@@ -1,0 +1,3 @@
+ok  	github.com/Alaneel/redis-reliability-lab/internal/diagnosis	12.345s
+ok  	github.com/Alaneel/redis-reliability-lab/internal/evaluation	1.477s
+ok  	github.com/Alaneel/redis-reliability-lab/cmd/redis-lab	2.042s

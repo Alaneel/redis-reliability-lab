@@ -49,3 +49,10 @@ Each comparison's links lead to per-condition summaries and individual reports. 
 | [0009 — Frozen-ledger all-process persistence](decisions/0009-frozen-ledger-all-process-persistence.md) | Preventing live replicas or diagnostic writes from masking loss |
 
 For development and resource safety, see [Contributing](../CONTRIBUTING.md) and the [Security policy](../SECURITY.md).
+
+## Incident intelligence
+
+- [AIOps architecture, evidence model, diagnostic rules and safety](aiops-architecture.md)
+- [Evaluation construction, partitions, metrics and limitations](aiops-evaluation.md)
+- [Three real incident diagnosis case studies](aiops-case-studies.md)
+- [Phase 4 validation, acceptance audit, portfolio bullets and remaining work](phase4-validation.md)

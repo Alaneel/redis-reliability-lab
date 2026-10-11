@@ -131,6 +131,7 @@ type PhaseTransition struct {
 }
 
 type Window struct {
+	P95MS       *float64          `json:"p95_ms,omitempty"` // all terminal attempts; absent for empty/legacy windows
 	StartedAt   time.Time         `json:"started_at"`
 	EndedAt     time.Time         `json:"ended_at"`
 	Attempts    uint64            `json:"attempts"`
@@ -219,6 +220,7 @@ type Collector struct {
 	totals           *aggregate
 	transitions      []PhaseTransition
 	window           Window
+	windowLatency    histogram
 	windows, pending []Window
 	dropped          uint64
 }
@@ -270,6 +272,7 @@ func (c *Collector) RecordAt(phase, operation string, elapsed time.Duration, err
 	}
 	a.record(operation, elapsed, err)
 	c.totals.record(operation, elapsed, err)
+	c.windowLatency.add(elapsed)
 	c.window.Attempts++
 	c.window.Phases[phase]++
 	if err == nil {
@@ -282,6 +285,8 @@ func (c *Collector) RecordAt(phase, operation string, elapsed time.Duration, err
 func (c *Collector) appendWindow(w Window) {
 	if w.Attempts > 0 {
 		w.SuccessRate = float64(w.Successes) / float64(w.Attempts)
+		p95 := float64(c.windowLatency.quantile(.95)) / float64(time.Millisecond)
+		w.P95MS = &p95
 	}
 	if len(c.windows) == maxWindows {
 		c.windows = c.windows[1:]
@@ -299,6 +304,7 @@ func (c *Collector) advanceWindows(at time.Time) {
 		c.window.EndedAt = c.window.StartedAt.Add(time.Second)
 		c.appendWindow(c.window)
 		c.window = Window{StartedAt: c.window.EndedAt, Phases: make(map[string]uint64)}
+		c.windowLatency = histogram{}
 	}
 }
 
@@ -307,6 +313,10 @@ func cloneWindows(windows []Window) []Window {
 	for i, window := range windows {
 		out[i] = window
 		out[i].Phases = copyCounts(window.Phases)
+		if window.P95MS != nil {
+			p95 := *window.P95MS
+			out[i].P95MS = &p95
+		}
 	}
 	return out
 }

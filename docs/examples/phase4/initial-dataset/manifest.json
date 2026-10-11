@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "frozen_rule_version": "rules-1",
+  "cases": [
+    {
+      "case_id": "case-001",
+      "partition": "development",
+      "trial_family": "69c8c806bf4bf1f684715d23",
+      "report": "runs/69c8c806bf4bf1f684715d23/report.json",
+      "sha256": "257f36cdcb0e60a5377b9e7c653c8bcc89b3e2127d6d0c401783632685ae0f7a",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "primary_unavailability",
+          "redundancy_degradation",
+          "client_disruption"
+        ],
+        "injected_cause": "primary",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:43:16.179524+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report",
+          "Terminal client metric errors \u003e 0"
+        ]
+      }
+    },
+    {
+      "case_id": "case-002",
+      "partition": "development",
+      "trial_family": "497e76933ed98eabedcf5f9a",
+      "report": "runs/497e76933ed98eabedcf5f9a/report.json",
+      "sha256": "79eab8e439dbddb0f949994302d937699266f6af08c0d95e8f50f0da07702130",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "replica_unavailability",
+          "redundancy_degradation"
+        ],
+        "injected_cause": "replica",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:43:38.211191+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report"
+        ]
+      }
+    },
+    {
+      "case_id": "case-003",
+      "partition": "development",
+      "trial_family": "e0b76730de3a4877dc470e5f",
+      "report": "runs/e0b76730de3a4877dc470e5f/report.json",
+      "sha256": "19eb2f30747ef5ef839b73751c7b48f26b15441146c27996e001b2cab7e45aa2",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "primary_unavailability",
+          "redundancy_degradation",
+          "client_disruption"
+        ],
+        "injected_cause": "primary-network",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:44:06.57012+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report",
+          "Terminal client metric errors \u003e 0"
+        ]
+      }
+    },
+    {
+      "case_id": "case-004",
+      "partition": "development",
+      "trial_family": "6bd90861768a51c6096c09a4",
+      "report": "runs/6bd90861768a51c6096c09a4/report.json",
+      "sha256": "8f15c3d12cd0f5a36a6308040f394874cdd0f9271a515ee45777f908df4b1cda",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "replica_unavailability",
+          "redundancy_degradation"
+        ],
+        "injected_cause": "replica-network",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:44:45.518933+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report"
+        ]
+      }
+    },
+    {
+      "case_id": "case-005",
+      "partition": "development",
+      "trial_family": "828dea872f91d77e7af07118",
+      "report": "runs/828dea872f91d77e7af07118/report.json",
+      "sha256": "4fbc0a2b500b960bbb237b7cc601dbc425e88458322944773e6f179bf753e525",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "replica_unavailability",
+          "redundancy_degradation",
+          "client_disruption",
+          "acknowledgement_degradation"
+        ],
+        "injected_cause": "wait",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:45:13.428894+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report",
+          "Terminal client metric errors \u003e 0",
+          "Workload policy ledger recorded valid short acknowledgements"
+        ]
+      }
+    },
+    {
+      "case_id": "case-006",
+      "partition": "development",
+      "trial_family": "8bdb515cc9f7c2761ae36f69",
+      "report": "runs/8bdb515cc9f7c2761ae36f69/report.json",
+      "sha256": "070ee1bc6ec0fbc0ac033dfc09b61bf844bbf7920ae6509e3b0e51844e62f9d1",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "primary_unavailability",
+          "replica_unavailability",
+          "redundancy_degradation",
+          "data_validation_failure"
+        ],
+        "injected_cause": "memory",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:45:51.885588+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report",
+          "Final immutable acknowledged-value ledger has missing or unequal values"
+        ]
+      }
+    },
+    {
+      "case_id": "case-007",
+      "partition": "development",
+      "trial_family": "9e35831d92bb07158449d38b",
+      "report": "runs/9e35831d92bb07158449d38b/report.json",
+      "sha256": "eda283d857bd1c673b2c69d0ac80eb7973a528b4130179960df9cac3af3e10a3",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "primary_unavailability",
+          "replica_unavailability",
+          "redundancy_degradation"
+        ],
+        "injected_cause": "aof",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:46:51.694282+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report"
+        ]
+      }
+    },
+    {
+      "case_id": "case-008",
+      "partition": "heldout",
+      "trial_family": "3bc724f5572421160eab2c37",
+      "report": "runs/3bc724f5572421160eab2c37/report.json",
+      "sha256": "195d55b773f089e0ab3c602382345be79c26ae505eb05e78f6eebbd406641a67",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "primary_unavailability",
+          "redundancy_degradation",
+          "client_disruption"
+        ],
+        "injected_cause": "primary",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:47:52.660125+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report",
+          "Terminal client metric errors \u003e 0"
+        ]
+      }
+    },
+    {
+      "case_id": "case-008-incomplete",
+      "partition": "heldout",
+      "trial_family": "3bc724f5572421160eab2c37",
+      "report": "inputs/case-008-incomplete.json",
+      "sha256": "f7913197fb1e4819adeb4f724db4489a6053a0dcfc155593ab9abdcf345bd27d",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "primary_unavailability",
+          "redundancy_degradation",
+          "client_disruption"
+        ],
+        "injected_cause": "primary",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:47:52.660125+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report",
+          "Terminal client metric errors \u003e 0"
+        ]
+      }
+    },
+    {
+      "case_id": "case-009",
+      "partition": "heldout",
+      "trial_family": "1392b9937b25046cd5e72c0d",
+      "report": "runs/1392b9937b25046cd5e72c0d/report.json",
+      "sha256": "4d76d83954191083ce39b0b5d1850e21087412a18142906a204dd9c0c19e93d8",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "replica_unavailability",
+          "redundancy_degradation"
+        ],
+        "injected_cause": "replica",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:48:23.666025+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report"
+        ]
+      }
+    },
+    {
+      "case_id": "case-010",
+      "partition": "heldout",
+      "trial_family": "f5eca49fc4fc2128a29cda93",
+      "report": "runs/f5eca49fc4fc2128a29cda93/report.json",
+      "sha256": "885aa7e931d98cb0c896448c84712ab39c691130bf40ff904fa8961ae2468bf4",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "primary_unavailability",
+          "redundancy_degradation",
+          "client_disruption"
+        ],
+        "injected_cause": "primary-network",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:48:55.815262+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report",
+          "Terminal client metric errors \u003e 0"
+        ]
+      }
+    },
+    {
+      "case_id": "case-011",
+      "partition": "heldout",
+      "trial_family": "d7245c097de839daf38fe9c6",
+      "report": "runs/d7245c097de839daf38fe9c6/report.json",
+      "sha256": "b890bd62d6946b7279a268ae3cda0868dac5878de00a0bd7f6201b08b74d04bf",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "replica_unavailability",
+          "redundancy_degradation"
+        ],
+        "injected_cause": "replica-network",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:49:33.808601+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report"
+        ]
+      }
+    },
+    {
+      "case_id": "case-012",
+      "partition": "heldout",
+      "trial_family": "0f7c4cf14829038fbb88fd6d",
+      "report": "runs/0f7c4cf14829038fbb88fd6d/report.json",
+      "sha256": "85480cd5b7c616d272fc506d639977a0df0863a617c001702f27fb411c57051d",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "replica_unavailability",
+          "redundancy_degradation",
+          "client_disruption",
+          "acknowledgement_degradation"
+        ],
+        "injected_cause": "wait",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:49:59.395786+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report",
+          "Terminal client metric errors \u003e 0",
+          "Workload policy ledger recorded valid short acknowledgements"
+        ]
+      }
+    },
+    {
+      "case_id": "case-013",
+      "partition": "heldout",
+      "trial_family": "9d637ef7c7c4dce5e3adf2fd",
+      "report": "runs/9d637ef7c7c4dce5e3adf2fd/report.json",
+      "sha256": "a55b9b1ac69e5b2bc106845b562c7593904c9751dba431c1467951c595e60b4f",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "primary_unavailability",
+          "replica_unavailability",
+          "redundancy_degradation",
+          "data_validation_failure"
+        ],
+        "injected_cause": "memory",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:50:39.155635+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report",
+          "Final immutable acknowledged-value ledger has missing or unequal values"
+        ]
+      }
+    },
+    {
+      "case_id": "case-014",
+      "partition": "heldout",
+      "trial_family": "dd88217ca44abba63ff3ccb6",
+      "report": "runs/dd88217ca44abba63ff3ccb6/report.json",
+      "sha256": "361b53a97e53c8b0d0a6645701770bcf19b1fcffba3f93c2381ebd556307887c",
+      "ground_truth": {
+        "incident": true,
+        "categories": [
+          "primary_unavailability",
+          "replica_unavailability",
+          "redundancy_degradation"
+        ],
+        "injected_cause": "aof",
+        "target_node": "node-1",
+        "fault_start": "2026-10-11T19:51:35.95823+08:00",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report"
+        ]
+      }
+    },
+    {
+      "case_id": "case-016",
+      "partition": "development",
+      "trial_family": "051f55d3988d2bb95802d785",
+      "report": "runs/051f55d3988d2bb95802d785/report.json",
+      "sha256": "19fd275f145c5bd02332bb196381599f6dcf12650e05463489aec5062dda5345",
+      "ground_truth": {
+        "incident": false,
+        "categories": [],
+        "injected_cause": "healthy",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report"
+        ]
+      }
+    },
+    {
+      "case_id": "case-017",
+      "partition": "heldout",
+      "trial_family": "abf1c05abe1dbfbc9ccad73d",
+      "report": "runs/abf1c05abe1dbfbc9ccad73d/report.json",
+      "sha256": "fe72e76917f8c5fbe9dca6ec157572c2441288eec3febde1defe51957fb4bd83",
+      "ground_truth": {
+        "incident": false,
+        "categories": [],
+        "injected_cause": "healthy",
+        "label_basis": [
+          "Fresh managed trial; physical action and cleanup receipts retained in source report"
+        ]
+      }
+    }
+  ],
+  "methodology": [
+    "All base cases are freshly provisioned six-node Redis clusters; no diagnostic inference is run during collection or label construction.",
+    "Development and heldout trials use separate physical clusters, workload seeds, rates, sample intervals and timing. Derivatives share their parent's trial family and partition.",
+    "Targets are selected by existing deterministic cluster inventory, with fresh Redis identities and ports; target shard position is not randomized. This limits generalization.",
+    "Physical primary/replica unavailability and redundancy labels come from applied controlled actions; transient client and value outcomes are labelled from independent runner counters, not diagnostic predictions.",
+    "Longer network holds allow server observations to reflect disruptions; absence of detectable evidence can still cause false negatives, retained in evaluation.",
+    "Persistence faults are labelled as primary and replica unavailability even when intermediate node observations are absent. The engine must not read stopped-process action fields to recover those labels.",
+    "Incomplete derivatives retain true physical incident labels, rather than changing labels to match missing observations. They are not additional independent trials.",
+    "Healthy controls were collected in a corrected separate invocation after the initial directory-writing defect; original failed collection log retained."
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "docker_test_groups_passed": 22,
+  "go_test_seconds": 792.501,
+  "run_reports": [
+    {
+      "run_id": "0350cd5879ed03d936a5b940",
+      "outcome": "failed",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "1a239cb87f2df1de0022e821",
+      "outcome": "recovered",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "1cafc9fe125ea28d3a8a2bcd",
+      "outcome": "recovered",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "1e6f3072ca6edd99be6febc3",
+      "outcome": "recovered",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "2f30dce045e957619a497d1c",
+      "outcome": "failed",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "2fdcdf6f699e8d7fc5e5c76b",
+      "outcome": "aborted",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "31827cecd0d865d74e41849a",
+      "outcome": "recovered",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "38cf7032dc3b16254a05ce10",
+      "outcome": "aborted",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "6674db63ca719398e6bdf597",
+      "outcome": "recovered",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "6763c0ab7bb8a4b7721385f3",
+      "outcome": "partial",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "89577307333d9f0b32d4ccd5",
+      "outcome": "failed",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "9398683c51b771089c14b914",
+      "outcome": "failed",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "b95dc960cf7be3695386342a",
+      "outcome": "partial",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "c138086df834c61a0fa39329",
+      "outcome": "recovered",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "c1885364206fcd6c073c8280",
+      "outcome": "recovered",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "d5585526911066d3956c98f1",
+      "outcome": "failed",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "e03db5421e555a9a2695350a",
+      "outcome": "failed",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "e201d6391db2fe08c7fdc1a0",
+      "outcome": "failed",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "e23c8a6a09a69683eb215a4e",
+      "outcome": "aborted",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "e39b7dcfc85d95860abd26ab",
+      "outcome": "recovered",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "ec718f16bab5e7eeed417104",
+      "outcome": "partial",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "f26495be174028e39c741fd1",
+      "outcome": "recovered",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "f27b8a0fcbe473ded39320ed",
+      "outcome": "aborted",
+      "cleanup_successful": true
+    },
+    {
+      "run_id": "f81e3026247b5c83824232a2",
+      "outcome": "failed",
+      "cleanup_successful": true
+    }
+  ],
+  "command_only_compatibility_runs": [
+    "66cbf7869fe57e36e79fccff"
+  ],
+  "outcomes": {
+    "failed": 8,
+    "recovered": 9,
+    "aborted": 4,
+    "partial": 3
+  },
+  "all_reported_cleanup_verified": true,
+  "independent_post_suite_managed_containers_networks_volumes": {
+    "containers": 0,
+    "networks": 0,
+    "volumes": 0
+  }
+}

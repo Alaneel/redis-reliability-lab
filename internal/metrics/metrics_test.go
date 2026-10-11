@@ -122,3 +122,19 @@ func TestBoundedWindowHistory(t *testing.T) {
 		t.Fatalf("unbounded windows: drained=%d snapshot=%d dropped=%d", len(windows), len(s.Windows), s.DroppedWindows)
 	}
 }
+
+func TestWindowLatencyMeasuredAndAbsentForEmptyWindow(t *testing.T) {
+	start := time.Unix(0, 0)
+	c := NewCollector(start)
+	c.RecordAt("baseline", "set", time.Millisecond, nil, start.Add(100*time.Millisecond))
+	c.RecordAt("baseline", "set", 100*time.Millisecond, nil, start.Add(200*time.Millisecond))
+	windows := c.DrainWindows(start.Add(2 * time.Second))
+	if len(windows) != 2 || windows[0].P95MS == nil || *windows[0].P95MS != 100 || windows[1].P95MS != nil {
+		t.Fatalf("windows %+v", windows)
+	}
+	*windows[0].P95MS = 999
+	s := c.Snapshot(start.Add(2 * time.Second))
+	if *s.Windows[0].P95MS != 100 {
+		t.Fatal("mutable latency pointer escaped")
+	}
+}

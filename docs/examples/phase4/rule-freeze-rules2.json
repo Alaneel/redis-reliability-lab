@@ -1,0 +1,14 @@
+{
+  "engine_version": "rules-2",
+  "frozen_at": "2026-10-11T11:55:17.811219+00:00",
+  "source_sha256": {
+    "internal/diagnosis/contradictions.go": "2ed7e4caa10e5f3028ea82a9231859ea2c7b5800cde7bf79369b1053652099b1",
+    "internal/diagnosis/engine.go": "861550ff39a23d75777253288975f858fcedc65f6fd2ef0c029dbdcee58b3141",
+    "internal/diagnosis/model.go": "6a659fef524916b7650ebac61c695e0bb7229869036041f0022c12b309777b6f",
+    "internal/diagnosis/normalize.go": "4f403b72dd8545e213575c4986e93ebb42457d466e5d828f232432003cfb6458",
+    "internal/diagnosis/report.go": "45a1297799dbe9e528e6b82bf699838f4d3a79f88e254a966282d7d5c6e4cc7c",
+    "internal/diagnosis/timeline.go": "daaa708babe75ffc9762ad1f162db3447cfb51fd033f2f3750ffc99ffaa70ba0"
+  },
+  "heldout_analysis_performed": false,
+  "basis": "Zero-replica startup false positive identified in development control and retained in rules-1 results. Require prior positive observed replica baseline; fresh heldout cohort collected after this correction. No tuning against new heldout results."
+}

@@ -16,7 +16,9 @@ import (
 	"github.com/Alaneel/redis-reliability-lab/internal/batch"
 	"github.com/Alaneel/redis-reliability-lab/internal/comparison"
 	"github.com/Alaneel/redis-reliability-lab/internal/config"
+	"github.com/Alaneel/redis-reliability-lab/internal/diagnosis"
 	"github.com/Alaneel/redis-reliability-lab/internal/environment"
+	"github.com/Alaneel/redis-reliability-lab/internal/evaluation"
 	"github.com/Alaneel/redis-reliability-lab/internal/experiment"
 )
 
@@ -31,6 +33,54 @@ func execute(args []string) int {
 	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer cancel()
 	switch args[0] {
+	case "evaluate":
+		flags := flag.NewFlagSet("evaluate", flag.ContinueOnError)
+		dataset := flags.String("dataset", "", "dataset manifest JSON")
+		partition := flags.String("partition", "heldout", "development or heldout")
+		output := flags.String("output", "reports/evaluation", "evaluation report directory")
+		if err := flags.Parse(args[1:]); err != nil || flags.NArg() != 0 || *dataset == "" {
+			fmt.Fprintln(os.Stderr, "evaluate requires --dataset MANIFEST.json")
+			return 2
+		}
+		result, err := evaluation.Run(ctx, *dataset, *partition)
+		if err == nil {
+			err = evaluation.Write(*output, result)
+		}
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			return 1
+		}
+		fmt.Printf("Evaluated %d %s cases; reports: %s\n", result.Cases, result.Partition, *output)
+		return 0
+	case "diagnose":
+		flags := flag.NewFlagSet("diagnose", flag.ContinueOnError)
+		output := flags.String("output", "reports/diagnoses", "directory for offline diagnosis reports")
+		path, err := experimentArgument(flags, args[1:])
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			return 2
+		}
+		f, err := os.Open(path)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			return 1
+		}
+		in, err := diagnosis.Normalize(ctx, f)
+		f.Close()
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			return 1
+		}
+		a, err := diagnosis.Analyze(ctx, in)
+		if err == nil {
+			err = diagnosis.Write(filepath.Join(*output, in.ID), a)
+		}
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			return 1
+		}
+		fmt.Printf("Detection: %s\nRoot cause: %s\nReports: %s\n", a.Detection, a.RootCause, filepath.Join(*output, in.ID))
+		return 0
 	case "compare":
 		flags := flag.NewFlagSet("compare", flag.ContinueOnError)
 		output := flags.String("output", "reports", "root directory for comparison and individual reports")
@@ -187,5 +237,5 @@ func experimentArgument(flags *flag.FlagSet, args []string) (string, error) {
 	return flags.Arg(0), nil
 }
 func usage() {
-	fmt.Fprintln(os.Stderr, "Usage:\n  redis-lab run [-output reports] experiments/primary-failure.yaml\n  redis-lab repeat experiments/primary-failure.yaml [--runs 5] [--output reports]\n  redis-lab compare [--rounds 3] [--seed 20261011] [--output reports] CONDITION.yaml CONDITION.yaml ...\n  redis-lab validate experiments/primary-failure.yaml\n  redis-lab cleanup RUN_ID\n  redis-lab version")
+	fmt.Fprintln(os.Stderr, "Usage:\n  redis-lab evaluate --dataset MANIFEST.json [--partition heldout] [--output reports/evaluation]\n  redis-lab diagnose REPORT.json [--output reports/diagnoses]\n  redis-lab run [-output reports] experiments/primary-failure.yaml\n  redis-lab repeat experiments/primary-failure.yaml [--runs 5] [--output reports]\n  redis-lab compare [--rounds 3] [--seed 20261011] [--output reports] CONDITION.yaml CONDITION.yaml ...\n  redis-lab validate experiments/primary-failure.yaml\n  redis-lab cleanup RUN_ID\n  redis-lab version")
 }

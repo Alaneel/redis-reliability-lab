@@ -1,4 +1,4 @@
-.PHONY: build test integration check fmt clean
+.PHONY: build test integration aiops-integration check fmt clean
 VERSION ?= dev
 export VERSION
 
@@ -16,3 +16,8 @@ fmt:
 	gofmt -w cmd internal
 clean:
 	rm -f bin/redis-lab
+
+# Opt-in fresh dataset collection uses the existing managed local Docker boundary.
+aiops-integration:
+	test -n "$$REDIS_LAB_DATASET"
+	go test -race -tags=integration -count=1 -timeout=25m -run '^TestDockerGenerateIncidentDataset$$' -v ./internal/evaluation

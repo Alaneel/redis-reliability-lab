@@ -104,3 +104,17 @@ Ownership, names, endpoints, and isolation settings are checked before managed a
 - [Contributing](CONTRIBUTING.md): local development and checks.
 
 This independent project uses synthetic data and contains no employer infrastructure, credentials, or production configuration. Project source is [MIT licensed](LICENSE); Redis, Docker, Go, and dependencies retain their respective licenses. See [third-party notices](THIRD_PARTY_NOTICES.md).
+
+## Offline incident diagnosis (Phase 4)
+
+The evidence-based extension analyzes saved Redis observations without Docker, an API key or an external AI service. It separates observed symptoms from possible causes, cites original evidence, reconstructs sampled recovery transitions and produces read-only remediation plans. Process failure and network isolation can remain indistinguishable; the engine abstains from selecting an unsupported unique root cause.
+
+```sh
+make build
+bin/redis-lab diagnose docs/examples/phase3/primary-repair-wait/report.json --output reports/diagnoses
+# Collect fresh development/heldout trials using managed local Docker:
+REDIS_LAB_DATASET=reports/aiops-dataset make aiops-integration
+bin/redis-lab evaluate --dataset reports/aiops-dataset/manifest.json --partition heldout --output reports/aiops-evaluation
+```
+
+See [architecture and safety](docs/aiops-architecture.md), [actual evaluation results](docs/aiops-evaluation.md), [three real case studies](docs/aiops-case-studies.md) and [validation evidence](docs/phase4-validation.md). Diagnostic outputs contain JSON and Markdown; existing diagnosis output is protected against overwrite. Evaluation keeps ambiguous cases, false positives, missed categories and malformed inputs visible. These single-host laboratory observations do not establish production diagnostic accuracy.

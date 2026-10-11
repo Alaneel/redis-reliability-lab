@@ -1,0 +1,346 @@
+=== RUN   TestDockerGenerateIncidentDataset
+=== RUN   TestDockerGenerateIncidentDataset/development-healthy
+    generate_integration_test.go:204: open /Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/1bbbf068501d79bc17f86e99/.report-881340350: no such file or directory
+=== RUN   TestDockerGenerateIncidentDataset/development-primary
+time=2026-10-11T19:43:02.706+08:00 level=INFO msg="experiment stage" run_id=69c8c806bf4bf1f684715d23 stage=provisioning
+2026/10/11 19:43:07 WARN Docker diagnostic message="time=\"2026-10-11T19:43:07+08:00\" level=error msg=\"error waiting for container: \""
+time=2026-10-11T19:43:08.697+08:00 level=INFO msg="experiment stage" run_id=69c8c806bf4bf1f684715d23 stage=readiness
+time=2026-10-11T19:43:13.852+08:00 level=INFO msg="experiment stage" run_id=69c8c806bf4bf1f684715d23 stage=baseline
+time=2026-10-11T19:43:15.957+08:00 level=INFO msg="experiment stage" run_id=69c8c806bf4bf1f684715d23 stage=injecting
+time=2026-10-11T19:43:16.179+08:00 level=INFO msg="experiment stage" run_id=69c8c806bf4bf1f684715d23 stage=observing
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:17 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:17 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:17 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:18 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:19 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:19 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:19 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+time=2026-10-11T19:43:20.032+08:00 level=INFO msg="experiment stage" run_id=69c8c806bf4bf1f684715d23 stage=post_recovery
+redis: 2026/10/11 19:43:20 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:20 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+redis: 2026/10/11 19:43:20 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52619: connect: connection refused
+time=2026-10-11T19:43:21.033+08:00 level=INFO msg="experiment stage" run_id=69c8c806bf4bf1f684715d23 stage=validating
+time=2026-10-11T19:43:21.127+08:00 level=INFO msg="experiment stage" run_id=69c8c806bf4bf1f684715d23 stage=cleanup
+time=2026-10-11T19:43:22.578+08:00 level=INFO msg="experiment stage" run_id=69c8c806bf4bf1f684715d23 stage=complete
+time=2026-10-11T19:43:22.685+08:00 level=INFO msg="experiment finished" run_id=69c8c806bf4bf1f684715d23 outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/69c8c806bf4bf1f684715d23 cleanup_verified=true
+    generate_integration_test.go:171: case=case-001 partition=development scenario=primary run=69c8c806bf4bf1f684715d23 outcome=recovered
+=== RUN   TestDockerGenerateIncidentDataset/development-replica
+time=2026-10-11T19:43:22.839+08:00 level=INFO msg="experiment stage" run_id=497e76933ed98eabedcf5f9a stage=provisioning
+2026/10/11 19:43:28 WARN Docker diagnostic message="time=\"2026-10-11T19:43:28+08:00\" level=error msg=\"error waiting for container: \""
+time=2026-10-11T19:43:30.446+08:00 level=INFO msg="experiment stage" run_id=497e76933ed98eabedcf5f9a stage=readiness
+time=2026-10-11T19:43:35.850+08:00 level=INFO msg="experiment stage" run_id=497e76933ed98eabedcf5f9a stage=baseline
+time=2026-10-11T19:43:37.959+08:00 level=INFO msg="experiment stage" run_id=497e76933ed98eabedcf5f9a stage=injecting
+time=2026-10-11T19:43:38.211+08:00 level=INFO msg="experiment stage" run_id=497e76933ed98eabedcf5f9a stage=observing
+redis: 2026/10/11 19:43:38 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52747: connect: connection refused
+redis: 2026/10/11 19:43:38 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52747: connect: connection refused
+redis: 2026/10/11 19:43:38 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52747: connect: connection refused
+redis: 2026/10/11 19:43:39 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52747: connect: connection refused
+redis: 2026/10/11 19:43:39 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52747: connect: connection refused
+redis: 2026/10/11 19:43:40 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52747: connect: connection refused
+redis: 2026/10/11 19:43:40 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52747: connect: connection refused
+redis: 2026/10/11 19:43:40 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:52747: connect: connection refused
+time=2026-10-11T19:43:41.352+08:00 level=INFO msg="experiment stage" run_id=497e76933ed98eabedcf5f9a stage=repairing
+time=2026-10-11T19:43:42.953+08:00 level=INFO msg="experiment stage" run_id=497e76933ed98eabedcf5f9a stage=reconciling
+time=2026-10-11T19:43:48.196+08:00 level=INFO msg="experiment stage" run_id=497e76933ed98eabedcf5f9a stage=post_recovery
+time=2026-10-11T19:43:49.196+08:00 level=INFO msg="experiment stage" run_id=497e76933ed98eabedcf5f9a stage=validating
+time=2026-10-11T19:43:49.414+08:00 level=INFO msg="experiment stage" run_id=497e76933ed98eabedcf5f9a stage=cleanup
+time=2026-10-11T19:43:51.950+08:00 level=INFO msg="experiment stage" run_id=497e76933ed98eabedcf5f9a stage=complete
+time=2026-10-11T19:43:52.163+08:00 level=INFO msg="experiment finished" run_id=497e76933ed98eabedcf5f9a outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/497e76933ed98eabedcf5f9a cleanup_verified=true
+    generate_integration_test.go:171: case=case-002 partition=development scenario=replica run=497e76933ed98eabedcf5f9a outcome=recovered
+=== RUN   TestDockerGenerateIncidentDataset/development-primary-network
+time=2026-10-11T19:43:52.333+08:00 level=INFO msg="experiment stage" run_id=e0b76730de3a4877dc470e5f stage=provisioning
+time=2026-10-11T19:43:57.844+08:00 level=INFO msg="experiment stage" run_id=e0b76730de3a4877dc470e5f stage=readiness
+time=2026-10-11T19:44:03.071+08:00 level=INFO msg="experiment stage" run_id=e0b76730de3a4877dc470e5f stage=baseline
+time=2026-10-11T19:44:05.173+08:00 level=INFO msg="experiment stage" run_id=e0b76730de3a4877dc470e5f stage=injecting
+time=2026-10-11T19:44:06.570+08:00 level=INFO msg="experiment stage" run_id=e0b76730de3a4877dc470e5f stage=observing
+time=2026-10-11T19:44:15.751+08:00 level=INFO msg="experiment stage" run_id=e0b76730de3a4877dc470e5f stage=restoring
+time=2026-10-11T19:44:17.123+08:00 level=INFO msg="experiment stage" run_id=e0b76730de3a4877dc470e5f stage=reconciling
+time=2026-10-11T19:44:23.997+08:00 level=INFO msg="experiment stage" run_id=e0b76730de3a4877dc470e5f stage=post_recovery
+time=2026-10-11T19:44:24.998+08:00 level=INFO msg="experiment stage" run_id=e0b76730de3a4877dc470e5f stage=validating
+time=2026-10-11T19:44:25.337+08:00 level=INFO msg="experiment stage" run_id=e0b76730de3a4877dc470e5f stage=cleanup
+time=2026-10-11T19:44:26.929+08:00 level=INFO msg="experiment stage" run_id=e0b76730de3a4877dc470e5f stage=complete
+time=2026-10-11T19:44:27.239+08:00 level=INFO msg="experiment finished" run_id=e0b76730de3a4877dc470e5f outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/e0b76730de3a4877dc470e5f cleanup_verified=true
+    generate_integration_test.go:171: case=case-003 partition=development scenario=primary-network run=e0b76730de3a4877dc470e5f outcome=recovered
+=== RUN   TestDockerGenerateIncidentDataset/development-replica-network
+time=2026-10-11T19:44:27.407+08:00 level=INFO msg="experiment stage" run_id=6bd90861768a51c6096c09a4 stage=provisioning
+time=2026-10-11T19:44:36.090+08:00 level=INFO msg="experiment stage" run_id=6bd90861768a51c6096c09a4 stage=readiness
+time=2026-10-11T19:44:41.949+08:00 level=INFO msg="experiment stage" run_id=6bd90861768a51c6096c09a4 stage=baseline
+time=2026-10-11T19:44:44.052+08:00 level=INFO msg="experiment stage" run_id=6bd90861768a51c6096c09a4 stage=injecting
+time=2026-10-11T19:44:45.518+08:00 level=INFO msg="experiment stage" run_id=6bd90861768a51c6096c09a4 stage=observing
+time=2026-10-11T19:44:49.286+08:00 level=INFO msg="experiment stage" run_id=6bd90861768a51c6096c09a4 stage=repairing
+time=2026-10-11T19:44:50.591+08:00 level=INFO msg="experiment stage" run_id=6bd90861768a51c6096c09a4 stage=reconciling
+time=2026-10-11T19:44:52.032+08:00 level=INFO msg="experiment stage" run_id=6bd90861768a51c6096c09a4 stage=post_recovery
+time=2026-10-11T19:44:53.033+08:00 level=INFO msg="experiment stage" run_id=6bd90861768a51c6096c09a4 stage=validating
+time=2026-10-11T19:44:53.260+08:00 level=INFO msg="experiment stage" run_id=6bd90861768a51c6096c09a4 stage=cleanup
+time=2026-10-11T19:44:55.065+08:00 level=INFO msg="experiment stage" run_id=6bd90861768a51c6096c09a4 stage=complete
+time=2026-10-11T19:44:55.223+08:00 level=INFO msg="experiment finished" run_id=6bd90861768a51c6096c09a4 outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/6bd90861768a51c6096c09a4 cleanup_verified=true
+    generate_integration_test.go:171: case=case-004 partition=development scenario=replica-network run=6bd90861768a51c6096c09a4 outcome=recovered
+=== RUN   TestDockerGenerateIncidentDataset/development-wait
+time=2026-10-11T19:44:55.391+08:00 level=INFO msg="experiment stage" run_id=828dea872f91d77e7af07118 stage=provisioning
+2026/10/11 19:45:03 WARN Docker diagnostic message="time=\"2026-10-11T19:45:03+08:00\" level=error msg=\"error waiting for container: \""
+time=2026-10-11T19:45:06.129+08:00 level=INFO msg="experiment stage" run_id=828dea872f91d77e7af07118 stage=readiness
+time=2026-10-11T19:45:11.053+08:00 level=INFO msg="experiment stage" run_id=828dea872f91d77e7af07118 stage=baseline
+time=2026-10-11T19:45:13.156+08:00 level=INFO msg="experiment stage" run_id=828dea872f91d77e7af07118 stage=injecting
+time=2026-10-11T19:45:13.428+08:00 level=INFO msg="experiment stage" run_id=828dea872f91d77e7af07118 stage=observing
+redis: 2026/10/11 19:45:13 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53229: connect: connection refused
+redis: 2026/10/11 19:45:13 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53229: connect: connection refused
+redis: 2026/10/11 19:45:13 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53229: connect: connection refused
+redis: 2026/10/11 19:45:14 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53229: connect: connection refused
+redis: 2026/10/11 19:45:15 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53229: connect: connection refused
+redis: 2026/10/11 19:45:15 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53229: connect: connection refused
+redis: 2026/10/11 19:45:15 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53229: connect: connection refused
+redis: 2026/10/11 19:45:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53229: connect: connection refused
+redis: 2026/10/11 19:45:16 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53229: connect: connection refused
+time=2026-10-11T19:45:16.840+08:00 level=INFO msg="experiment stage" run_id=828dea872f91d77e7af07118 stage=repairing
+time=2026-10-11T19:45:18.514+08:00 level=INFO msg="experiment stage" run_id=828dea872f91d77e7af07118 stage=reconciling
+time=2026-10-11T19:45:24.573+08:00 level=INFO msg="experiment stage" run_id=828dea872f91d77e7af07118 stage=post_recovery
+time=2026-10-11T19:45:25.574+08:00 level=INFO msg="experiment stage" run_id=828dea872f91d77e7af07118 stage=validating
+time=2026-10-11T19:45:25.812+08:00 level=INFO msg="experiment stage" run_id=828dea872f91d77e7af07118 stage=cleanup
+time=2026-10-11T19:45:28.383+08:00 level=INFO msg="experiment stage" run_id=828dea872f91d77e7af07118 stage=complete
+time=2026-10-11T19:45:28.593+08:00 level=INFO msg="experiment finished" run_id=828dea872f91d77e7af07118 outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/828dea872f91d77e7af07118 cleanup_verified=true
+    generate_integration_test.go:171: case=case-005 partition=development scenario=wait run=828dea872f91d77e7af07118 outcome=recovered
+=== RUN   TestDockerGenerateIncidentDataset/development-memory
+time=2026-10-11T19:45:28.790+08:00 level=INFO msg="experiment stage" run_id=8bdb515cc9f7c2761ae36f69 stage=provisioning
+time=2026-10-11T19:45:35.724+08:00 level=INFO msg="experiment stage" run_id=8bdb515cc9f7c2761ae36f69 stage=readiness
+time=2026-10-11T19:45:47.428+08:00 level=INFO msg="experiment stage" run_id=8bdb515cc9f7c2761ae36f69 stage=baseline
+time=2026-10-11T19:45:49.570+08:00 level=INFO msg="experiment stage" run_id=8bdb515cc9f7c2761ae36f69 stage=quiescing
+time=2026-10-11T19:45:49.570+08:00 level=INFO msg="experiment stage" run_id=8bdb515cc9f7c2761ae36f69 stage=injecting
+time=2026-10-11T19:45:51.885+08:00 level=INFO msg="experiment stage" run_id=8bdb515cc9f7c2761ae36f69 stage=observing
+time=2026-10-11T19:45:54.886+08:00 level=INFO msg="experiment stage" run_id=8bdb515cc9f7c2761ae36f69 stage=repairing
+time=2026-10-11T19:46:04.703+08:00 level=INFO msg="experiment stage" run_id=8bdb515cc9f7c2761ae36f69 stage=reconciling
+time=2026-10-11T19:46:17.133+08:00 level=INFO msg="experiment stage" run_id=8bdb515cc9f7c2761ae36f69 stage=validating
+time=2026-10-11T19:46:17.180+08:00 level=INFO msg="experiment stage" run_id=8bdb515cc9f7c2761ae36f69 stage=diagnosing
+time=2026-10-11T19:46:20.402+08:00 level=INFO msg="experiment stage" run_id=8bdb515cc9f7c2761ae36f69 stage=cleanup
+time=2026-10-11T19:46:22.961+08:00 level=INFO msg="experiment stage" run_id=8bdb515cc9f7c2761ae36f69 stage=complete
+time=2026-10-11T19:46:23.197+08:00 level=INFO msg="experiment finished" run_id=8bdb515cc9f7c2761ae36f69 outcome=partial reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/8bdb515cc9f7c2761ae36f69 cleanup_verified=true
+    generate_integration_test.go:97: retained experimental outcome=partial err=persistence experiment ended partial: frozen data verified=false, original redundancy stable=true, restoration deadline=false
+    generate_integration_test.go:171: case=case-006 partition=development scenario=memory run=8bdb515cc9f7c2761ae36f69 outcome=partial
+=== RUN   TestDockerGenerateIncidentDataset/development-aof
+time=2026-10-11T19:46:23.365+08:00 level=INFO msg="experiment stage" run_id=9e35831d92bb07158449d38b stage=provisioning
+time=2026-10-11T19:46:36.200+08:00 level=INFO msg="experiment stage" run_id=9e35831d92bb07158449d38b stage=readiness
+time=2026-10-11T19:46:47.310+08:00 level=INFO msg="experiment stage" run_id=9e35831d92bb07158449d38b stage=baseline
+time=2026-10-11T19:46:49.456+08:00 level=INFO msg="experiment stage" run_id=9e35831d92bb07158449d38b stage=quiescing
+time=2026-10-11T19:46:49.456+08:00 level=INFO msg="experiment stage" run_id=9e35831d92bb07158449d38b stage=injecting
+time=2026-10-11T19:46:51.694+08:00 level=INFO msg="experiment stage" run_id=9e35831d92bb07158449d38b stage=observing
+time=2026-10-11T19:46:54.695+08:00 level=INFO msg="experiment stage" run_id=9e35831d92bb07158449d38b stage=repairing
+time=2026-10-11T19:47:04.294+08:00 level=INFO msg="experiment stage" run_id=9e35831d92bb07158449d38b stage=reconciling
+time=2026-10-11T19:47:16.086+08:00 level=INFO msg="experiment stage" run_id=9e35831d92bb07158449d38b stage=validating
+time=2026-10-11T19:47:16.127+08:00 level=INFO msg="experiment stage" run_id=9e35831d92bb07158449d38b stage=diagnosing
+time=2026-10-11T19:47:19.290+08:00 level=INFO msg="experiment stage" run_id=9e35831d92bb07158449d38b stage=cleanup
+time=2026-10-11T19:47:21.851+08:00 level=INFO msg="experiment stage" run_id=9e35831d92bb07158449d38b stage=complete
+time=2026-10-11T19:47:22.072+08:00 level=INFO msg="experiment finished" run_id=9e35831d92bb07158449d38b outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/9e35831d92bb07158449d38b cleanup_verified=true
+    generate_integration_test.go:171: case=case-007 partition=development scenario=aof run=9e35831d92bb07158449d38b outcome=recovered
+=== RUN   TestDockerGenerateIncidentDataset/heldout-healthy
+    generate_integration_test.go:204: open /Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/8b9418d4f8725af33ca15890/.report-3487532743: no such file or directory
+=== RUN   TestDockerGenerateIncidentDataset/heldout-primary
+time=2026-10-11T19:47:37.763+08:00 level=INFO msg="experiment stage" run_id=3bc724f5572421160eab2c37 stage=provisioning
+time=2026-10-11T19:47:44.231+08:00 level=INFO msg="experiment stage" run_id=3bc724f5572421160eab2c37 stage=readiness
+time=2026-10-11T19:47:50.347+08:00 level=INFO msg="experiment stage" run_id=3bc724f5572421160eab2c37 stage=baseline
+time=2026-10-11T19:47:52.456+08:00 level=INFO msg="experiment stage" run_id=3bc724f5572421160eab2c37 stage=injecting
+time=2026-10-11T19:47:52.660+08:00 level=INFO msg="experiment stage" run_id=3bc724f5572421160eab2c37 stage=observing
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:56 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:56 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+time=2026-10-11T19:47:56.988+08:00 level=INFO msg="experiment stage" run_id=3bc724f5572421160eab2c37 stage=post_recovery
+redis: 2026/10/11 19:47:56 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+redis: 2026/10/11 19:47:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53575: connect: connection refused
+time=2026-10-11T19:47:58.012+08:00 level=INFO msg="experiment stage" run_id=3bc724f5572421160eab2c37 stage=validating
+time=2026-10-11T19:47:58.153+08:00 level=INFO msg="experiment stage" run_id=3bc724f5572421160eab2c37 stage=cleanup
+time=2026-10-11T19:47:59.596+08:00 level=INFO msg="experiment stage" run_id=3bc724f5572421160eab2c37 stage=complete
+time=2026-10-11T19:47:59.704+08:00 level=INFO msg="experiment finished" run_id=3bc724f5572421160eab2c37 outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/3bc724f5572421160eab2c37 cleanup_verified=true
+    generate_integration_test.go:171: case=case-008 partition=heldout scenario=primary run=3bc724f5572421160eab2c37 outcome=recovered
+=== RUN   TestDockerGenerateIncidentDataset/heldout-replica
+time=2026-10-11T19:47:59.856+08:00 level=INFO msg="experiment stage" run_id=1392b9937b25046cd5e72c0d stage=provisioning
+time=2026-10-11T19:48:15.705+08:00 level=INFO msg="experiment stage" run_id=1392b9937b25046cd5e72c0d stage=readiness
+time=2026-10-11T19:48:21.305+08:00 level=INFO msg="experiment stage" run_id=1392b9937b25046cd5e72c0d stage=baseline
+time=2026-10-11T19:48:23.406+08:00 level=INFO msg="experiment stage" run_id=1392b9937b25046cd5e72c0d stage=injecting
+time=2026-10-11T19:48:23.666+08:00 level=INFO msg="experiment stage" run_id=1392b9937b25046cd5e72c0d stage=observing
+redis: 2026/10/11 19:48:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53718: connect: connection refused
+redis: 2026/10/11 19:48:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53718: connect: connection refused
+redis: 2026/10/11 19:48:24 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53718: connect: connection refused
+redis: 2026/10/11 19:48:24 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53718: connect: connection refused
+redis: 2026/10/11 19:48:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53718: connect: connection refused
+redis: 2026/10/11 19:48:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53718: connect: connection refused
+redis: 2026/10/11 19:48:26 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53718: connect: connection refused
+redis: 2026/10/11 19:48:27 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53718: connect: connection refused
+redis: 2026/10/11 19:48:27 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:53718: connect: connection refused
+time=2026-10-11T19:48:28.164+08:00 level=INFO msg="experiment stage" run_id=1392b9937b25046cd5e72c0d stage=repairing
+time=2026-10-11T19:48:29.756+08:00 level=INFO msg="experiment stage" run_id=1392b9937b25046cd5e72c0d stage=reconciling
+time=2026-10-11T19:48:35.372+08:00 level=INFO msg="experiment stage" run_id=1392b9937b25046cd5e72c0d stage=post_recovery
+time=2026-10-11T19:48:36.372+08:00 level=INFO msg="experiment stage" run_id=1392b9937b25046cd5e72c0d stage=validating
+time=2026-10-11T19:48:36.782+08:00 level=INFO msg="experiment stage" run_id=1392b9937b25046cd5e72c0d stage=cleanup
+time=2026-10-11T19:48:39.342+08:00 level=INFO msg="experiment stage" run_id=1392b9937b25046cd5e72c0d stage=complete
+time=2026-10-11T19:48:39.579+08:00 level=INFO msg="experiment finished" run_id=1392b9937b25046cd5e72c0d outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/1392b9937b25046cd5e72c0d cleanup_verified=true
+    generate_integration_test.go:171: case=case-009 partition=heldout scenario=replica run=1392b9937b25046cd5e72c0d outcome=recovered
+=== RUN   TestDockerGenerateIncidentDataset/heldout-primary-network
+time=2026-10-11T19:48:39.766+08:00 level=INFO msg="experiment stage" run_id=f5eca49fc4fc2128a29cda93 stage=provisioning
+time=2026-10-11T19:48:46.536+08:00 level=INFO msg="experiment stage" run_id=f5eca49fc4fc2128a29cda93 stage=readiness
+time=2026-10-11T19:48:52.276+08:00 level=INFO msg="experiment stage" run_id=f5eca49fc4fc2128a29cda93 stage=baseline
+time=2026-10-11T19:48:54.378+08:00 level=INFO msg="experiment stage" run_id=f5eca49fc4fc2128a29cda93 stage=injecting
+time=2026-10-11T19:48:55.815+08:00 level=INFO msg="experiment stage" run_id=f5eca49fc4fc2128a29cda93 stage=observing
+time=2026-10-11T19:49:06.908+08:00 level=INFO msg="experiment stage" run_id=f5eca49fc4fc2128a29cda93 stage=restoring
+time=2026-10-11T19:49:08.202+08:00 level=INFO msg="experiment stage" run_id=f5eca49fc4fc2128a29cda93 stage=reconciling
+time=2026-10-11T19:49:14.510+08:00 level=INFO msg="experiment stage" run_id=f5eca49fc4fc2128a29cda93 stage=post_recovery
+time=2026-10-11T19:49:15.511+08:00 level=INFO msg="experiment stage" run_id=f5eca49fc4fc2128a29cda93 stage=validating
+time=2026-10-11T19:49:16.106+08:00 level=INFO msg="experiment stage" run_id=f5eca49fc4fc2128a29cda93 stage=cleanup
+time=2026-10-11T19:49:17.615+08:00 level=INFO msg="experiment stage" run_id=f5eca49fc4fc2128a29cda93 stage=complete
+time=2026-10-11T19:49:17.899+08:00 level=INFO msg="experiment finished" run_id=f5eca49fc4fc2128a29cda93 outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/f5eca49fc4fc2128a29cda93 cleanup_verified=true
+    generate_integration_test.go:171: case=case-010 partition=heldout scenario=primary-network run=f5eca49fc4fc2128a29cda93 outcome=recovered
+=== RUN   TestDockerGenerateIncidentDataset/heldout-replica-network
+time=2026-10-11T19:49:18.057+08:00 level=INFO msg="experiment stage" run_id=d7245c097de839daf38fe9c6 stage=provisioning
+time=2026-10-11T19:49:24.231+08:00 level=INFO msg="experiment stage" run_id=d7245c097de839daf38fe9c6 stage=readiness
+time=2026-10-11T19:49:30.362+08:00 level=INFO msg="experiment stage" run_id=d7245c097de839daf38fe9c6 stage=baseline
+time=2026-10-11T19:49:32.460+08:00 level=INFO msg="experiment stage" run_id=d7245c097de839daf38fe9c6 stage=injecting
+time=2026-10-11T19:49:33.808+08:00 level=INFO msg="experiment stage" run_id=d7245c097de839daf38fe9c6 stage=observing
+time=2026-10-11T19:49:38.204+08:00 level=INFO msg="experiment stage" run_id=d7245c097de839daf38fe9c6 stage=repairing
+time=2026-10-11T19:49:39.513+08:00 level=INFO msg="experiment stage" run_id=d7245c097de839daf38fe9c6 stage=reconciling
+time=2026-10-11T19:49:41.163+08:00 level=INFO msg="experiment stage" run_id=d7245c097de839daf38fe9c6 stage=post_recovery
+time=2026-10-11T19:49:42.241+08:00 level=INFO msg="experiment stage" run_id=d7245c097de839daf38fe9c6 stage=validating
+time=2026-10-11T19:49:42.549+08:00 level=INFO msg="experiment stage" run_id=d7245c097de839daf38fe9c6 stage=cleanup
+time=2026-10-11T19:49:44.109+08:00 level=INFO msg="experiment stage" run_id=d7245c097de839daf38fe9c6 stage=complete
+time=2026-10-11T19:49:44.253+08:00 level=INFO msg="experiment finished" run_id=d7245c097de839daf38fe9c6 outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/d7245c097de839daf38fe9c6 cleanup_verified=true
+    generate_integration_test.go:171: case=case-011 partition=heldout scenario=replica-network run=d7245c097de839daf38fe9c6 outcome=recovered
+=== RUN   TestDockerGenerateIncidentDataset/heldout-wait
+time=2026-10-11T19:49:44.411+08:00 level=INFO msg="experiment stage" run_id=0f7c4cf14829038fbb88fd6d stage=provisioning
+2026/10/11 19:49:49 WARN Docker diagnostic message="time=\"2026-10-11T19:49:49+08:00\" level=error msg=\"error waiting for container: \""
+time=2026-10-11T19:49:52.179+08:00 level=INFO msg="experiment stage" run_id=0f7c4cf14829038fbb88fd6d stage=readiness
+time=2026-10-11T19:49:57.030+08:00 level=INFO msg="experiment stage" run_id=0f7c4cf14829038fbb88fd6d stage=baseline
+time=2026-10-11T19:49:59.137+08:00 level=INFO msg="experiment stage" run_id=0f7c4cf14829038fbb88fd6d stage=injecting
+time=2026-10-11T19:49:59.395+08:00 level=INFO msg="experiment stage" run_id=0f7c4cf14829038fbb88fd6d stage=observing
+redis: 2026/10/11 19:49:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:54176: connect: connection refused
+redis: 2026/10/11 19:49:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:54176: connect: connection refused
+redis: 2026/10/11 19:50:00 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:54176: connect: connection refused
+redis: 2026/10/11 19:50:00 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:54176: connect: connection refused
+redis: 2026/10/11 19:50:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:54176: connect: connection refused
+redis: 2026/10/11 19:50:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:54176: connect: connection refused
+redis: 2026/10/11 19:50:02 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:54176: connect: connection refused
+redis: 2026/10/11 19:50:02 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:54176: connect: connection refused
+time=2026-10-11T19:50:03.426+08:00 level=INFO msg="experiment stage" run_id=0f7c4cf14829038fbb88fd6d stage=repairing
+time=2026-10-11T19:50:05.022+08:00 level=INFO msg="experiment stage" run_id=0f7c4cf14829038fbb88fd6d stage=reconciling
+time=2026-10-11T19:50:10.576+08:00 level=INFO msg="experiment stage" run_id=0f7c4cf14829038fbb88fd6d stage=post_recovery
+time=2026-10-11T19:50:11.577+08:00 level=INFO msg="experiment stage" run_id=0f7c4cf14829038fbb88fd6d stage=validating
+time=2026-10-11T19:50:11.973+08:00 level=INFO msg="experiment stage" run_id=0f7c4cf14829038fbb88fd6d stage=cleanup
+time=2026-10-11T19:50:14.570+08:00 level=INFO msg="experiment stage" run_id=0f7c4cf14829038fbb88fd6d stage=complete
+time=2026-10-11T19:50:14.760+08:00 level=INFO msg="experiment finished" run_id=0f7c4cf14829038fbb88fd6d outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/0f7c4cf14829038fbb88fd6d cleanup_verified=true
+    generate_integration_test.go:171: case=case-012 partition=heldout scenario=wait run=0f7c4cf14829038fbb88fd6d outcome=recovered
+=== RUN   TestDockerGenerateIncidentDataset/heldout-memory
+time=2026-10-11T19:50:14.924+08:00 level=INFO msg="experiment stage" run_id=9d637ef7c7c4dce5e3adf2fd stage=provisioning
+time=2026-10-11T19:50:22.671+08:00 level=INFO msg="experiment stage" run_id=9d637ef7c7c4dce5e3adf2fd stage=readiness
+time=2026-10-11T19:50:34.731+08:00 level=INFO msg="experiment stage" run_id=9d637ef7c7c4dce5e3adf2fd stage=baseline
+time=2026-10-11T19:50:36.878+08:00 level=INFO msg="experiment stage" run_id=9d637ef7c7c4dce5e3adf2fd stage=quiescing
+time=2026-10-11T19:50:36.879+08:00 level=INFO msg="experiment stage" run_id=9d637ef7c7c4dce5e3adf2fd stage=injecting
+time=2026-10-11T19:50:39.155+08:00 level=INFO msg="experiment stage" run_id=9d637ef7c7c4dce5e3adf2fd stage=observing
+time=2026-10-11T19:50:43.157+08:00 level=INFO msg="experiment stage" run_id=9d637ef7c7c4dce5e3adf2fd stage=repairing
+time=2026-10-11T19:50:53.216+08:00 level=INFO msg="experiment stage" run_id=9d637ef7c7c4dce5e3adf2fd stage=reconciling
+time=2026-10-11T19:51:04.425+08:00 level=INFO msg="experiment stage" run_id=9d637ef7c7c4dce5e3adf2fd stage=validating
+time=2026-10-11T19:51:04.497+08:00 level=INFO msg="experiment stage" run_id=9d637ef7c7c4dce5e3adf2fd stage=diagnosing
+time=2026-10-11T19:51:07.190+08:00 level=INFO msg="experiment stage" run_id=9d637ef7c7c4dce5e3adf2fd stage=cleanup
+time=2026-10-11T19:51:09.755+08:00 level=INFO msg="experiment stage" run_id=9d637ef7c7c4dce5e3adf2fd stage=complete
+time=2026-10-11T19:51:09.937+08:00 level=INFO msg="experiment finished" run_id=9d637ef7c7c4dce5e3adf2fd outcome=partial reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/9d637ef7c7c4dce5e3adf2fd cleanup_verified=true
+    generate_integration_test.go:97: retained experimental outcome=partial err=persistence experiment ended partial: frozen data verified=false, original redundancy stable=true, restoration deadline=false
+    generate_integration_test.go:171: case=case-013 partition=heldout scenario=memory run=9d637ef7c7c4dce5e3adf2fd outcome=partial
+=== RUN   TestDockerGenerateIncidentDataset/heldout-aof
+time=2026-10-11T19:51:10.115+08:00 level=INFO msg="experiment stage" run_id=dd88217ca44abba63ff3ccb6 stage=provisioning
+time=2026-10-11T19:51:19.720+08:00 level=INFO msg="experiment stage" run_id=dd88217ca44abba63ff3ccb6 stage=readiness
+time=2026-10-11T19:51:31.460+08:00 level=INFO msg="experiment stage" run_id=dd88217ca44abba63ff3ccb6 stage=baseline
+time=2026-10-11T19:51:33.601+08:00 level=INFO msg="experiment stage" run_id=dd88217ca44abba63ff3ccb6 stage=quiescing
+time=2026-10-11T19:51:33.601+08:00 level=INFO msg="experiment stage" run_id=dd88217ca44abba63ff3ccb6 stage=injecting
+time=2026-10-11T19:51:35.958+08:00 level=INFO msg="experiment stage" run_id=dd88217ca44abba63ff3ccb6 stage=observing
+time=2026-10-11T19:51:39.960+08:00 level=INFO msg="experiment stage" run_id=dd88217ca44abba63ff3ccb6 stage=repairing
+time=2026-10-11T19:51:49.895+08:00 level=INFO msg="experiment stage" run_id=dd88217ca44abba63ff3ccb6 stage=reconciling
+time=2026-10-11T19:52:01.098+08:00 level=INFO msg="experiment stage" run_id=dd88217ca44abba63ff3ccb6 stage=validating
+time=2026-10-11T19:52:01.160+08:00 level=INFO msg="experiment stage" run_id=dd88217ca44abba63ff3ccb6 stage=diagnosing
+time=2026-10-11T19:52:03.831+08:00 level=INFO msg="experiment stage" run_id=dd88217ca44abba63ff3ccb6 stage=cleanup
+time=2026-10-11T19:52:06.395+08:00 level=INFO msg="experiment stage" run_id=dd88217ca44abba63ff3ccb6 stage=complete
+time=2026-10-11T19:52:06.575+08:00 level=INFO msg="experiment finished" run_id=dd88217ca44abba63ff3ccb6 outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/phase4-dataset/runs/dd88217ca44abba63ff3ccb6 cleanup_verified=true
+    generate_integration_test.go:171: case=case-014 partition=heldout scenario=aof run=dd88217ca44abba63ff3ccb6 outcome=recovered
+--- FAIL: TestDockerGenerateIncidentDataset (561.90s)
+    --- FAIL: TestDockerGenerateIncidentDataset/development-healthy (17.85s)
+    --- PASS: TestDockerGenerateIncidentDataset/development-primary (20.13s)
+    --- PASS: TestDockerGenerateIncidentDataset/development-replica (29.50s)
+    --- PASS: TestDockerGenerateIncidentDataset/development-primary-network (35.07s)
+    --- PASS: TestDockerGenerateIncidentDataset/development-replica-network (27.98s)
+    --- PASS: TestDockerGenerateIncidentDataset/development-wait (33.40s)
+    --- PASS: TestDockerGenerateIncidentDataset/development-memory (54.57s)
+    --- PASS: TestDockerGenerateIncidentDataset/development-aof (58.87s)
+    --- FAIL: TestDockerGenerateIncidentDataset/heldout-healthy (15.53s)
+    --- PASS: TestDockerGenerateIncidentDataset/heldout-primary (22.09s)
+    --- PASS: TestDockerGenerateIncidentDataset/heldout-replica (39.91s)
+    --- PASS: TestDockerGenerateIncidentDataset/heldout-primary-network (38.29s)
+    --- PASS: TestDockerGenerateIncidentDataset/heldout-replica-network (26.35s)
+    --- PASS: TestDockerGenerateIncidentDataset/heldout-wait (30.51s)
+    --- PASS: TestDockerGenerateIncidentDataset/heldout-memory (55.19s)
+    --- PASS: TestDockerGenerateIncidentDataset/heldout-aof (56.63s)
+FAIL
+FAIL	github.com/Alaneel/redis-reliability-lab/internal/evaluation	562.416s
+FAIL

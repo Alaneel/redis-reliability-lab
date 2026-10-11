@@ -1,0 +1,11 @@
+=== RUN   TestDockerGenerateIncidentDataset
+=== RUN   TestDockerGenerateIncidentDataset/development-healthy
+    generate_integration_test.go:185: case=case-016 partition=development scenario=healthy run=051f55d3988d2bb95802d785 outcome=healthy-control
+=== RUN   TestDockerGenerateIncidentDataset/heldout-healthy
+2026/10/11 19:52:57 WARN Docker diagnostic message="time=\"2026-10-11T19:52:57+08:00\" level=error msg=\"error waiting for container: \""
+    generate_integration_test.go:185: case=case-017 partition=heldout scenario=healthy run=abf1c05abe1dbfbc9ccad73d outcome=healthy-control
+--- PASS: TestDockerGenerateIncidentDataset (27.88s)
+    --- PASS: TestDockerGenerateIncidentDataset/development-healthy (13.79s)
+    --- PASS: TestDockerGenerateIncidentDataset/heldout-healthy (14.09s)
+PASS
+ok  	github.com/Alaneel/redis-reliability-lab/internal/evaluation	29.369s

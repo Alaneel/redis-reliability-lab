@@ -1,0 +1,14 @@
+{
+  "engine_version": "rules-1",
+  "frozen_at": "2026-10-11T11:52:39.649930+00:00",
+  "source_sha256": {
+    "internal/diagnosis/contradictions.go": "2ed7e4caa10e5f3028ea82a9231859ea2c7b5800cde7bf79369b1053652099b1",
+    "internal/diagnosis/engine.go": "fb72269c3867a5b8082c9d973249ebc11f4e1745b649c76bd87ba4bc9513f6b6",
+    "internal/diagnosis/model.go": "810c0571f6bc2a865e4113478c960e5280617d2e00410a74d8f0a56b0bec58d9",
+    "internal/diagnosis/normalize.go": "4f403b72dd8545e213575c4986e93ebb42457d466e5d828f232432003cfb6458",
+    "internal/diagnosis/report.go": "45a1297799dbe9e528e6b82bf699838f4d3a79f88e254a966282d7d5c6e4cc7c",
+    "internal/diagnosis/timeline.go": "daaa708babe75ffc9762ad1f162db3447cfb51fd033f2f3750ffc99ffaa70ba0"
+  },
+  "heldout_analysis_performed": false,
+  "basis": "After development-only evaluations and deterministic tests; prior to any heldout diagnosis. Do not tune against heldout results without collecting a new heldout cohort."
+}

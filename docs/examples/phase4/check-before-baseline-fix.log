@@ -1,0 +1,16 @@
+test -z "$(gofmt -l cmd internal)"
+go vet ./...
+go test -race -count=1 ./...
+ok  	github.com/Alaneel/redis-reliability-lab/cmd/redis-lab	1.754s
+ok  	github.com/Alaneel/redis-reliability-lab/internal/batch	13.896s
+ok  	github.com/Alaneel/redis-reliability-lab/internal/cluster	20.358s
+ok  	github.com/Alaneel/redis-reliability-lab/internal/comparison	11.763s
+ok  	github.com/Alaneel/redis-reliability-lab/internal/config	2.980s
+ok  	github.com/Alaneel/redis-reliability-lab/internal/diagnosis	10.374s
+ok  	github.com/Alaneel/redis-reliability-lab/internal/environment	7.196s
+ok  	github.com/Alaneel/redis-reliability-lab/internal/evaluation	3.557s
+ok  	github.com/Alaneel/redis-reliability-lab/internal/experiment	32.784s
+ok  	github.com/Alaneel/redis-reliability-lab/internal/metrics	6.260s
+ok  	github.com/Alaneel/redis-reliability-lab/internal/report	4.923s
+ok  	github.com/Alaneel/redis-reliability-lab/internal/workload	6.238s
+go build -trimpath -buildvcs=false -ldflags="-X main.version=$VERSION" -o bin/redis-lab ./cmd/redis-lab

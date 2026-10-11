@@ -1,0 +1,131 @@
+{
+  "records": 29,
+  "all_assessments_byte_equivalent": true,
+  "method": "Built isolated replay binaries from exact archived rules-2 and current guarded source; compared SHA-256 of complete JSON assessments for every corpus record. No diagnostic rule or evaluation label changes.",
+  "checked": [
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/69c8c806bf4bf1f684715d23/report.json",
+      "assessment_sha256": "38e8cb605fc867e9849919569b3348f11116b72a96037db409f7a7231c236f69"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/497e76933ed98eabedcf5f9a/report.json",
+      "assessment_sha256": "12cdca49babfec0b83cb17c201bb0213a9d6fb1ce0a76e2afc655614bc31ee0a"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/e0b76730de3a4877dc470e5f/report.json",
+      "assessment_sha256": "d84a4b308d7805ddd7d064d55dcc54b1e24d63a42a3d62e42ebce5c015cccc4c"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/6bd90861768a51c6096c09a4/report.json",
+      "assessment_sha256": "074e666d97285d612c6f0b352be74d67db1d8aa86e01ef75838311a37fe418e6"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/828dea872f91d77e7af07118/report.json",
+      "assessment_sha256": "0fd5c7e1f62eaa442f45408ef80d62b6394090ce3c39e6a008a4fd73dbf25f25"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/8bdb515cc9f7c2761ae36f69/report.json",
+      "assessment_sha256": "16247b76fb54012c71a273825e7183836cef4d5730c69b49e2ca0f68aa2fd16a"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/9e35831d92bb07158449d38b/report.json",
+      "assessment_sha256": "795837fd7be41ec68062dd850d41a9fa47983c563170869ac9b559bb948e0f08"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/3bc724f5572421160eab2c37/report.json",
+      "assessment_sha256": "3b45238d93425a6b124122f439557536de96fe13b277c002bcba2ee54922ef33"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/inputs/case-008-incomplete.json",
+      "assessment_sha256": "7e0ae8dd6614418488c6c1dc3daa829d84f713ed87c14dd68b6abbb22c5d80cd"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/1392b9937b25046cd5e72c0d/report.json",
+      "assessment_sha256": "e2eb3a31752f8f69aa4529240bfe41a3004bd4eb8e934269abefba85f99bedac"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/f5eca49fc4fc2128a29cda93/report.json",
+      "assessment_sha256": "476622240ea7ded2e6b03eee53bdc40947c3364a320649124ef18c73c98f481d"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/d7245c097de839daf38fe9c6/report.json",
+      "assessment_sha256": "c6c7412ae6d1ac76389595d300593a6e9791c314f68c024fed152848cd6c8122"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/0f7c4cf14829038fbb88fd6d/report.json",
+      "assessment_sha256": "31d77c37d3e805a33538359efdbab7cd6caa3b08e764984e3e9a623e93dc8632"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/9d637ef7c7c4dce5e3adf2fd/report.json",
+      "assessment_sha256": "04eac0a20eeee62827c4c814e449f890b1836cd8d77e52dc6da8ff9ef90c6706"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/dd88217ca44abba63ff3ccb6/report.json",
+      "assessment_sha256": "8334db08af24b327526f0ad73204ad515a3d0cab701980a9e883187b44707363"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/051f55d3988d2bb95802d785/report.json",
+      "assessment_sha256": "41c6360658c4204a374f8a56b7eb7f2dca428c8dff541d16d03a55558fa49ff5"
+    },
+    {
+      "input": "docs/examples/phase4/initial-dataset/runs/abf1c05abe1dbfbc9ccad73d/report.json",
+      "assessment_sha256": "7f794c7245b9718f7a842ae83c6bcf6dffc8f6ab597a8837404a850490c4297a"
+    },
+    {
+      "input": "docs/examples/phase4/heldout-dataset/runs/7cf84fb5cb0435467126ce1a/report.json",
+      "assessment_sha256": "ab7900ef948a1c60ec422198f1585af8a3586a26d0f148d7452191622764fda5"
+    },
+    {
+      "input": "docs/examples/phase4/heldout-dataset/runs/a272b5d9e6773d9c5fa6c493/report.json",
+      "assessment_sha256": "fe0a496bddec2ff42607f13ff47706ca2a627fdd7b92c5989f0c0891c16cca9d"
+    },
+    {
+      "input": "docs/examples/phase4/heldout-dataset/inputs/case-002-incomplete.json",
+      "assessment_sha256": "7e0ae8dd6614418488c6c1dc3daa829d84f713ed87c14dd68b6abbb22c5d80cd"
+    },
+    {
+      "input": "docs/examples/phase4/heldout-dataset/runs/5e2f1051ec26c8e7bb07b752/report.json",
+      "assessment_sha256": "8982d44815f1ab81f60e9c605a66cb559e0b0130fa015c33baf4d71ab371b0d4"
+    },
+    {
+      "input": "docs/examples/phase4/heldout-dataset/runs/6fcd217008a29878e09b60d0/report.json",
+      "assessment_sha256": "b099e07020f61b109d2a8ba231c37ae481d7177180c5d7a20adf5c3933336139"
+    },
+    {
+      "input": "docs/examples/phase4/heldout-dataset/runs/61f327f21a9b8adb4f662cc5/report.json",
+      "assessment_sha256": "88859ef48112b1f10c0d1bf1285173d02134e7cb63808486ee82771fadf99747"
+    },
+    {
+      "input": "docs/examples/phase4/heldout-dataset/runs/42ff17db5678dfbe4b21a5d7/report.json",
+      "assessment_sha256": "99239565ff2d880f241914c2dcb839ab4a02dce24c14010a351b0d0fb3e1f7ed"
+    },
+    {
+      "input": "docs/examples/phase4/heldout-dataset/runs/d4afc5196b21a7355b5de2ba/report.json",
+      "assessment_sha256": "3fbcb67e09c54369a4aaf9de4fb360723cd300a30bbcdad7aff22f5677386c83"
+    },
+    {
+      "input": "docs/examples/phase4/heldout-dataset/runs/440307057705312273b742fe/report.json",
+      "assessment_sha256": "d98c9fa0a4712646468ca58bfc743b80c7e3cf13fc47de3bff9028f0f84d5b36"
+    },
+    {
+      "input": "docs/examples/phase3/repair-failure-paths/ab7af306ada2be3182c8226c/report.json",
+      "assessment_sha256": "e8a402d0864ef9121c8d97242751fcf46d4a73be898b4efdf3dd0225289b1968"
+    },
+    {
+      "input": "docs/examples/phase3/repair-failure-paths/488a31734f8e918c27af7ca0/report.json",
+      "assessment_sha256": "a49d7946fad6d460b2457e26f874798c8f4f871e6b896b19449b045c9efda075"
+    },
+    {
+      "input": "docs/examples/phase3/repair-failure-paths/f5a5a102abc9f92056580064/report.json",
+      "assessment_sha256": "00c32f5f9f1bfac85a00ad407114636745b1e2d763c53362cb06fbe25e0a518a"
+    }
+  ],
+  "guarded_source_sha256": {
+    "internal/diagnosis/contradictions.go": "2ed7e4caa10e5f3028ea82a9231859ea2c7b5800cde7bf79369b1053652099b1",
+    "internal/diagnosis/engine.go": "861550ff39a23d75777253288975f858fcedc65f6fd2ef0c029dbdcee58b3141",
+    "internal/diagnosis/model.go": "6a659fef524916b7650ebac61c695e0bb7229869036041f0022c12b309777b6f",
+    "internal/diagnosis/normalize.go": "85c62be154023e5ac152656ddff6f29a4f0e75446cf8b22fd759aaec004d5947",
+    "internal/diagnosis/report.go": "45a1297799dbe9e528e6b82bf699838f4d3a79f88e254a966282d7d5c6e4cc7c",
+    "internal/diagnosis/timeline.go": "daaa708babe75ffc9762ad1f162db3447cfb51fd033f2f3750ffc99ffaa70ba0"
+  }
+}

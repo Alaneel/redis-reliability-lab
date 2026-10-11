@@ -1,0 +1,315 @@
+{
+  "engine_version": "rules-2",
+  "dataset_rule_version": "rules-2",
+  "schema_version": 1,
+  "partition": "heldout",
+  "dataset_sha256": "e9e50a12ce4b9dd219a443df8b2e14f5a3ea760c54d9a816f0b50759ecac4cd8",
+  "cases": 9,
+  "incident_detection": {
+    "confusion": {
+      "tp": 7,
+      "fp": 0,
+      "tn": 1,
+      "fn": 1
+    },
+    "precision": 1,
+    "recall": 0.875
+  },
+  "categories": {
+    "acknowledgement_command_failure": {
+      "confusion": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 9,
+        "fn": 0
+      },
+      "precision": null,
+      "recall": null
+    },
+    "acknowledgement_degradation": {
+      "confusion": {
+        "tp": 1,
+        "fp": 0,
+        "tn": 8,
+        "fn": 0
+      },
+      "precision": 1,
+      "recall": 1
+    },
+    "client_disruption": {
+      "confusion": {
+        "tp": 3,
+        "fp": 0,
+        "tn": 5,
+        "fn": 1
+      },
+      "precision": 1,
+      "recall": 0.75
+    },
+    "client_latency_change": {
+      "confusion": {
+        "tp": 0,
+        "fp": 4,
+        "tn": 5,
+        "fn": 0
+      },
+      "precision": 0,
+      "recall": null
+    },
+    "client_recovery_lag": {
+      "confusion": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 9,
+        "fn": 0
+      },
+      "precision": null,
+      "recall": null
+    },
+    "data_validation_failure": {
+      "confusion": {
+        "tp": 1,
+        "fp": 0,
+        "tn": 8,
+        "fn": 0
+      },
+      "precision": 1,
+      "recall": 1
+    },
+    "node_unavailability": {
+      "confusion": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 9,
+        "fn": 0
+      },
+      "precision": null,
+      "recall": null
+    },
+    "persistence_recovery": {
+      "confusion": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 9,
+        "fn": 0
+      },
+      "precision": null,
+      "recall": null
+    },
+    "primary_unavailability": {
+      "confusion": {
+        "tp": 2,
+        "fp": 0,
+        "tn": 4,
+        "fn": 3
+      },
+      "precision": 1,
+      "recall": 0.4
+    },
+    "redundancy_degradation": {
+      "confusion": {
+        "tp": 3,
+        "fp": 0,
+        "tn": 1,
+        "fn": 5
+      },
+      "precision": 1,
+      "recall": 0.375
+    },
+    "replica_unavailability": {
+      "confusion": {
+        "tp": 5,
+        "fp": 2,
+        "tn": 2,
+        "fn": 0
+      },
+      "precision": 0.7142857142857143,
+      "recall": 1
+    },
+    "topology_disagreement": {
+      "confusion": {
+        "tp": 0,
+        "fp": 2,
+        "tn": 7,
+        "fn": 0
+      },
+      "precision": 0,
+      "recall": null
+    },
+    "validation_incomplete": {
+      "confusion": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 9,
+        "fn": 0
+      },
+      "precision": null,
+      "recall": null
+    }
+  },
+  "multilabel_micro": {
+    "confusion": {
+      "tp": 15,
+      "fp": 8,
+      "tn": 85,
+      "fn": 9
+    },
+    "precision": 0.6521739130434783,
+    "recall": 0.625
+  },
+  "root_cause_abstentions": 9,
+  "root_cause_abstention_rate": 1,
+  "incorrect_definitive_root_cause_claims": 0,
+  "definitive_claims": 0,
+  "citations": 906,
+  "valid_citations": 906,
+  "citation_validity": 1,
+  "recommendations": 23,
+  "unsupported_recommendations": 0,
+  "unsupported_recommendation_rate": 0,
+  "case_results": [
+    {
+      "case_id": "case-001",
+      "expected_categories": [],
+      "predicted_categories": [],
+      "detection": "healthy_observed",
+      "root_cause": "abstained",
+      "execution_latency_ms": 34.698708
+    },
+    {
+      "case_id": "case-002",
+      "expected_categories": [
+        "primary_unavailability",
+        "redundancy_degradation",
+        "client_disruption"
+      ],
+      "predicted_categories": [
+        "client_disruption",
+        "client_latency_change",
+        "primary_unavailability",
+        "replica_unavailability"
+      ],
+      "detection": "incident",
+      "root_cause": "abstained",
+      "execution_latency_ms": 56.122167
+    },
+    {
+      "case_id": "case-002-incomplete",
+      "expected_categories": [
+        "primary_unavailability",
+        "redundancy_degradation",
+        "client_disruption"
+      ],
+      "predicted_categories": [],
+      "detection": "insufficient_evidence",
+      "root_cause": "abstained",
+      "execution_latency_ms": 0.159625
+    },
+    {
+      "case_id": "case-003",
+      "expected_categories": [
+        "replica_unavailability",
+        "redundancy_degradation"
+      ],
+      "predicted_categories": [
+        "redundancy_degradation",
+        "replica_unavailability"
+      ],
+      "detection": "incident",
+      "root_cause": "abstained",
+      "execution_latency_ms": 96.463166
+    },
+    {
+      "case_id": "case-004",
+      "expected_categories": [
+        "primary_unavailability",
+        "redundancy_degradation",
+        "client_disruption"
+      ],
+      "predicted_categories": [
+        "client_disruption",
+        "client_latency_change",
+        "primary_unavailability",
+        "redundancy_degradation",
+        "replica_unavailability",
+        "topology_disagreement"
+      ],
+      "detection": "incident",
+      "root_cause": "abstained",
+      "execution_latency_ms": 173.334541
+    },
+    {
+      "case_id": "case-005",
+      "expected_categories": [
+        "replica_unavailability",
+        "redundancy_degradation"
+      ],
+      "predicted_categories": [
+        "client_latency_change",
+        "replica_unavailability"
+      ],
+      "detection": "incident",
+      "root_cause": "abstained",
+      "execution_latency_ms": 66.633166
+    },
+    {
+      "case_id": "case-006",
+      "expected_categories": [
+        "replica_unavailability",
+        "redundancy_degradation",
+        "client_disruption",
+        "acknowledgement_degradation"
+      ],
+      "predicted_categories": [
+        "acknowledgement_degradation",
+        "client_disruption",
+        "client_latency_change",
+        "redundancy_degradation",
+        "replica_unavailability",
+        "topology_disagreement"
+      ],
+      "detection": "incident",
+      "root_cause": "abstained",
+      "execution_latency_ms": 104.6175
+    },
+    {
+      "case_id": "case-007",
+      "expected_categories": [
+        "primary_unavailability",
+        "replica_unavailability",
+        "redundancy_degradation",
+        "data_validation_failure"
+      ],
+      "predicted_categories": [
+        "data_validation_failure",
+        "replica_unavailability"
+      ],
+      "detection": "incident",
+      "root_cause": "abstained",
+      "execution_latency_ms": 81.2005
+    },
+    {
+      "case_id": "case-008",
+      "expected_categories": [
+        "primary_unavailability",
+        "replica_unavailability",
+        "redundancy_degradation"
+      ],
+      "predicted_categories": [
+        "replica_unavailability"
+      ],
+      "detection": "incident",
+      "root_cause": "abstained",
+      "execution_latency_ms": 92.297125
+    }
+  ],
+  "limitations": [
+    "Small single-host laboratory dataset; no generalization or production claims.",
+    "Category matrices treat every selected case as one multilabel decision per category; overlap is allowed. Micro metrics sum category TP/FP/FN. Undefined denominators are null.",
+    "Input and analysis failures count as undetected incidents and negative category predictions, and remain visible in case results.",
+    "Abstention denominator is every selected case, including controls; definitive-claim counts are separate.",
+    "Citation validity checks JSON-pointer existence in original bytes, not the causal truth of an interpretation.",
+    "Unsupported recommendations check cited evidence availability and the read-only safety contract, not operator effectiveness.",
+    "Execution latency includes input normalization and deterministic analysis, excluding file reading and report writing; timings are not deterministic output."
+  ]
+}
