@@ -1,0 +1,12 @@
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/canceled_sample
+--- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent (6.50s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression (2.06s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression (2.06s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression (2.12s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/canceled_sample (0.26s)
+PASS
+ok  	github.com/Alaneel/redis-reliability-lab/internal/experiment	8.079s

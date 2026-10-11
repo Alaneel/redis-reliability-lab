@@ -1,0 +1,31 @@
+unit	Check and build	﻿2026-10-11T11:02:02.8116878Z ##[group]Run make check build
+unit	Check and build	2026-10-11T11:02:02.8117207Z [36;1mmake check build[0m
+unit	Check and build	2026-10-11T11:02:02.8178222Z shell: /usr/bin/bash -e {0}
+unit	Check and build	2026-10-11T11:02:02.8178484Z env:
+unit	Check and build	2026-10-11T11:02:02.8178674Z   GOTOOLCHAIN: local
+unit	Check and build	2026-10-11T11:02:02.8178918Z   GOFLAGS: -mod=readonly
+unit	Check and build	2026-10-11T11:02:02.8179144Z ##[endgroup]
+unit	Check and build	2026-10-11T11:02:02.8292583Z test -z "$(gofmt -l cmd internal)"
+unit	Check and build	2026-10-11T11:02:02.8813580Z go vet ./...
+unit	Check and build	2026-10-11T11:02:26.7965395Z go test -race -count=1 ./...
+unit	Check and build	2026-10-11T11:03:07.8109890Z ok  	github.com/Alaneel/redis-reliability-lab/cmd/redis-lab	1.022s
+unit	Check and build	2026-10-11T11:03:28.8844055Z ok  	github.com/Alaneel/redis-reliability-lab/internal/batch	22.099s
+unit	Check and build	2026-10-11T11:03:48.7741635Z ok  	github.com/Alaneel/redis-reliability-lab/internal/cluster	41.988s
+unit	Check and build	2026-10-11T11:03:48.7742665Z ok  	github.com/Alaneel/redis-reliability-lab/internal/comparison	8.546s
+unit	Check and build	2026-10-11T11:03:48.7743622Z ok  	github.com/Alaneel/redis-reliability-lab/internal/config	1.789s
+unit	Check and build	2026-10-11T11:03:48.7744305Z ok  	github.com/Alaneel/redis-reliability-lab/internal/environment	2.708s
+unit	Check and build	2026-10-11T11:04:10.4584884Z --- FAIL: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent (4.29s)
+unit	Check and build	2026-10-11T11:04:10.4586666Z     --- FAIL: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression (1.29s)
+unit	Check and build	2026-10-11T11:04:10.4589577Z         persistence_test.go:519: post-stability client failure was masked
+unit	Check and build	2026-10-11T11:04:10.4590432Z     --- FAIL: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression (1.29s)
+unit	Check and build	2026-10-11T11:04:10.4591413Z         persistence_test.go:522: basic service conflated with acknowledgement policy recovery
+unit	Check and build	2026-10-11T11:04:10.4592292Z     --- FAIL: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression (1.29s)
+unit	Check and build	2026-10-11T11:04:10.4593621Z         persistence_test.go:522: basic service conflated with acknowledgement policy recovery
+unit	Check and build	2026-10-11T11:04:10.4594038Z FAIL
+unit	Check and build	2026-10-11T11:04:10.4594374Z FAIL	github.com/Alaneel/redis-reliability-lab/internal/experiment	55.469s
+unit	Check and build	2026-10-11T11:04:10.4594885Z ok  	github.com/Alaneel/redis-reliability-lab/internal/metrics	1.301s
+unit	Check and build	2026-10-11T11:04:10.4595345Z ok  	github.com/Alaneel/redis-reliability-lab/internal/report	1.253s
+unit	Check and build	2026-10-11T11:04:10.4596053Z ok  	github.com/Alaneel/redis-reliability-lab/internal/workload	1.510s
+unit	Check and build	2026-10-11T11:04:10.4596399Z FAIL
+unit	Check and build	2026-10-11T11:04:10.6108317Z make: *** [Makefile:14: check] Error 1
+unit	Check and build	2026-10-11T11:04:10.6123320Z ##[error]Process completed with exit code 2.

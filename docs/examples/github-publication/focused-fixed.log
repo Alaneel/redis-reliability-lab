@@ -1,0 +1,52 @@
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/canceled_sample
+--- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent (3.05s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression (0.95s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression (0.92s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression (0.92s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/canceled_sample (0.26s)
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/canceled_sample
+--- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent (3.08s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression (0.93s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression (0.95s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression (0.94s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/canceled_sample (0.25s)
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/canceled_sample
+--- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent (3.05s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression (0.92s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression (0.94s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression (0.93s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/canceled_sample (0.25s)
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/canceled_sample
+--- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent (3.03s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression (0.92s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression (0.92s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression (0.92s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/canceled_sample (0.26s)
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/canceled_sample
+--- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent (3.10s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression (0.92s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression (0.93s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression (0.99s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/canceled_sample (0.26s)
+PASS
+ok  	github.com/Alaneel/redis-reliability-lab/internal/experiment	16.872s

@@ -468,7 +468,7 @@ func TestPersistenceAOFVerdictKeepsValidationUncertaintyAndObservedLoss(t *testi
 }
 
 func TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent(t *testing.T) {
-	for _, name := range []string{"ordinary service regression", "WAIT regression", "WAITAOF regression", "deadline sample"} {
+	for _, name := range []string{"ordinary service regression", "WAIT regression", "WAITAOF regression", "canceled sample"} {
 		t.Run(name, func(t *testing.T) {
 			c, r, _, _, _ := persistenceFixture(t, "aof-always")
 			at := time.Now()
@@ -482,11 +482,17 @@ func TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent(t
 				}
 				r.Config.Workload.WritePolicy = c.Workload.WritePolicy
 			}
-			ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+			// These synthetic timestamps test the third sample's regression,
+			// not how quickly race-instrumented slot validation runs on a host.
+			// A fourth collection cancels a broken loop without a wall-clock race.
+			ctx, cancel := context.WithCancel(context.Background())
 			defer cancel()
 			count := 0
 			collect := func(context.Context) report.Sample {
 				count++
+				if count > 3 {
+					cancel()
+				}
 				stamp := at.Add(time.Duration(count) * time.Millisecond)
 				snapshot := *r.Initial
 				snapshot.At, snapshot.Completed = stamp, stamp
@@ -500,13 +506,13 @@ func TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent(t
 				if name == "WAIT regression" || name == "WAITAOF regression" {
 					s.WritePolicyProbe = &report.PolicyProbe{At: stamp, Successful: count < 3}
 				}
-				if name == "deadline sample" {
+				if name == "canceled sample" {
 					cancel()
 				}
 				return s
 			}
 			observePersistenceDiagnostics(ctx, c, r, collect)
-			if name == "deadline sample" {
+			if name == "canceled sample" {
 				if len(r.Samples) != 1 || !r.Samples[0].Excluded || r.Recovery.CombinedStable != nil || r.PersistenceFault.DiagnosticServiceStable != nil || r.Recovery.ClientFirstSuccess != nil || r.Recovery.CombinedRecovered {
 					t.Fatal("deadline/canceled diagnostics raised recovery milestones")
 				}
@@ -516,10 +522,12 @@ func TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent(t
 				t.Fatal("historical sampled stability was lost")
 			}
 			if name == "ordinary service regression" && (r.Recovery.ClientRecovered || r.Recovery.CombinedRecovered || r.Dimensions.ReadAvailable == nil || *r.Dimensions.ReadAvailable) {
-				t.Fatal("post-stability client failure was masked")
+				last := r.Samples[len(r.Samples)-1]
+				t.Fatalf("post-stability client failure was masked: context=%v excluded=%t reasons=%v recovery=%+v dimensions=%+v", ctx.Err(), last.Excluded, last.Reasons, r.Recovery, r.Dimensions)
 			}
 			if (name == "WAIT regression" || name == "WAITAOF regression") && (!r.Recovery.ClientRecovered || !r.Recovery.CombinedRecovered || r.Recovery.WritePolicyRecovered == nil || *r.Recovery.WritePolicyRecovered || r.Dimensions.WritePolicyAvailable == nil || *r.Dimensions.WritePolicyAvailable || Outcome(r.Recovery) == "recovered") {
-				t.Fatal("basic service conflated with acknowledgement policy recovery")
+				last := r.Samples[len(r.Samples)-1]
+				t.Fatalf("basic service conflated with acknowledgement policy recovery: context=%v excluded=%t reasons=%v recovery=%+v dimensions=%+v", ctx.Err(), last.Excluded, last.Reasons, r.Recovery, r.Dimensions)
 			}
 		})
 	}

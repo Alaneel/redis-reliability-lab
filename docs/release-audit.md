@@ -1,6 +1,6 @@
 # Portfolio release v1.0 audit
 
-This audit records initial local release preparation on 11 October 2026. It separates local source/build validation, actual Docker experiments, and hosted GitHub Actions. At that point, no repository had been published or remote created. The owner subsequently authorized publication to [Alaneel/redis-reliability-lab](https://github.com/Alaneel/redis-reliability-lab). The Go module and internal import paths were changed to that actual repository address; the saved local checks and source manifests below describe the prepublication snapshot. Hosted validation must be assessed separately from those historical local results.
+This audit records initial local release preparation on 11 October 2026. It separates local source/build validation, actual Docker experiments, and hosted GitHub Actions. At that point, no repository had been published or remote created. The owner subsequently authorized publication to [Alaneel/redis-reliability-lab](https://github.com/Alaneel/redis-reliability-lab). The Go module and internal import paths were changed to that actual repository address; the saved local checks and source manifests below describe the prepublication snapshot. Hosted validation must be assessed separately from those historical local results; see the [publication validation record](github-publication.md).
 
 ## Scope and changes
 
@@ -35,7 +35,7 @@ The Linux runner used official Go 1.26.9 and Docker CLI 24.0.6, a local Unix dae
 
 The attempted full Docker suite from inside that runner failed at readiness because the published `127.0.0.1` endpoints were unreachable there. The [unmodified failed attempt](examples/release-v1.0/linux-integration-attempt.log) records connection refusals and its termination. This is **not a passing Linux Docker integration result**. The attempt used Docker Desktop's Linux VM from a macOS host, rather than a native Linux host. Docker documents its [Desktop VM and host forwarding boundary](https://docs.docker.com/desktop/features/networking/) and requires Desktop 4.34+ with an enabled setting for [Desktop host networking](https://docs.docker.com/engine/network/drivers/host/). No Desktop setting was changed to make the test pass.
 
-The incompatible harness was stopped. Its exact managed run IDs were cleaned through `redis-lab cleanup`, and managed container/network/volume inventories were empty before the next host suite. The temporary owned validation image was subsequently removed. Native Linux Docker end-to-end behavior and hosted Ubuntu GitHub Actions remain **unverified**. A successful hosted workflow or native Linux `make integration` is a release gate; an amd64 cross-build does not satisfy it.
+The incompatible harness was stopped. Its exact managed run IDs were cleaned through `redis-lab cleanup`, and managed container/network/volume inventories were empty before the next host suite. The temporary owned validation image was subsequently removed. At the end of that initial local audit, native Linux Docker end-to-end behavior and hosted Ubuntu GitHub Actions remained **unverified**. Subsequent hosted outcomes are recorded in the [publication validation record](github-publication.md). A successful hosted workflow or native Linux `make integration` is a release gate; an amd64 cross-build does not satisfy it.
 
 ## Security, licensing and artifact review
 
