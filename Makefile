@@ -20,4 +20,4 @@ clean:
 # Opt-in fresh dataset collection uses the existing managed local Docker boundary.
 aiops-integration:
 	test -n "$$REDIS_LAB_DATASET"
-	go test -race -tags=integration -count=1 -timeout=25m -run '^TestDockerGenerateIncidentDataset$$' -v ./internal/evaluation
+	REDIS_LAB_DATASET="$(abspath $(REDIS_LAB_DATASET))" go test -race -tags=integration -count=1 -timeout=25m -run '^TestDockerGenerateIncidentDataset$$' -v ./internal/evaluation
