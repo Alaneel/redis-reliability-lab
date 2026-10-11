@@ -13,11 +13,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/batch"
-	"github.com/alanwang/redis-reliability-lab/internal/comparison"
-	"github.com/alanwang/redis-reliability-lab/internal/config"
-	"github.com/alanwang/redis-reliability-lab/internal/environment"
-	"github.com/alanwang/redis-reliability-lab/internal/experiment"
+	"github.com/Alaneel/redis-reliability-lab/internal/batch"
+	"github.com/Alaneel/redis-reliability-lab/internal/comparison"
+	"github.com/Alaneel/redis-reliability-lab/internal/config"
+	"github.com/Alaneel/redis-reliability-lab/internal/environment"
+	"github.com/Alaneel/redis-reliability-lab/internal/experiment"
 )
 
 var version = "dev"

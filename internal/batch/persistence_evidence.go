@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/cluster"
-	"github.com/alanwang/redis-reliability-lab/internal/environment"
-	"github.com/alanwang/redis-reliability-lab/internal/report"
+	"github.com/Alaneel/redis-reliability-lab/internal/cluster"
+	"github.com/Alaneel/redis-reliability-lab/internal/environment"
+	"github.com/Alaneel/redis-reliability-lab/internal/report"
 )
 
 // Aggregate recovery claims require the stopped barrier and frozen read-back

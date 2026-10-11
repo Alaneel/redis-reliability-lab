@@ -3,8 +3,8 @@ package batch
 import (
 	"errors"
 
-	"github.com/alanwang/redis-reliability-lab/internal/cluster"
-	"github.com/alanwang/redis-reliability-lab/internal/report"
+	"github.com/Alaneel/redis-reliability-lab/internal/cluster"
+	"github.com/Alaneel/redis-reliability-lab/internal/report"
 )
 
 // Recovered lifecycle outcomes need a concrete repaired node and a fresh full

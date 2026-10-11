@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/batch"
-	"github.com/alanwang/redis-reliability-lab/internal/config"
-	"github.com/alanwang/redis-reliability-lab/internal/environment"
-	"github.com/alanwang/redis-reliability-lab/internal/report"
+	"github.com/Alaneel/redis-reliability-lab/internal/batch"
+	"github.com/Alaneel/redis-reliability-lab/internal/config"
+	"github.com/Alaneel/redis-reliability-lab/internal/environment"
+	"github.com/Alaneel/redis-reliability-lab/internal/report"
 )
 
 // An unsuccessful trial is evidence, not a reason to omit it or reuse its

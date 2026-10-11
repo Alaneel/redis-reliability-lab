@@ -3,7 +3,7 @@ package batch
 import (
 	"net"
 
-	"github.com/alanwang/redis-reliability-lab/internal/report"
+	"github.com/Alaneel/redis-reliability-lab/internal/report"
 )
 
 // recoveredNetworkEvidence validates the network experiment's evidence without

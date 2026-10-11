@@ -1,4 +1,4 @@
-module github.com/alanwang/redis-reliability-lab
+module github.com/Alaneel/redis-reliability-lab
 
 go 1.26.0
 

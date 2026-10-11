@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/alanwang/redis-reliability-lab/internal/workload"
+	"github.com/Alaneel/redis-reliability-lab/internal/workload"
 )
 
 func (s Summary) policyMarkdown(b *bytes.Buffer) {

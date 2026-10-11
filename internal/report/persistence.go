@@ -5,9 +5,9 @@ import (
 	"io"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/cluster"
-	"github.com/alanwang/redis-reliability-lab/internal/environment"
-	"github.com/alanwang/redis-reliability-lab/internal/workload"
+	"github.com/Alaneel/redis-reliability-lab/internal/cluster"
+	"github.com/Alaneel/redis-reliability-lab/internal/environment"
+	"github.com/Alaneel/redis-reliability-lab/internal/workload"
 )
 
 // PersistenceFailureModel names the measured process failure model. It is shared

@@ -3,8 +3,8 @@ package batch
 import (
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/report"
-	"github.com/alanwang/redis-reliability-lab/internal/workload"
+	"github.com/Alaneel/redis-reliability-lab/internal/report"
+	"github.com/Alaneel/redis-reliability-lab/internal/workload"
 )
 
 var eventNames = []string{"failure_detected", "replica_promoted", "full_slot_coverage", "topology_converged", "client_first_all_shard_success", "client_stable", "combined_stable", "write_policy_stable", "replication_interrupted", "target_reachable_after_repair", "membership_rejoined", "replica_link_up", "replica_sync_complete", "stable_redundancy", "original_topology_stable", "persistence_recovered", "all_processes_stopped"}

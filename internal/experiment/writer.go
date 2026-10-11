@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/environment"
-	"github.com/alanwang/redis-reliability-lab/internal/workload"
+	"github.com/Alaneel/redis-reliability-lab/internal/environment"
+	"github.com/Alaneel/redis-reliability-lab/internal/workload"
 	"github.com/redis/go-redis/v9"
 	"github.com/redis/go-redis/v9/maintnotifications"
 )

@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/metrics"
-	"github.com/alanwang/redis-reliability-lab/internal/workload"
+	"github.com/Alaneel/redis-reliability-lab/internal/metrics"
+	"github.com/Alaneel/redis-reliability-lab/internal/workload"
 )
 
 func TestWAITAOFMarkdownSeparatesPairCountsAndFullSETLedger(t *testing.T) {

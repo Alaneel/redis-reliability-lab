@@ -2,8 +2,8 @@ package batch
 
 import (
 	"context"
-	"github.com/alanwang/redis-reliability-lab/internal/config"
-	"github.com/alanwang/redis-reliability-lab/internal/report"
+	"github.com/Alaneel/redis-reliability-lab/internal/config"
+	"github.com/Alaneel/redis-reliability-lab/internal/report"
 	"testing"
 )
 

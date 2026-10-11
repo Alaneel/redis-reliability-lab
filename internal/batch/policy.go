@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alanwang/redis-reliability-lab/internal/metrics"
-	"github.com/alanwang/redis-reliability-lab/internal/report"
-	"github.com/alanwang/redis-reliability-lab/internal/workload"
+	"github.com/Alaneel/redis-reliability-lab/internal/metrics"
+	"github.com/Alaneel/redis-reliability-lab/internal/report"
+	"github.com/Alaneel/redis-reliability-lab/internal/workload"
 )
 
 func sumPolicyCounts(a, b workload.PolicyCounts) workload.PolicyCounts {

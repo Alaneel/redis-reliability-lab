@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/config"
-	"github.com/alanwang/redis-reliability-lab/internal/report"
+	"github.com/Alaneel/redis-reliability-lab/internal/config"
+	"github.com/Alaneel/redis-reliability-lab/internal/report"
 )
 
 func waitAOFRuntimeFixture(t *testing.T, persistence bool) *report.Report {

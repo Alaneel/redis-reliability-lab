@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/metrics"
+	"github.com/Alaneel/redis-reliability-lab/internal/metrics"
 )
 
 // WriteExecutor owns routing and physical-connection affinity for SET and its

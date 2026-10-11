@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/batch"
+	"github.com/Alaneel/redis-reliability-lab/internal/batch"
 )
 
 func (s Summary) Markdown() string {

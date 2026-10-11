@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/report"
-	"github.com/alanwang/redis-reliability-lab/internal/workload"
+	"github.com/Alaneel/redis-reliability-lab/internal/report"
+	"github.com/Alaneel/redis-reliability-lab/internal/workload"
 )
 
 // ProbeWritePolicy preserves the WAIT probe API for existing callers.

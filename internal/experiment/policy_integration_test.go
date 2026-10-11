@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/config"
-	"github.com/alanwang/redis-reliability-lab/internal/environment"
+	"github.com/Alaneel/redis-reliability-lab/internal/config"
+	"github.com/Alaneel/redis-reliability-lab/internal/environment"
 )
 
 func TestDockerWaitPolicyPreservesSETLedgerAndReportsDegradedAcknowledgements(t *testing.T) {

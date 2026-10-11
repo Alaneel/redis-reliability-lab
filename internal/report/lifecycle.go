@@ -5,8 +5,8 @@ import (
 	"io"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/cluster"
-	"github.com/alanwang/redis-reliability-lab/internal/environment"
+	"github.com/Alaneel/redis-reliability-lab/internal/cluster"
+	"github.com/Alaneel/redis-reliability-lab/internal/environment"
 )
 
 // LifecycleSchemaVersion adds independent replica lifecycle and persistence

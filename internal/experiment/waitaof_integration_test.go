@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/cluster"
-	"github.com/alanwang/redis-reliability-lab/internal/config"
-	"github.com/alanwang/redis-reliability-lab/internal/environment"
-	"github.com/alanwang/redis-reliability-lab/internal/report"
+	"github.com/Alaneel/redis-reliability-lab/internal/cluster"
+	"github.com/Alaneel/redis-reliability-lab/internal/config"
+	"github.com/Alaneel/redis-reliability-lab/internal/environment"
+	"github.com/Alaneel/redis-reliability-lab/internal/report"
 )
 
 func assertWAITAOFAccounting(t *testing.T, r *report.Report) {

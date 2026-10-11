@@ -9,6 +9,8 @@ It provisions **three primaries and three replicas**, drives bounded synthetic t
 With Go 1.26+ and Docker running Linux containers through a local Unix socket, run from the repository root:
 
 ```sh
+git clone https://github.com/Alaneel/redis-reliability-lab.git
+cd redis-reliability-lab
 make build
 bin/redis-lab validate experiments/primary-failure.yaml
 bin/redis-lab run -output reports experiments/primary-failure.yaml

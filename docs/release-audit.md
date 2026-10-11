@@ -1,6 +1,6 @@
 # Portfolio release v1.0 audit
 
-This audit records release preparation on 11 October 2026. It separates local source/build validation, actual Docker experiments, and hosted GitHub Actions. No repository has been published, remote created, or external GitHub setting changed.
+This audit records initial local release preparation on 11 October 2026. It separates local source/build validation, actual Docker experiments, and hosted GitHub Actions. At that point, no repository had been published or remote created. The owner subsequently authorized publication to [Alaneel/redis-reliability-lab](https://github.com/Alaneel/redis-reliability-lab). The Go module and internal import paths were changed to that actual repository address; the saved local checks and source manifests below describe the prepublication snapshot. Hosted validation must be assessed separately from those historical local results.
 
 ## Scope and changes
 

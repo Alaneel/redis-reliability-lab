@@ -17,7 +17,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/metrics"
+	"github.com/Alaneel/redis-reliability-lab/internal/metrics"
 	"github.com/redis/go-redis/v9"
 )
 

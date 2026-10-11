@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/workload"
+	"github.com/Alaneel/redis-reliability-lab/internal/workload"
 	"github.com/redis/go-redis/v9"
 )
 

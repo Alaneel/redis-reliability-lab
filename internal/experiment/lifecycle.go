@@ -7,11 +7,11 @@ import (
 	"net"
 	"time"
 
-	"github.com/alanwang/redis-reliability-lab/internal/cluster"
-	"github.com/alanwang/redis-reliability-lab/internal/config"
-	"github.com/alanwang/redis-reliability-lab/internal/environment"
-	"github.com/alanwang/redis-reliability-lab/internal/report"
-	"github.com/alanwang/redis-reliability-lab/internal/workload"
+	"github.com/Alaneel/redis-reliability-lab/internal/cluster"
+	"github.com/Alaneel/redis-reliability-lab/internal/config"
+	"github.com/Alaneel/redis-reliability-lab/internal/environment"
+	"github.com/Alaneel/redis-reliability-lab/internal/report"
+	"github.com/Alaneel/redis-reliability-lab/internal/workload"
 )
 
 func lifecycleRestored(s cluster.Snapshot, selected cluster.Selection, baseline cluster.Snapshot, replica bool) (bool, []string) {
