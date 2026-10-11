@@ -1,0 +1,56 @@
+{"time":"2026-10-11T18:53:33.874807+08:00","level":"INFO","msg":"experiment stage","run_id":"4f98886ad19defb3c16e8744","stage":"provisioning"}
+{"time":"2026-10-11T18:53:39.627968+08:00","level":"INFO","msg":"experiment stage","run_id":"4f98886ad19defb3c16e8744","stage":"readiness"}
+{"time":"2026-10-11T18:53:44.850844+08:00","level":"INFO","msg":"experiment stage","run_id":"4f98886ad19defb3c16e8744","stage":"baseline"}
+{"time":"2026-10-11T18:53:54.867511+08:00","level":"INFO","msg":"experiment stage","run_id":"4f98886ad19defb3c16e8744","stage":"injecting"}
+{"time":"2026-10-11T18:53:55.072787+08:00","level":"INFO","msg":"experiment stage","run_id":"4f98886ad19defb3c16e8744","stage":"observing"}
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:56 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:53:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:54:00 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:54:00 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:54:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:54:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+redis: 2026/10/11 18:54:02 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:65061: connect: connection refused
+{"time":"2026-10-11T18:54:03.402814+08:00","level":"INFO","msg":"experiment stage","run_id":"4f98886ad19defb3c16e8744","stage":"post_recovery"}
+{"time":"2026-10-11T18:54:08.403065+08:00","level":"INFO","msg":"experiment stage","run_id":"4f98886ad19defb3c16e8744","stage":"validating"}
+{"time":"2026-10-11T18:54:09.019204+08:00","level":"INFO","msg":"experiment stage","run_id":"4f98886ad19defb3c16e8744","stage":"cleanup"}
+{"time":"2026-10-11T18:54:10.498888+08:00","level":"INFO","msg":"experiment stage","run_id":"4f98886ad19defb3c16e8744","stage":"complete"}
+{"time":"2026-10-11T18:54:10.53358+08:00","level":"INFO","msg":"experiment finished","run_id":"4f98886ad19defb3c16e8744","outcome":"recovered","reports":"/Users/alanwang/Desktop/redis-reliability-lab/reports/release-v1.0/4f98886ad19defb3c16e8744","cleanup_verified":true}
+Outcome: recovered
+Reports: /Users/alanwang/Desktop/redis-reliability-lab/reports/release-v1.0/4f98886ad19defb3c16e8744

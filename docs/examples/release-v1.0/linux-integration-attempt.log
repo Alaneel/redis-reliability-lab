@@ -1,0 +1,219 @@
+go test -race -tags=integration -count=1 -timeout=20m -v ./internal/experiment
+=== RUN   TestDockerRepeatedRecoveryTimeout
+time=2026-10-11T10:36:47.488Z level=INFO msg="experiment stage" run_id=6ad2b41930a1f41e41ad1d91 stage=provisioning
+time=2026-10-11T10:36:52.285Z level=INFO msg="experiment stage" run_id=6ad2b41930a1f41e41ad1d91 stage=readiness
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61789: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61783: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61784: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61785: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61789: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61786: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61783: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61784: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61785: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61788: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61786: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61788: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61784: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61785: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61788: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61789: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61786: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61783: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61789: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61785: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61784: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61788: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61783: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61786: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61786: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61788: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61789: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61784: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61785: connect: connection refused
+redis: 2026/10/11 10:36:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61783: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61788: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61786: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61789: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61785: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61784: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61783: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61789: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61788: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61785: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61786: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61784: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61783: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61788: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61789: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61783: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61784: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61786: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61785: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61783: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61786: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61789: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61784: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61785: connect: connection refused
+redis: 2026/10/11 10:36:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61788: connect: connection refused
+redis: 2026/10/11 10:36:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61788: connect: connection refused
+redis: 2026/10/11 10:36:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61789: connect: connection refused
+redis: 2026/10/11 10:36:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61783: connect: connection refused
+redis: 2026/10/11 10:36:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61785: connect: connection refused
+redis: 2026/10/11 10:36:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61784: connect: connection refused
+redis: 2026/10/11 10:36:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61786: connect: connection refused
+redis: 2026/10/11 10:36:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61786: connect: connection refused
+redis: 2026/10/11 10:36:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61784: connect: connection refused
+redis: 2026/10/11 10:36:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61789: connect: connection refused
+redis: 2026/10/11 10:36:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61783: connect: connection refused
+redis: 2026/10/11 10:36:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61785: connect: connection refused
+redis: 2026/10/11 10:36:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61788: connect: connection refused
+time=2026-10-11T10:37:52.288Z level=INFO msg="experiment stage" run_id=6ad2b41930a1f41e41ad1d91 stage=cleanup
+time=2026-10-11T10:37:53.235Z level=INFO msg="experiment stage" run_id=6ad2b41930a1f41e41ad1d91 stage=complete
+time=2026-10-11T10:37:53.242Z level=INFO msg="experiment finished" run_id=6ad2b41930a1f41e41ad1d91 outcome=failed reports=/workspace/reports/ci/batch-745c27125b24685b84250257/runs/6ad2b41930a1f41e41ad1d91 cleanup_verified=true
+time=2026-10-11T10:37:53.253Z level=INFO msg="experiment stage" run_id=edc552124e5d83b61eea4fed stage=provisioning
+time=2026-10-11T10:37:57.705Z level=INFO msg="experiment stage" run_id=edc552124e5d83b61eea4fed stage=readiness
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61859: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61860: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61858: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61863: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61861: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61862: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61860: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61859: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61863: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61858: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61861: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61862: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61858: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61860: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61862: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61859: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61861: connect: connection refused
+redis: 2026/10/11 10:37:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61863: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61863: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61858: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61862: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61861: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61859: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61860: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61861: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61859: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61860: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61862: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61863: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61858: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61860: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61862: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61863: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61861: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61859: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61858: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61860: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61863: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61859: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61862: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61861: connect: connection refused
+redis: 2026/10/11 10:37:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61858: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61860: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61863: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61862: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61859: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61858: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61861: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61858: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61859: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61860: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61863: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61862: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61861: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61862: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61863: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61860: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61861: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61858: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61859: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61858: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61859: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61860: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61861: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61863: connect: connection refused
+redis: 2026/10/11 10:37:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61862: connect: connection refused
+time=2026-10-11T10:38:57.709Z level=INFO msg="experiment stage" run_id=edc552124e5d83b61eea4fed stage=cleanup
+time=2026-10-11T10:38:58.568Z level=INFO msg="experiment stage" run_id=edc552124e5d83b61eea4fed stage=complete
+time=2026-10-11T10:38:58.573Z level=INFO msg="experiment finished" run_id=edc552124e5d83b61eea4fed outcome=failed reports=/workspace/reports/ci/batch-745c27125b24685b84250257/runs/edc552124e5d83b61eea4fed cleanup_verified=true
+    batch_integration_test.go:55: inaccurate trial evidence: {SchemaVersion:2 RunID:6ad2b41930a1f41e41ad1d91 Outcome:failed StartedAt:2026-10-11 10:36:47.488660886 +0000 UTC FinishedAt:2026-10-11 10:37:53.235694722 +0000 UTC Config:{Version:1 Name:primary-failure Environment:{Persistence:memory RedisImage:redis:8.10.2-alpine NodeTimeout:1s} Workload:{WritePolicy:set WaitReplicas:1 WaitTimeout:100ms Workers:8 RatePerSecond:200 MaxWrites:20000 ReadPercent:50 ValueBytes:128 Seed:42 OperationTimeout:500ms} Experiment:{Fault:primary-kill Repair:false DownDuration:3s IsolationDuration:8s Baseline:2s PostRecovery:2s SampleInterval:200ms StableFor:1s MinimumBaselineSuccess:0.99} Timeouts:{Provision:2m0s Readiness:1m0s Recovery:100ms Repair:30s Restoration:30s Reconciliation:30s Validation:30s Cleanup:30s}} ConfigSHA256:1327623c02402c0222e87292aed6c1e43398671f06594e5d72b0096d5fd924e8 Host:map[architecture:arm64 go_version:go1.26.9 logical_cpus:12 os:linux] Environment:0xc0000880e0 Events:[{Stage:created At:2026-10-11 10:36:47.488660886 +0000 UTC} {Stage:provisioning At:2026-10-11 10:36:47.488768011 +0000 UTC} {Stage:readiness At:2026-10-11 10:36:52.285595638 +0000 UTC} {Stage:cleanup At:2026-10-11 10:37:52.28891818 +0000 UTC} {Stage:complete At:2026-10-11 10:37:53.235644139 +0000 UTC}] Selection:<nil> FaultRequestedAt:<nil> FaultCompletedAt:<nil> FaultActionDurationMS:<nil> NetworkFault:<nil> LifecycleFault:<nil> PersistenceFault:<nil> PersistencePrepared:[] BaselineWritePolicyProbe:<nil> Dimensions:<nil> Initial:0xc000024140 Final:<nil> Samples:[] DroppedSamples:0 Recovery:{FailureDetected:<nil> ReplicaPromoted:<nil> FullCoverage:<nil> TopologyConverged:<nil> ClientFirstSuccess:<nil> ClientStable:<nil> CombinedStable:<nil> TopologyRecovered:false ClientRecovered:false CombinedRecovered:false DataVerified:false ProcessRestarted:false RedundancyRestored:false TimedOut:false WritePolicyRecovered:<nil> WritePolicyStable:<nil>} Metrics:{StartedAt:0001-01-01 00:00:00 +0000 UTC EndedAt:0001-01-01 00:00:00 +0000 UTC Phases:map[] Totals:{Attempts:0 Successes:0 Errors:0 ErrorClasses:map[] ByOperation:map[] Latency:{Count:0 MinMS:0 P50MS:0 P95MS:0 P99MS:0 MaxMS:0} SuccessfulLatency:{Count:0 MinMS:0 P50MS:0 P95MS:0 P99MS:0 MaxMS:0} FailedLatency:{Count:0 MinMS:0 P50MS:0 P95MS:0 P99MS:0 MaxMS:0} DurationSeconds:0 Throughput:0 SuccessRate:0} Windows:[] DroppedWindows:0 PhaseTransitions:[] Methodology:} WorkloadStats:{WritePolicy: PolicyTotals:{SetAcknowledged:0 SetErrors:0 WaitAttempted:0 WaitNotAttempted:0 WaitNotAttemptedTimeouts:0 WaitSatisfied:0 WaitShort:0 WaitErrors:0 WaitClientTimeouts:0 PolicySatisfied:0 HandledRedirects:0 WaitAcknowledgements:map[] WaitAOFAttempted:0 WaitAOFNotAttempted:0 WaitAOFNotAttemptedTimeouts:0 WaitAOFSatisfied:0 WaitAOFShort:0 WaitAOFErrors:0 WaitAOFClientTimeouts:0 WaitAOFLocalSatisfied:0 WaitAOFReplicaSatisfied:0 WaitAOFReplies:map[]} PolicyByPhase:map[] WriteStages:{StartedAt:0001-01-01 00:00:00 +0000 UTC EndedAt:0001-01-01 00:00:00 +0000 UTC Phases:map[] Totals:{Attempts:0 Successes:0 Errors:0 ErrorClasses:map[] ByOperation:map[] Latency:{Count:0 MinMS:0 P50MS:0 P95MS:0 P99MS:0 MaxMS:0} SuccessfulLatency:{Count:0 MinMS:0 P50MS:0 P95MS:0 P99MS:0 MaxMS:0} FailedLatency:{Count:0 MinMS:0 P50MS:0 P95MS:0 P99MS:0 MaxMS:0} DurationSeconds:0 Throughput:0 SuccessRate:0} Windows:[] DroppedWindows:0 PhaseTransitions:[] Methodology:} OfferedRequests:0 StartedRequests:0 CompletedRequests:0 DroppedRequests:0 PacingMethodology: WritesAttempted:0 AcknowledgedWrites:0 AmbiguousWrites:0 ReadChecks:0 MissingReads:0 MismatchedReads:0 WriteLimitReached:false Guarantee:} Validation:{WaitSatisfiedSubset:{Expected:0 Checked:0 Missing:0 Corrupt:0 Unreadable:0 Unverified:0 Complete:false} WaitAOFSatisfiedSubset:{Expected:0 Checked:0 Missing:0 Corrupt:0 Unreadable:0 Unverified:0 Complete:false} StartedAt:0001-01-01 00:00:00 +0000 UTC CompletedAt:0001-01-01 00:00:00 +0000 UTC Complete:false Expected:0 Checked:0 Missing:0 Corrupt:0 Unreadable:0 Unverified:0 Samples:[] Error: Guarantee:} Cleanup:{Attempted:true Successful:true Error:} Errors:[readiness deadline: context deadline exceeded; last observations: [missing or duplicate directly observed Redis identity node-1 Redis version is unavailable node-1 cluster_slots_assigned="", expected 16384 node-1 cluster_slots_fail="", expected 0 node-1 cluster_slots_ok="", expected 16384 node-1 cluster_slots_pfail="", expected 0 node-1 cluster_state is not ok node-1 does not have unique, healthy full slot coverage node-1 has no healthy myself topology entry node-1 has no observed Redis identity node-1 is unreachable node-1 topology has 0 nodes, 0 primaries and 0 replicas node-1: CLUSTER INFO: dial tcp 127.0.0.1:61783: connect: connection refused node-1: CLUSTER NODES: dial tcp 127.0.0.1:61783: connect: connection refused node-1: INFO persistence: dial tcp 127.0.0.1:61783: connect: connection refused node-1: INFO replication: dial tcp 127.0.0.1:61783: connect: connection refused node-1: INFO server: dial tcp 127.0.0.1:61783: connect: connection refused node-1: INFO stats: dial tcp 127.0.0.1:61783: connect: connection refused node-2 Redis version is unavailable node-2 cluster_slots_assigned="", expected 16384 node-2 cluster_slots_fail="", expected 0 node-2 cluster_slots_ok="", expected 16384 node-2 cluster_slots_pfail="", expected 0 node-2 cluster_state is not ok node-2 does not have unique, healthy full slot coverage node-2 has no healthy myself topology entry node-2 has no observed Redis identity node-2 is unreachable node-2 topology has 0 nodes, 0 primaries and 0 replicas node-2: CLUSTER INFO: dial tcp 127.0.0.1:61784: connect: connection refused node-2: CLUSTER NODES: dial tcp 127.0.0.1:61784: connect: connection refused node-2: INFO persistence: dial tcp 127.0.0.1:61784: connect: connection refused node-2: INFO replication: dial tcp 127.0.0.1:61784: connect: connection refused node-2: INFO server: dial tcp 127.0.0.1:61784: connect: connection refused node-2: INFO stats: dial tcp 127.0.0.1:61784: connect: connection refused node-3 Redis version is unavailable node-3 cluster_slots_assigned="", expected 16384 node-3 cluster_slots_fail="", expected 0 node-3 cluster_slots_ok="", expected 16384 node-3 cluster_slots_pfail="", expected 0 node-3 cluster_state is not ok node-3 does not have unique, healthy full slot coverage node-3 has no healthy myself topology entry node-3 has no observed Redis identity node-3 is unreachable node-3 topology has 0 nodes, 0 primaries and 0 replicas node-3: CLUSTER INFO: dial tcp 127.0.0.1:61785: connect: connection refused node-3: CLUSTER NODES: dial tcp 127.0.0.1:61785: connect: connection refused node-3: INFO persistence: dial tcp 127.0.0.1:61785: connect: connection refused node-3: INFO replication: dial tcp 127.0.0.1:61785: connect: connection refused node-3: INFO server: dial tcp 127.0.0.1:61785: connect: connection refused node-3: INFO stats: dial tcp 127.0.0.1:61785: connect: connection refused node-4 Redis version is unavailable node-4 cluster_slots_assigned="", expected 16384 node-4 cluster_slots_fail="", expected 0 node-4 cluster_slots_ok="", expected 16384 node-4 cluster_slots_pfail="", expected 0 node-4 cluster_state is not ok node-4 does not have unique, healthy full slot coverage node-4 has no healthy myself topology entry node-4 has no observed Redis identity node-4 is unreachable node-4 topology has 0 nodes, 0 primaries and 0 replicas node-4: CLUSTER INFO: dial tcp 127.0.0.1:61786: connect: connection refused node-4: CLUSTER NODES: dial tcp 127.0.0.1:61786: connect: connection refused node-4: INFO persistence: dial tcp 127.0.0.1:61786: connect: connection refused node-4: INFO replication: dial tcp 127.0.0.1:61786: connect: connection refused node-4: INFO server: dial tcp 127.0.0.1:61786: connect: connection refused node-4: INFO stats: dial tcp 127.0.0.1:61786: connect: connection refused node-5 Redis version is unavailable node-5 cluster_slots_assigned="", expected 16384 node-5 cluster_slots_fail="", expected 0 node-5 cluster_slots_ok="", expected 16384 node-5 cluster_slots_pfail="", expected 0 node-5 cluster_state is not ok node-5 does not have unique, healthy full slot coverage node-5 has no healthy myself topology entry node-5 has no observed Redis identity node-5 is unreachable node-5 topology has 0 nodes, 0 primaries and 0 replicas node-5: CLUSTER INFO: dial tcp 127.0.0.1:61788: connect: connection refused node-5: CLUSTER NODES: dial tcp 127.0.0.1:61788: connect: connection refused node-5: INFO persistence: dial tcp 127.0.0.1:61788: connect: connection refused node-5: INFO replication: dial tcp 127.0.0.1:61788: connect: connection refused node-5: INFO server: dial tcp 127.0.0.1:61788: connect: connection refused node-5: INFO stats: dial tcp 127.0.0.1:61788: connect: connection refused node-6 Redis version is unavailable node-6 cluster_slots_assigned="", expected 16384 node-6 cluster_slots_fail="", expected 0 node-6 cluster_slots_ok="", expected 16384 node-6 cluster_slots_pfail="", expected 0 node-6 cluster_state is not ok node-6 does not have unique, healthy full slot coverage node-6 has no healthy myself topology entry node-6 has no observed Redis identity node-6 is unreachable node-6 topology has 0 nodes, 0 primaries and 0 replicas node-6: CLUSTER INFO: dial tcp 127.0.0.1:61789: connect: connection refused node-6: CLUSTER NODES: dial tcp 127.0.0.1:61789: connect: connection refused node-6: INFO persistence: dial tcp 127.0.0.1:61789: connect: connection refused node-6: INFO replication: dial tcp 127.0.0.1:61789: connect: connection refused node-6: INFO server: dial tcp 127.0.0.1:61789: connect: connection refused node-6: INFO stats: dial tcp 127.0.0.1:61789: connect: connection refused]] Methodology:[Fault is SIGKILL of the deterministic primary owning the lowest initial slot; the process remains stopped. Initial topology is three primaries and one synchronized replica each. Time origin is the start of validated fault injection, including Docker ownership inspections before SIGKILL; successful command completion is also recorded. Redis event times are bounded by polling and request deadlines; views within a snapshot are concurrent and not an atomic Redis snapshot. A sample collects direct CLUSTER INFO/NODES and replication/server INFO from all six managed nodes, then parallel SET/GET probes to all three initial shards. Poll interval is a delay after sample completion; actual timestamps define resolution. Recovery requires five surviving nodes healthy with exactly one owner per 16384 slots, equal ownership maps, the original replica owning the failed primary slots, unaffected ownership preserved, and all-shard SET/GET probes succeeding for stable_for. Post-recovery probes continue to detect regressions. Probes are separate from workload metrics and do not guarantee every request succeeded between samples. The workload success rate, latency distributions and error counts report client-visible operations, including terminal errors after cluster redirections. Workload stops and waits for in-flight requests before verifying every acknowledged immutable write. Missing/corrupt reads during traffic also prevent a recovered outcome. Error-returning writes have unknown outcomes, not proven lost writes. At most 1200 topology samples are retained (first 1199 and latest); dropped_samples records omitted intermediates. Milestones are retained independently. No process restart or redundancy restoration is attempted.]}
+--- FAIL: TestDockerRepeatedRecoveryTimeout (131.10s)
+=== RUN   TestDockerPrimaryFailure
+time=2026-10-11T10:38:58.593Z level=INFO msg="experiment stage" run_id=203f2adce33912f747e1180e stage=provisioning
+time=2026-10-11T10:39:03.301Z level=INFO msg="experiment stage" run_id=203f2adce33912f747e1180e stage=readiness
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61912: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61911: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61910: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61912: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61908: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61909: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61911: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61913: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61910: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61909: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61908: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61913: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61908: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61910: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61911: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61912: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61913: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61909: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61910: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61912: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61911: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61913: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61909: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61908: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61910: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61908: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61911: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61913: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61909: connect: connection refused
+redis: 2026/10/11 10:39:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61912: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61909: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61910: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61913: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61911: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61908: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61912: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61911: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61913: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61908: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61910: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61912: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61909: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61908: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61912: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61911: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61909: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61913: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61910: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61913: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61911: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61908: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61909: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61910: connect: connection refused
+redis: 2026/10/11 10:39:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61912: connect: connection refused
+redis: 2026/10/11 10:39:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61911: connect: connection refused
+redis: 2026/10/11 10:39:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61909: connect: connection refused
+redis: 2026/10/11 10:39:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61913: connect: connection refused
+redis: 2026/10/11 10:39:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61912: connect: connection refused
+redis: 2026/10/11 10:39:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61910: connect: connection refused
+redis: 2026/10/11 10:39:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61908: connect: connection refused
+redis: 2026/10/11 10:39:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61910: connect: connection refused
+redis: 2026/10/11 10:39:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61911: connect: connection refused
+redis: 2026/10/11 10:39:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61913: connect: connection refused
+redis: 2026/10/11 10:39:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61908: connect: connection refused
+redis: 2026/10/11 10:39:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61909: connect: connection refused
+redis: 2026/10/11 10:39:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:61912: connect: connection refused
+signal: killed
+FAIL	github.com/alanwang/redis-reliability-lab/internal/experiment	146.575s
+FAIL
+make: *** [Makefile:10: integration] Error 1

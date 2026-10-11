@@ -1,0 +1,2712 @@
+{
+  "schema_version": 1,
+  "batch_id": "batch-d0662642c7cf1047aa35a9ed",
+  "directory": "/Users/alanwang/Desktop/redis-reliability-lab/reports/comparison-321638985ff49f9040049bf4/trials/position-0009/batch-d0662642c7cf1047aa35a9ed",
+  "outcome": "recovered",
+  "started_at": "2026-10-11T09:16:42.829065Z",
+  "finished_at": "2026-10-11T09:17:22.331474Z",
+  "config": {
+    "version": 1,
+    "name": "policy-aof-set",
+    "environment": {
+      "persistence": "aof-always",
+      "redis_image": "redis:8.10.2-alpine",
+      "node_timeout": "1s"
+    },
+    "workload": {
+      "write_policy": "set",
+      "wait_replicas": 1,
+      "wait_timeout": "100ms",
+      "workers": 8,
+      "rate_per_second": 200,
+      "max_writes": 20000,
+      "read_percent": 50,
+      "value_bytes": 128,
+      "seed": 42,
+      "operation_timeout": "500ms"
+    },
+    "experiment": {
+      "fault": "primary-kill",
+      "repair": true,
+      "down_duration": "3s",
+      "isolation_duration": "8s",
+      "baseline": "4s",
+      "post_recovery": "2s",
+      "sample_interval": "250ms",
+      "stable_for": "1s",
+      "minimum_baseline_success": 0.99
+    },
+    "timeouts": {
+      "provision": "2m0s",
+      "readiness": "1m0s",
+      "recovery": "30s",
+      "repair": "1m0s",
+      "restoration": "30s",
+      "reconciliation": "30s",
+      "validation": "30s",
+      "cleanup": "30s"
+    }
+  },
+  "effective_config_sha256": "de05e21df2ed5b0a82dc0af8fa135f9173da7c1fdf43019ed7cd93af6d12f3cf",
+  "requested_trials": 1,
+  "started_trials": 1,
+  "completed_trials": 1,
+  "unstarted_trials": 0,
+  "outcomes": {
+    "aborted": 0,
+    "failed": 0,
+    "partial": 0,
+    "recovered": 1,
+    "unstarted": 0
+  },
+  "recovery_success_fraction_all_requested_trials": 1,
+  "recovery_success_fraction_started_trials": 1,
+  "cleanup_failures": 0,
+  "incomplete_evidence_trials": 0,
+  "trials": [
+    {
+      "index": 1,
+      "started": true,
+      "run_id": "8d7edf6681a3f591879efeda",
+      "outcome": "recovered",
+      "started_at": "2026-10-11T17:16:42.829144+08:00",
+      "finished_at": "2026-10-11T17:17:22.210203+08:00",
+      "effective_config_sha256": "de05e21df2ed5b0a82dc0af8fa135f9173da7c1fdf43019ed7cd93af6d12f3cf",
+      "report_path": "runs/8d7edf6681a3f591879efeda/report.json",
+      "report_json_available": true,
+      "report_markdown_available": true,
+      "evidence_complete": true,
+      "environment_present": true,
+      "cleanup": {
+        "attempted": true,
+        "successful": true
+      },
+      "fault_action_duration_ms": 236.911667,
+      "observations": {
+        "all_processes_stopped": {
+          "status": "not_at_risk"
+        },
+        "client_first_all_shard_success": {
+          "status": "observed",
+          "since_fault_requested_ms": 3398.084667,
+          "since_fault_completed_ms": 3161.1730000000002,
+          "observation_horizon_at": "2026-10-11T17:17:19.154693+08:00",
+          "horizon_since_fault_requested_ms": 13912.542917,
+          "horizon_since_fault_completed_ms": 13675.63125
+        },
+        "client_stable": {
+          "status": "observed",
+          "since_fault_requested_ms": 4522.178917,
+          "since_fault_completed_ms": 4285.26725,
+          "observation_horizon_at": "2026-10-11T17:17:19.154693+08:00",
+          "horizon_since_fault_requested_ms": 13912.542917,
+          "horizon_since_fault_completed_ms": 13675.63125
+        },
+        "combined_stable": {
+          "status": "observed",
+          "since_fault_requested_ms": 4522.178917,
+          "since_fault_completed_ms": 4285.26725,
+          "observation_horizon_at": "2026-10-11T17:17:19.154693+08:00",
+          "horizon_since_fault_requested_ms": 13912.542917,
+          "horizon_since_fault_completed_ms": 13675.63125
+        },
+        "failure_detected": {
+          "status": "observed",
+          "since_fault_requested_ms": 1804.404833,
+          "since_fault_completed_ms": 1567.493166,
+          "observation_horizon_at": "2026-10-11T17:17:19.154693+08:00",
+          "horizon_since_fault_requested_ms": 13912.542917,
+          "horizon_since_fault_completed_ms": 13675.63125
+        },
+        "full_slot_coverage": {
+          "status": "observed",
+          "since_fault_requested_ms": 2588.465833,
+          "since_fault_completed_ms": 2351.5541660000004,
+          "observation_horizon_at": "2026-10-11T17:17:19.154693+08:00",
+          "horizon_since_fault_requested_ms": 13912.542917,
+          "horizon_since_fault_completed_ms": 13675.63125
+        },
+        "membership_rejoined": {
+          "status": "observed",
+          "since_fault_requested_ms": 6039.702708,
+          "since_fault_completed_ms": 5802.7910409999995,
+          "observation_horizon_at": "2026-10-11T17:17:19.154693+08:00",
+          "horizon_since_fault_requested_ms": 13912.542917,
+          "horizon_since_fault_completed_ms": 13675.63125
+        },
+        "original_topology_stable": {
+          "status": "not_at_risk"
+        },
+        "persistence_recovered": {
+          "status": "not_at_risk"
+        },
+        "replica_link_up": {
+          "status": "observed",
+          "since_fault_requested_ms": 10733.577875,
+          "since_fault_completed_ms": 10496.666208,
+          "observation_horizon_at": "2026-10-11T17:17:19.154693+08:00",
+          "horizon_since_fault_requested_ms": 13912.542917,
+          "horizon_since_fault_completed_ms": 13675.63125
+        },
+        "replica_promoted": {
+          "status": "observed",
+          "since_fault_requested_ms": 2588.465833,
+          "since_fault_completed_ms": 2351.5541660000004,
+          "observation_horizon_at": "2026-10-11T17:17:19.154693+08:00",
+          "horizon_since_fault_requested_ms": 13912.542917,
+          "horizon_since_fault_completed_ms": 13675.63125
+        },
+        "replica_sync_complete": {
+          "status": "observed",
+          "since_fault_requested_ms": 10733.577875,
+          "since_fault_completed_ms": 10496.666208,
+          "observation_horizon_at": "2026-10-11T17:17:19.154693+08:00",
+          "horizon_since_fault_requested_ms": 13912.542917,
+          "horizon_since_fault_completed_ms": 13675.63125
+        },
+        "replication_interrupted": {
+          "status": "observed",
+          "since_fault_requested_ms": 2588.465833,
+          "since_fault_completed_ms": 2351.5541660000004,
+          "observation_horizon_at": "2026-10-11T17:17:19.154693+08:00",
+          "horizon_since_fault_requested_ms": 13912.542917,
+          "horizon_since_fault_completed_ms": 13675.63125
+        },
+        "stable_redundancy": {
+          "status": "observed",
+          "since_fault_requested_ms": 12013.1475,
+          "since_fault_completed_ms": 11776.235832999999,
+          "observation_horizon_at": "2026-10-11T17:17:19.154693+08:00",
+          "horizon_since_fault_requested_ms": 13912.542917,
+          "horizon_since_fault_completed_ms": 13675.63125
+        },
+        "target_reachable_after_repair": {
+          "status": "observed",
+          "since_fault_requested_ms": 6039.702708,
+          "since_fault_completed_ms": 5802.7910409999995,
+          "observation_horizon_at": "2026-10-11T17:17:19.154693+08:00",
+          "horizon_since_fault_requested_ms": 13912.542917,
+          "horizon_since_fault_completed_ms": 13675.63125
+        },
+        "topology_converged": {
+          "status": "observed",
+          "since_fault_requested_ms": 2588.465833,
+          "since_fault_completed_ms": 2351.5541660000004,
+          "observation_horizon_at": "2026-10-11T17:17:19.154693+08:00",
+          "horizon_since_fault_requested_ms": 13912.542917,
+          "horizon_since_fault_completed_ms": 13675.63125
+        },
+        "write_policy_stable": {
+          "status": "not_at_risk"
+        }
+      },
+      "phases": {
+        "baseline": {
+          "attempts": 804,
+          "successes": 804,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 387,
+              "successes": 387,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 387,
+                "min_ms": 0.312125,
+                "p50_ms": 0.449293,
+                "p95_ms": 0.632203,
+                "p99_ms": 0.806872,
+                "max_ms": 2.513125
+              },
+              "successful_latency": {
+                "count": 387,
+                "min_ms": 0.312125,
+                "p50_ms": 0.449293,
+                "p95_ms": 0.632203,
+                "p99_ms": 0.806872,
+                "max_ms": 2.513125
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 417,
+              "successes": 417,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 417,
+                "min_ms": 0.57475,
+                "p50_ms": 1.029797,
+                "p95_ms": 1.677436,
+                "p99_ms": 2.360325,
+                "max_ms": 2.691
+              },
+              "successful_latency": {
+                "count": 417,
+                "min_ms": 0.57475,
+                "p50_ms": 1.029797,
+                "p95_ms": 1.677436,
+                "p99_ms": 2.360325,
+                "max_ms": 2.691
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 804,
+            "min_ms": 0.312125,
+            "p50_ms": 0.806872,
+            "p95_ms": 1.380029,
+            "p99_ms": 2.360325,
+            "max_ms": 2.691
+          },
+          "successful_latency": {
+            "count": 804,
+            "min_ms": 0.312125,
+            "p50_ms": 0.806872,
+            "p95_ms": 1.380029,
+            "p99_ms": 2.360325,
+            "max_ms": 2.691
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 4.021064458,
+          "throughput_ops_per_second": 199.94705590964193,
+          "success_rate": 1
+        },
+        "fault": {
+          "attempts": 543,
+          "successes": 465,
+          "errors": 78,
+          "error_classes": {
+            "CLUSTERDOWN": 14,
+            "network": 30,
+            "timeout": 34
+          },
+          "by_operation": {
+            "get": {
+              "attempts": 282,
+              "successes": 248,
+              "errors": 34,
+              "error_classes": {
+                "timeout": 34
+              },
+              "latency": {
+                "count": 282,
+                "min_ms": 0.277417,
+                "p50_ms": 0.495346,
+                "p95_ms": 501.118375,
+                "p99_ms": 501.118375,
+                "max_ms": 501.118375
+              },
+              "successful_latency": {
+                "count": 248,
+                "min_ms": 0.277417,
+                "p50_ms": 0.471758,
+                "p95_ms": 3.661644,
+                "p99_ms": 396.141159,
+                "max_ms": 446.337584
+              },
+              "failed_latency": {
+                "count": 34,
+                "min_ms": 500.022083,
+                "p50_ms": 501.118375,
+                "p95_ms": 501.118375,
+                "p99_ms": 501.118375,
+                "max_ms": 501.118375
+              }
+            },
+            "set": {
+              "attempts": 261,
+              "successes": 217,
+              "errors": 44,
+              "error_classes": {
+                "CLUSTERDOWN": 14,
+                "network": 30
+              },
+              "latency": {
+                "count": 261,
+                "min_ms": 0.006958,
+                "p50_ms": 0.934056,
+                "p95_ms": 1.761308,
+                "p99_ms": 3.661644,
+                "max_ms": 7.440167
+              },
+              "successful_latency": {
+                "count": 217,
+                "min_ms": 0.554791,
+                "p50_ms": 0.980759,
+                "p95_ms": 2.140883,
+                "p99_ms": 3.661644,
+                "max_ms": 7.440167
+              },
+              "failed_latency": {
+                "count": 44,
+                "min_ms": 0.006958,
+                "p50_ms": 0.205821,
+                "p95_ms": 0.847216,
+                "p99_ms": 0.948083,
+                "max_ms": 0.948083
+              }
+            }
+          },
+          "latency": {
+            "count": 543,
+            "min_ms": 0.006958,
+            "p50_ms": 0.731856,
+            "p95_ms": 501.118375,
+            "p99_ms": 501.118375,
+            "max_ms": 501.118375
+          },
+          "successful_latency": {
+            "count": 465,
+            "min_ms": 0.277417,
+            "p50_ms": 0.697005,
+            "p95_ms": 2.360325,
+            "p99_ms": 325.90631,
+            "max_ms": 446.337584
+          },
+          "failed_latency": {
+            "count": 78,
+            "min_ms": 0.006958,
+            "p50_ms": 0.731856,
+            "p95_ms": 501.118375,
+            "p99_ms": 501.118375,
+            "max_ms": 501.118375
+          },
+          "duration_seconds": 4.525980583,
+          "throughput_ops_per_second": 119.97400122297431,
+          "success_rate": 0.856353591160221
+        },
+        "post_recovery": {
+          "attempts": 400,
+          "successes": 400,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 205,
+              "successes": 205,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 205,
+                "min_ms": 0.256625,
+                "p50_ms": 0.388115,
+                "p95_ms": 0.980759,
+                "p99_ms": 1.521483,
+                "max_ms": 2.321542
+              },
+              "successful_latency": {
+                "count": 205,
+                "min_ms": 0.256625,
+                "p50_ms": 0.388115,
+                "p95_ms": 0.980759,
+                "p99_ms": 1.521483,
+                "max_ms": 2.321542
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 195,
+              "successes": 195,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 195,
+                "min_ms": 0.528833,
+                "p50_ms": 0.934056,
+                "p95_ms": 2.360325,
+                "p99_ms": 2.868992,
+                "max_ms": 3.785834
+              },
+              "successful_latency": {
+                "count": 195,
+                "min_ms": 0.528833,
+                "p50_ms": 0.934056,
+                "p95_ms": 2.360325,
+                "p99_ms": 2.868992,
+                "max_ms": 3.785834
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 400,
+            "min_ms": 0.256625,
+            "p50_ms": 0.697005,
+            "p95_ms": 2.038936,
+            "p99_ms": 2.478342,
+            "max_ms": 3.785834
+          },
+          "successful_latency": {
+            "count": 400,
+            "min_ms": 0.256625,
+            "p50_ms": 0.697005,
+            "p95_ms": 2.038936,
+            "p99_ms": 2.478342,
+            "max_ms": 3.785834
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 2.000557,
+          "throughput_ops_per_second": 199.94431550813098,
+          "success_rate": 1
+        },
+        "reconciliation": {
+          "attempts": 1202,
+          "successes": 1202,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 568,
+              "successes": 568,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 568,
+                "min_ms": 0.237666,
+                "p50_ms": 0.369633,
+                "p95_ms": 0.573426,
+                "p99_ms": 0.768449,
+                "max_ms": 1.611416
+              },
+              "successful_latency": {
+                "count": 568,
+                "min_ms": 0.237666,
+                "p50_ms": 0.369633,
+                "p95_ms": 0.573426,
+                "p99_ms": 0.768449,
+                "max_ms": 1.611416
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 634,
+              "successes": 634,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 634,
+                "min_ms": 0.512791,
+                "p50_ms": 0.889577,
+                "p95_ms": 1.380029,
+                "p99_ms": 2.038936,
+                "max_ms": 2.419542
+              },
+              "successful_latency": {
+                "count": 634,
+                "min_ms": 0.512791,
+                "p50_ms": 0.889577,
+                "p95_ms": 1.380029,
+                "p99_ms": 2.038936,
+                "max_ms": 2.419542
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 1202,
+            "min_ms": 0.237666,
+            "p50_ms": 0.632203,
+            "p95_ms": 1.19212,
+            "p99_ms": 1.677436,
+            "max_ms": 2.419542
+          },
+          "successful_latency": {
+            "count": 1202,
+            "min_ms": 0.237666,
+            "p50_ms": 0.632203,
+            "p95_ms": 1.19212,
+            "p99_ms": 1.677436,
+            "max_ms": 2.419542
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 6.011334,
+          "throughput_ops_per_second": 199.9556171724945,
+          "success_rate": 1
+        },
+        "repair": {
+          "attempts": 302,
+          "successes": 302,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 158,
+              "successes": 158,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 158,
+                "min_ms": 0.276334,
+                "p50_ms": 0.388115,
+                "p95_ms": 0.632203,
+                "p99_ms": 2.038936,
+                "max_ms": 3.278125
+              },
+              "successful_latency": {
+                "count": 158,
+                "min_ms": 0.276334,
+                "p50_ms": 0.388115,
+                "p95_ms": 0.632203,
+                "p99_ms": 2.038936,
+                "max_ms": 3.278125
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 144,
+              "successes": 144,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 144,
+                "min_ms": 0.5535,
+                "p50_ms": 0.934056,
+                "p95_ms": 1.761308,
+                "p99_ms": 2.60226,
+                "max_ms": 2.754
+              },
+              "successful_latency": {
+                "count": 144,
+                "min_ms": 0.5535,
+                "p50_ms": 0.934056,
+                "p95_ms": 1.761308,
+                "p99_ms": 2.60226,
+                "max_ms": 2.754
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 302,
+            "min_ms": 0.276334,
+            "p50_ms": 0.602098,
+            "p95_ms": 1.314313,
+            "p99_ms": 2.60226,
+            "max_ms": 3.278125
+          },
+          "successful_latency": {
+            "count": 302,
+            "min_ms": 0.276334,
+            "p50_ms": 0.602098,
+            "p95_ms": 1.314313,
+            "p99_ms": 2.60226,
+            "max_ms": 3.278125
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 1.510429834,
+          "throughput_ops_per_second": 199.94308454582605,
+          "success_rate": 1
+        }
+      },
+      "workload_stats": {
+        "write_policy": "set",
+        "policy_totals": {
+          "set_acknowledged": 1607,
+          "set_errors": 44,
+          "wait_attempted": 0,
+          "wait_not_attempted": 0,
+          "wait_not_attempted_timeouts": 0,
+          "wait_satisfied": 0,
+          "wait_short": 0,
+          "wait_errors": 0,
+          "wait_client_timeouts": 0,
+          "policy_satisfied": 1607,
+          "handled_redirects": 0,
+          "wait_acknowledgements": {},
+          "waitaof_attempted": 0,
+          "waitaof_not_attempted": 0,
+          "waitaof_not_attempted_timeouts": 0,
+          "waitaof_satisfied": 0,
+          "waitaof_short": 0,
+          "waitaof_errors": 0,
+          "waitaof_client_timeouts": 0,
+          "waitaof_local_satisfied": 0,
+          "waitaof_replica_satisfied": 0,
+          "waitaof_replies": {}
+        },
+        "policy_by_phase": {
+          "baseline": {
+            "set_acknowledged": 417,
+            "set_errors": 0,
+            "wait_attempted": 0,
+            "wait_not_attempted": 0,
+            "wait_not_attempted_timeouts": 0,
+            "wait_satisfied": 0,
+            "wait_short": 0,
+            "wait_errors": 0,
+            "wait_client_timeouts": 0,
+            "policy_satisfied": 417,
+            "handled_redirects": 0,
+            "wait_acknowledgements": {},
+            "waitaof_attempted": 0,
+            "waitaof_not_attempted": 0,
+            "waitaof_not_attempted_timeouts": 0,
+            "waitaof_satisfied": 0,
+            "waitaof_short": 0,
+            "waitaof_errors": 0,
+            "waitaof_client_timeouts": 0,
+            "waitaof_local_satisfied": 0,
+            "waitaof_replica_satisfied": 0,
+            "waitaof_replies": {}
+          },
+          "fault": {
+            "set_acknowledged": 217,
+            "set_errors": 44,
+            "wait_attempted": 0,
+            "wait_not_attempted": 0,
+            "wait_not_attempted_timeouts": 0,
+            "wait_satisfied": 0,
+            "wait_short": 0,
+            "wait_errors": 0,
+            "wait_client_timeouts": 0,
+            "policy_satisfied": 217,
+            "handled_redirects": 0,
+            "wait_acknowledgements": {},
+            "waitaof_attempted": 0,
+            "waitaof_not_attempted": 0,
+            "waitaof_not_attempted_timeouts": 0,
+            "waitaof_satisfied": 0,
+            "waitaof_short": 0,
+            "waitaof_errors": 0,
+            "waitaof_client_timeouts": 0,
+            "waitaof_local_satisfied": 0,
+            "waitaof_replica_satisfied": 0,
+            "waitaof_replies": {}
+          },
+          "post_recovery": {
+            "set_acknowledged": 195,
+            "set_errors": 0,
+            "wait_attempted": 0,
+            "wait_not_attempted": 0,
+            "wait_not_attempted_timeouts": 0,
+            "wait_satisfied": 0,
+            "wait_short": 0,
+            "wait_errors": 0,
+            "wait_client_timeouts": 0,
+            "policy_satisfied": 195,
+            "handled_redirects": 0,
+            "wait_acknowledgements": {},
+            "waitaof_attempted": 0,
+            "waitaof_not_attempted": 0,
+            "waitaof_not_attempted_timeouts": 0,
+            "waitaof_satisfied": 0,
+            "waitaof_short": 0,
+            "waitaof_errors": 0,
+            "waitaof_client_timeouts": 0,
+            "waitaof_local_satisfied": 0,
+            "waitaof_replica_satisfied": 0,
+            "waitaof_replies": {}
+          },
+          "reconciliation": {
+            "set_acknowledged": 634,
+            "set_errors": 0,
+            "wait_attempted": 0,
+            "wait_not_attempted": 0,
+            "wait_not_attempted_timeouts": 0,
+            "wait_satisfied": 0,
+            "wait_short": 0,
+            "wait_errors": 0,
+            "wait_client_timeouts": 0,
+            "policy_satisfied": 634,
+            "handled_redirects": 0,
+            "wait_acknowledgements": {},
+            "waitaof_attempted": 0,
+            "waitaof_not_attempted": 0,
+            "waitaof_not_attempted_timeouts": 0,
+            "waitaof_satisfied": 0,
+            "waitaof_short": 0,
+            "waitaof_errors": 0,
+            "waitaof_client_timeouts": 0,
+            "waitaof_local_satisfied": 0,
+            "waitaof_replica_satisfied": 0,
+            "waitaof_replies": {}
+          },
+          "repair": {
+            "set_acknowledged": 144,
+            "set_errors": 0,
+            "wait_attempted": 0,
+            "wait_not_attempted": 0,
+            "wait_not_attempted_timeouts": 0,
+            "wait_satisfied": 0,
+            "wait_short": 0,
+            "wait_errors": 0,
+            "wait_client_timeouts": 0,
+            "policy_satisfied": 144,
+            "handled_redirects": 0,
+            "wait_acknowledgements": {},
+            "waitaof_attempted": 0,
+            "waitaof_not_attempted": 0,
+            "waitaof_not_attempted_timeouts": 0,
+            "waitaof_satisfied": 0,
+            "waitaof_short": 0,
+            "waitaof_errors": 0,
+            "waitaof_client_timeouts": 0,
+            "waitaof_local_satisfied": 0,
+            "waitaof_replica_satisfied": 0,
+            "waitaof_replies": {}
+          }
+        },
+        "write_stages": {
+          "started_at": "2026-10-11T17:17:01.221218+08:00",
+          "ended_at": "2026-10-11T17:17:19.290451+08:00",
+          "phases": {
+            "baseline": {
+              "attempts": 417,
+              "successes": 417,
+              "errors": 0,
+              "error_classes": {},
+              "by_operation": {
+                "set": {
+                  "attempts": 417,
+                  "successes": 417,
+                  "errors": 0,
+                  "error_classes": {},
+                  "latency": {
+                    "count": 417,
+                    "min_ms": 0.572792,
+                    "p50_ms": 1.029797,
+                    "p95_ms": 1.677436,
+                    "p99_ms": 2.360325,
+                    "max_ms": 2.686542
+                  },
+                  "successful_latency": {
+                    "count": 417,
+                    "min_ms": 0.572792,
+                    "p50_ms": 1.029797,
+                    "p95_ms": 1.677436,
+                    "p99_ms": 2.360325,
+                    "max_ms": 2.686542
+                  },
+                  "failed_latency": {
+                    "count": 0,
+                    "min_ms": 0,
+                    "p50_ms": 0,
+                    "p95_ms": 0,
+                    "p99_ms": 0,
+                    "max_ms": 0
+                  }
+                }
+              },
+              "latency": {
+                "count": 417,
+                "min_ms": 0.572792,
+                "p50_ms": 1.029797,
+                "p95_ms": 1.677436,
+                "p99_ms": 2.360325,
+                "max_ms": 2.686542
+              },
+              "successful_latency": {
+                "count": 417,
+                "min_ms": 0.572792,
+                "p50_ms": 1.029797,
+                "p95_ms": 1.677436,
+                "p99_ms": 2.360325,
+                "max_ms": 2.686542
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              },
+              "duration_seconds": 4.021064458,
+              "throughput_ops_per_second": 103.70388347552324,
+              "success_rate": 1
+            },
+            "fault": {
+              "attempts": 261,
+              "successes": 217,
+              "errors": 44,
+              "error_classes": {
+                "CLUSTERDOWN": 14,
+                "network": 30
+              },
+              "by_operation": {
+                "set": {
+                  "attempts": 261,
+                  "successes": 217,
+                  "errors": 44,
+                  "error_classes": {
+                    "CLUSTERDOWN": 14,
+                    "network": 30
+                  },
+                  "latency": {
+                    "count": 261,
+                    "min_ms": 0.006,
+                    "p50_ms": 0.934056,
+                    "p95_ms": 1.761308,
+                    "p99_ms": 3.661644,
+                    "max_ms": 7.434209
+                  },
+                  "successful_latency": {
+                    "count": 217,
+                    "min_ms": 0.55325,
+                    "p50_ms": 0.980759,
+                    "p95_ms": 2.140883,
+                    "p99_ms": 3.661644,
+                    "max_ms": 7.434209
+                  },
+                  "failed_latency": {
+                    "count": 44,
+                    "min_ms": 0.006,
+                    "p50_ms": 0.205821,
+                    "p95_ms": 0.847216,
+                    "p99_ms": 0.941583,
+                    "max_ms": 0.941583
+                  }
+                }
+              },
+              "latency": {
+                "count": 261,
+                "min_ms": 0.006,
+                "p50_ms": 0.934056,
+                "p95_ms": 1.761308,
+                "p99_ms": 3.661644,
+                "max_ms": 7.434209
+              },
+              "successful_latency": {
+                "count": 217,
+                "min_ms": 0.55325,
+                "p50_ms": 0.980759,
+                "p95_ms": 2.140883,
+                "p99_ms": 3.661644,
+                "max_ms": 7.434209
+              },
+              "failed_latency": {
+                "count": 44,
+                "min_ms": 0.006,
+                "p50_ms": 0.205821,
+                "p95_ms": 0.847216,
+                "p99_ms": 0.941583,
+                "max_ms": 0.941583
+              },
+              "duration_seconds": 4.525980583,
+              "throughput_ops_per_second": 57.66706136131915,
+              "success_rate": 0.8314176245210728
+            },
+            "post_recovery": {
+              "attempts": 195,
+              "successes": 195,
+              "errors": 0,
+              "error_classes": {},
+              "by_operation": {
+                "set": {
+                  "attempts": 195,
+                  "successes": 195,
+                  "errors": 0,
+                  "error_classes": {},
+                  "latency": {
+                    "count": 195,
+                    "min_ms": 0.526583,
+                    "p50_ms": 0.934056,
+                    "p95_ms": 2.360325,
+                    "p99_ms": 2.868992,
+                    "max_ms": 3.774209
+                  },
+                  "successful_latency": {
+                    "count": 195,
+                    "min_ms": 0.526583,
+                    "p50_ms": 0.934056,
+                    "p95_ms": 2.360325,
+                    "p99_ms": 2.868992,
+                    "max_ms": 3.774209
+                  },
+                  "failed_latency": {
+                    "count": 0,
+                    "min_ms": 0,
+                    "p50_ms": 0,
+                    "p95_ms": 0,
+                    "p99_ms": 0,
+                    "max_ms": 0
+                  }
+                }
+              },
+              "latency": {
+                "count": 195,
+                "min_ms": 0.526583,
+                "p50_ms": 0.934056,
+                "p95_ms": 2.360325,
+                "p99_ms": 2.868992,
+                "max_ms": 3.774209
+              },
+              "successful_latency": {
+                "count": 195,
+                "min_ms": 0.526583,
+                "p50_ms": 0.934056,
+                "p95_ms": 2.360325,
+                "p99_ms": 2.868992,
+                "max_ms": 3.774209
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              },
+              "duration_seconds": 2.000557,
+              "throughput_ops_per_second": 97.47285381021385,
+              "success_rate": 1
+            },
+            "reconciliation": {
+              "attempts": 634,
+              "successes": 634,
+              "errors": 0,
+              "error_classes": {},
+              "by_operation": {
+                "set": {
+                  "attempts": 634,
+                  "successes": 634,
+                  "errors": 0,
+                  "error_classes": {},
+                  "latency": {
+                    "count": 634,
+                    "min_ms": 0.511208,
+                    "p50_ms": 0.889577,
+                    "p95_ms": 1.380029,
+                    "p99_ms": 2.038936,
+                    "max_ms": 2.415708
+                  },
+                  "successful_latency": {
+                    "count": 634,
+                    "min_ms": 0.511208,
+                    "p50_ms": 0.889577,
+                    "p95_ms": 1.380029,
+                    "p99_ms": 2.038936,
+                    "max_ms": 2.415708
+                  },
+                  "failed_latency": {
+                    "count": 0,
+                    "min_ms": 0,
+                    "p50_ms": 0,
+                    "p95_ms": 0,
+                    "p99_ms": 0,
+                    "max_ms": 0
+                  }
+                }
+              },
+              "latency": {
+                "count": 634,
+                "min_ms": 0.511208,
+                "p50_ms": 0.889577,
+                "p95_ms": 1.380029,
+                "p99_ms": 2.038936,
+                "max_ms": 2.415708
+              },
+              "successful_latency": {
+                "count": 634,
+                "min_ms": 0.511208,
+                "p50_ms": 0.889577,
+                "p95_ms": 1.380029,
+                "p99_ms": 2.038936,
+                "max_ms": 2.415708
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              },
+              "duration_seconds": 6.011334,
+              "throughput_ops_per_second": 105.46743867500957,
+              "success_rate": 1
+            },
+            "repair": {
+              "attempts": 144,
+              "successes": 144,
+              "errors": 0,
+              "error_classes": {},
+              "by_operation": {
+                "set": {
+                  "attempts": 144,
+                  "successes": 144,
+                  "errors": 0,
+                  "error_classes": {},
+                  "latency": {
+                    "count": 144,
+                    "min_ms": 0.551209,
+                    "p50_ms": 0.934056,
+                    "p95_ms": 1.761308,
+                    "p99_ms": 2.60226,
+                    "max_ms": 2.748958
+                  },
+                  "successful_latency": {
+                    "count": 144,
+                    "min_ms": 0.551209,
+                    "p50_ms": 0.934056,
+                    "p95_ms": 1.761308,
+                    "p99_ms": 2.60226,
+                    "max_ms": 2.748958
+                  },
+                  "failed_latency": {
+                    "count": 0,
+                    "min_ms": 0,
+                    "p50_ms": 0,
+                    "p95_ms": 0,
+                    "p99_ms": 0,
+                    "max_ms": 0
+                  }
+                }
+              },
+              "latency": {
+                "count": 144,
+                "min_ms": 0.551209,
+                "p50_ms": 0.934056,
+                "p95_ms": 1.761308,
+                "p99_ms": 2.60226,
+                "max_ms": 2.748958
+              },
+              "successful_latency": {
+                "count": 144,
+                "min_ms": 0.551209,
+                "p50_ms": 0.934056,
+                "p95_ms": 1.761308,
+                "p99_ms": 2.60226,
+                "max_ms": 2.748958
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              },
+              "duration_seconds": 1.510429834,
+              "throughput_ops_per_second": 95.33709991589056,
+              "success_rate": 1
+            }
+          },
+          "totals": {
+            "attempts": 1651,
+            "successes": 1607,
+            "errors": 44,
+            "error_classes": {
+              "CLUSTERDOWN": 14,
+              "network": 30
+            },
+            "by_operation": {
+              "set": {
+                "attempts": 1651,
+                "successes": 1607,
+                "errors": 44,
+                "error_classes": {
+                  "CLUSTERDOWN": 14,
+                  "network": 30
+                },
+                "latency": {
+                  "count": 1651,
+                  "min_ms": 0.006,
+                  "p50_ms": 0.934056,
+                  "p95_ms": 1.677436,
+                  "p99_ms": 2.478342,
+                  "max_ms": 7.434209
+                },
+                "successful_latency": {
+                  "count": 1607,
+                  "min_ms": 0.511208,
+                  "p50_ms": 0.980759,
+                  "p95_ms": 1.677436,
+                  "p99_ms": 2.478342,
+                  "max_ms": 7.434209
+                },
+                "failed_latency": {
+                  "count": 44,
+                  "min_ms": 0.006,
+                  "p50_ms": 0.205821,
+                  "p95_ms": 0.847216,
+                  "p99_ms": 0.941583,
+                  "max_ms": 0.941583
+                }
+              }
+            },
+            "latency": {
+              "count": 1651,
+              "min_ms": 0.006,
+              "p50_ms": 0.934056,
+              "p95_ms": 1.677436,
+              "p99_ms": 2.478342,
+              "max_ms": 7.434209
+            },
+            "successful_latency": {
+              "count": 1607,
+              "min_ms": 0.511208,
+              "p50_ms": 0.980759,
+              "p95_ms": 1.677436,
+              "p99_ms": 2.478342,
+              "max_ms": 7.434209
+            },
+            "failed_latency": {
+              "count": 44,
+              "min_ms": 0.006,
+              "p50_ms": 0.205821,
+              "p95_ms": 0.847216,
+              "p99_ms": 0.941583,
+              "max_ms": 0.941583
+            },
+            "duration_seconds": 18.069365875,
+            "throughput_ops_per_second": 91.37011289833103,
+            "success_rate": 0.9733494851605088
+          },
+          "windows": [
+            {
+              "started_at": "2026-10-11T17:17:01.221218+08:00",
+              "ended_at": "2026-10-11T17:17:02.221218+08:00",
+              "attempts": 95,
+              "successes": 95,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "baseline": 95
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:02.221218+08:00",
+              "ended_at": "2026-10-11T17:17:03.221218+08:00",
+              "attempts": 116,
+              "successes": 116,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "baseline": 116
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:03.221218+08:00",
+              "ended_at": "2026-10-11T17:17:04.221218+08:00",
+              "attempts": 104,
+              "successes": 104,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "baseline": 104
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:04.221218+08:00",
+              "ended_at": "2026-10-11T17:17:05.221218+08:00",
+              "attempts": 100,
+              "successes": 100,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "baseline": 100
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:05.221218+08:00",
+              "ended_at": "2026-10-11T17:17:06.221218+08:00",
+              "attempts": 61,
+              "successes": 47,
+              "errors": 14,
+              "success_rate": 0.7704918032786885,
+              "phases": {
+                "baseline": 2,
+                "fault": 59
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:06.221218+08:00",
+              "ended_at": "2026-10-11T17:17:07.221218+08:00",
+              "attempts": 11,
+              "successes": 5,
+              "errors": 6,
+              "success_rate": 0.45454545454545453,
+              "phases": {
+                "fault": 11
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:07.221218+08:00",
+              "ended_at": "2026-10-11T17:17:08.221218+08:00",
+              "attempts": 38,
+              "successes": 14,
+              "errors": 24,
+              "success_rate": 0.3684210526315789,
+              "phases": {
+                "fault": 38
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:08.221218+08:00",
+              "ended_at": "2026-10-11T17:17:09.221218+08:00",
+              "attempts": 109,
+              "successes": 109,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "fault": 109
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:09.221218+08:00",
+              "ended_at": "2026-10-11T17:17:10.221218+08:00",
+              "attempts": 90,
+              "successes": 90,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "fault": 44,
+                "repair": 46
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:10.221218+08:00",
+              "ended_at": "2026-10-11T17:17:11.221218+08:00",
+              "attempts": 94,
+              "successes": 94,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "repair": 94
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:11.221218+08:00",
+              "ended_at": "2026-10-11T17:17:12.221218+08:00",
+              "attempts": 106,
+              "successes": 106,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "reconciliation": 102,
+                "repair": 4
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:12.221218+08:00",
+              "ended_at": "2026-10-11T17:17:13.221218+08:00",
+              "attempts": 102,
+              "successes": 102,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "reconciliation": 102
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:13.221218+08:00",
+              "ended_at": "2026-10-11T17:17:14.221218+08:00",
+              "attempts": 105,
+              "successes": 105,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "reconciliation": 105
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:14.221218+08:00",
+              "ended_at": "2026-10-11T17:17:15.221218+08:00",
+              "attempts": 102,
+              "successes": 102,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "reconciliation": 102
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:15.221218+08:00",
+              "ended_at": "2026-10-11T17:17:16.221218+08:00",
+              "attempts": 107,
+              "successes": 107,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "reconciliation": 107
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:16.221218+08:00",
+              "ended_at": "2026-10-11T17:17:17.221218+08:00",
+              "attempts": 107,
+              "successes": 107,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "reconciliation": 107
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:17.221218+08:00",
+              "ended_at": "2026-10-11T17:17:18.221218+08:00",
+              "attempts": 96,
+              "successes": 96,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "post_recovery": 87,
+                "reconciliation": 9
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:18.221218+08:00",
+              "ended_at": "2026-10-11T17:17:19.221218+08:00",
+              "attempts": 103,
+              "successes": 103,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "post_recovery": 103
+              }
+            },
+            {
+              "started_at": "2026-10-11T17:17:19.221218+08:00",
+              "ended_at": "2026-10-11T17:17:19.290451+08:00",
+              "attempts": 5,
+              "successes": 5,
+              "errors": 0,
+              "success_rate": 1,
+              "phases": {
+                "post_recovery": 5
+              }
+            }
+          ],
+          "dropped_windows": 0,
+          "phase_transitions": [
+            {
+              "phase": "baseline",
+              "at": "2026-10-11T17:17:01.221218+08:00"
+            },
+            {
+              "phase": "fault",
+              "at": "2026-10-11T17:17:05.242253+08:00"
+            },
+            {
+              "phase": "repair",
+              "at": "2026-10-11T17:17:09.7682+08:00"
+            },
+            {
+              "phase": "reconciliation",
+              "at": "2026-10-11T17:17:11.278619+08:00"
+            },
+            {
+              "phase": "post_recovery",
+              "at": "2026-10-11T17:17:17.289909+08:00"
+            }
+          ],
+          "methodology": "Diagnostic SET, WAIT and WAITAOF stages are excluded from logical request and pacing counts. SET latency includes routing, pool/connection initialization and handled redirections before its terminal result; WAIT/WAITAOF latency covers only that attempted command on the same physical connection. Logical set_wait/set_waitaof latency covers the complete write executor operation. Short WAIT or WAITAOF replies have distinct wait_short/waitaof_short classes, separate from client timeout. Unissued commands have no stage latency. Reply histograms exclude errors and malformed replies; WAITAOF histogram keys are canonical local/replicas integer pairs. WAIT replica-memory acknowledgements and WAITAOF local/replica AOF acknowledgements remain separate. Latencies use 512 bounded geometric histogram buckets, starting at 1 microsecond and increasing by 5%; quantiles are nearest-rank bucket upper bounds. The last bucket covers the remaining duration range. All terminal client attempts, successful attempts, and failed attempts have separate histograms. Throughput is completed attempts divided by phase wall-clock seconds. Operations are attributed to the phase in which they start. Redirect counts include only terminal MOVED/ASK errors; redirects handled by the client are not observable here."
+        },
+        "offered_requests": 3613,
+        "started_requests": 3251,
+        "completed_requests": 3251,
+        "dropped_requests": 362,
+        "pacing_methodology": "Offered requests are ideal period slots from workload Start until the dispatcher observes Stop or parent cancellation; the first slot occurs after one period. The period is one second divided by the configured aggregate rate, truncated to whole nanoseconds. A central dispatcher offers only the latest due slot over an unbuffered channel; missed slots, busy workers, stopped tokens, and tokens with no eligible operation are dropped, without catch-up requests. Started requests count actual logical workload GET or write executions; a SET+WAIT/WAITAOF write counts once. Completed requests count their terminal logical metrics attempts. After Stop, offered = started + dropped and started = completed. Validation and ordinary/acknowledgement-policy probes are excluded. These global counters are not attributed to phases.",
+        "writes_attempted": 1651,
+        "acknowledged_writes": 1607,
+        "ambiguous_writes": 44,
+        "read_checks": 1600,
+        "missing_reads": 0,
+        "mismatched_reads": 0,
+        "write_limit_reached": false,
+        "guarantee": "Every successful client SET acknowledgement is validated, including writes whose subsequent WAIT or WAITAOF returned too few acknowledgements or an error. Every write uses a unique immutable key. SET errors are ambiguous outcomes and may have executed; they are excluded from the acknowledged-write guarantee. WAIT-satisfied and WAITAOF-satisfied subsets are reported separately. WAIT concerns replica memory, while WAITAOF requires observed local and replica AOF counts; neither subset establishes loss-free failover or a power-loss guarantee from this process-crash experiment. Redis asynchronous replication can lose acknowledged writes during failover. This check establishes observed post-experiment readability and value equality, not a general durability guarantee."
+      },
+      "validation": {
+        "wait_satisfied_subset": {
+          "expected": 0,
+          "checked": 0,
+          "missing": 0,
+          "corrupt": 0,
+          "unreadable": 0,
+          "unverified": 0,
+          "complete": true
+        },
+        "waitaof_satisfied_subset": {
+          "expected": 0,
+          "checked": 0,
+          "missing": 0,
+          "corrupt": 0,
+          "unreadable": 0,
+          "unverified": 0,
+          "complete": true
+        },
+        "started_at": "2026-10-11T17:17:19.290456+08:00",
+        "completed_at": "2026-10-11T17:17:19.729183+08:00",
+        "complete": true,
+        "expected": 1607,
+        "checked": 1607,
+        "missing": 0,
+        "corrupt": 0,
+        "unreadable": 0,
+        "unverified": 0,
+        "samples": [],
+        "guarantee": "Every successful client SET acknowledgement is validated, including writes whose subsequent WAIT or WAITAOF returned too few acknowledgements or an error. Every write uses a unique immutable key. SET errors are ambiguous outcomes and may have executed; they are excluded from the acknowledged-write guarantee. WAIT-satisfied and WAITAOF-satisfied subsets are reported separately. WAIT concerns replica memory, while WAITAOF requires observed local and replica AOF counts; neither subset establishes loss-free failover or a power-loss guarantee from this process-crash experiment. Redis asynchronous replication can lose acknowledged writes during failover. This check establishes observed post-experiment readability and value equality, not a general durability guarantee."
+      }
+    }
+  ],
+  "events": {
+    "all_processes_stopped": {
+      "observed": 0,
+      "not_at_risk": 1,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "client_first_all_shard_success": {
+      "observed": 1,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 1,
+        "min": 3398.084667,
+        "median": 3398.084667,
+        "mean": 3398.084667,
+        "max": 3398.084667,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 1,
+        "min": 3161.1730000000002,
+        "median": 3161.1730000000002,
+        "mean": 3161.1730000000002,
+        "max": 3161.1730000000002,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "client_stable": {
+      "observed": 1,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 1,
+        "min": 4522.178917,
+        "median": 4522.178917,
+        "mean": 4522.178917,
+        "max": 4522.178917,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 1,
+        "min": 4285.26725,
+        "median": 4285.26725,
+        "mean": 4285.26725,
+        "max": 4285.26725,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "combined_stable": {
+      "observed": 1,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 1,
+        "min": 4522.178917,
+        "median": 4522.178917,
+        "mean": 4522.178917,
+        "max": 4522.178917,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 1,
+        "min": 4285.26725,
+        "median": 4285.26725,
+        "mean": 4285.26725,
+        "max": 4285.26725,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "failure_detected": {
+      "observed": 1,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 1,
+        "min": 1804.404833,
+        "median": 1804.404833,
+        "mean": 1804.404833,
+        "max": 1804.404833,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 1,
+        "min": 1567.493166,
+        "median": 1567.493166,
+        "mean": 1567.493166,
+        "max": 1567.493166,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "full_slot_coverage": {
+      "observed": 1,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 1,
+        "min": 2588.465833,
+        "median": 2588.465833,
+        "mean": 2588.465833,
+        "max": 2588.465833,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 1,
+        "min": 2351.5541660000004,
+        "median": 2351.5541660000004,
+        "mean": 2351.5541660000004,
+        "max": 2351.5541660000004,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "membership_rejoined": {
+      "observed": 1,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 1,
+        "min": 6039.702708,
+        "median": 6039.702708,
+        "mean": 6039.702708,
+        "max": 6039.702708,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 1,
+        "min": 5802.7910409999995,
+        "median": 5802.7910409999995,
+        "mean": 5802.7910409999995,
+        "max": 5802.7910409999995,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "original_topology_stable": {
+      "observed": 0,
+      "not_at_risk": 1,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "persistence_recovered": {
+      "observed": 0,
+      "not_at_risk": 1,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "replica_link_up": {
+      "observed": 1,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 1,
+        "min": 10733.577875,
+        "median": 10733.577875,
+        "mean": 10733.577875,
+        "max": 10733.577875,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 1,
+        "min": 10496.666208,
+        "median": 10496.666208,
+        "mean": 10496.666208,
+        "max": 10496.666208,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "replica_promoted": {
+      "observed": 1,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 1,
+        "min": 2588.465833,
+        "median": 2588.465833,
+        "mean": 2588.465833,
+        "max": 2588.465833,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 1,
+        "min": 2351.5541660000004,
+        "median": 2351.5541660000004,
+        "mean": 2351.5541660000004,
+        "max": 2351.5541660000004,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "replica_sync_complete": {
+      "observed": 1,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 1,
+        "min": 10733.577875,
+        "median": 10733.577875,
+        "mean": 10733.577875,
+        "max": 10733.577875,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 1,
+        "min": 10496.666208,
+        "median": 10496.666208,
+        "mean": 10496.666208,
+        "max": 10496.666208,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "replication_interrupted": {
+      "observed": 1,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 1,
+        "min": 2588.465833,
+        "median": 2588.465833,
+        "mean": 2588.465833,
+        "max": 2588.465833,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 1,
+        "min": 2351.5541660000004,
+        "median": 2351.5541660000004,
+        "mean": 2351.5541660000004,
+        "max": 2351.5541660000004,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "stable_redundancy": {
+      "observed": 1,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 1,
+        "min": 12013.1475,
+        "median": 12013.1475,
+        "mean": 12013.1475,
+        "max": 12013.1475,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 1,
+        "min": 11776.235832999999,
+        "median": 11776.235832999999,
+        "mean": 11776.235832999999,
+        "max": 11776.235832999999,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "target_reachable_after_repair": {
+      "observed": 1,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 1,
+        "min": 6039.702708,
+        "median": 6039.702708,
+        "mean": 6039.702708,
+        "max": 6039.702708,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 1,
+        "min": 5802.7910409999995,
+        "median": 5802.7910409999995,
+        "mean": 5802.7910409999995,
+        "max": 5802.7910409999995,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "topology_converged": {
+      "observed": 1,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 1,
+        "min": 2588.465833,
+        "median": 2588.465833,
+        "mean": 2588.465833,
+        "max": 2588.465833,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 1,
+        "min": 2351.5541660000004,
+        "median": 2351.5541660000004,
+        "mean": 2351.5541660000004,
+        "max": 2351.5541660000004,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "write_policy_stable": {
+      "observed": 0,
+      "not_at_risk": 1,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    }
+  },
+  "fault_action_duration_ms": {
+    "n": 1,
+    "min": 236.911667,
+    "median": 236.911667,
+    "mean": 236.911667,
+    "max": 236.911667,
+    "small_sample": true,
+    "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+  },
+  "phases": {
+    "baseline": {
+      "trials_with_phase": 1,
+      "trials_with_attempts": 1,
+      "attempts": 804,
+      "successes": 804,
+      "errors": 0,
+      "error_classes": {},
+      "sum_trial_phase_duration_seconds": 4.021064458,
+      "completed_request_success_fraction": 1,
+      "completed_throughput_over_sum_phase_seconds": 199.94705590964193,
+      "successful_throughput_over_sum_phase_seconds": 199.94705590964193,
+      "trial_success_fraction": {
+        "n": 1,
+        "min": 1,
+        "median": 1,
+        "mean": 1,
+        "max": 1,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_completed_throughput_ops_per_second": {
+        "n": 1,
+        "min": 199.94705590964193,
+        "median": 199.94705590964193,
+        "mean": 199.94705590964193,
+        "max": 199.94705590964193,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p50_ms": {
+        "n": 1,
+        "min": 0.806872,
+        "median": 0.806872,
+        "mean": 0.806872,
+        "max": 0.806872,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p95_ms": {
+        "n": 1,
+        "min": 1.380029,
+        "median": 1.380029,
+        "mean": 1.380029,
+        "max": 1.380029,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p99_ms": {
+        "n": 1,
+        "min": 2.360325,
+        "median": 2.360325,
+        "mean": 2.360325,
+        "max": 2.360325,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p50_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p95_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p99_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "fault": {
+      "trials_with_phase": 1,
+      "trials_with_attempts": 1,
+      "attempts": 543,
+      "successes": 465,
+      "errors": 78,
+      "error_classes": {
+        "CLUSTERDOWN": 14,
+        "network": 30,
+        "timeout": 34
+      },
+      "sum_trial_phase_duration_seconds": 4.525980583,
+      "completed_request_success_fraction": 0.856353591160221,
+      "completed_throughput_over_sum_phase_seconds": 119.97400122297431,
+      "successful_throughput_over_sum_phase_seconds": 102.7401667931548,
+      "trial_success_fraction": {
+        "n": 1,
+        "min": 0.856353591160221,
+        "median": 0.856353591160221,
+        "mean": 0.856353591160221,
+        "max": 0.856353591160221,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_completed_throughput_ops_per_second": {
+        "n": 1,
+        "min": 119.97400122297431,
+        "median": 119.97400122297431,
+        "mean": 119.97400122297431,
+        "max": 119.97400122297431,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p50_ms": {
+        "n": 1,
+        "min": 0.697005,
+        "median": 0.697005,
+        "mean": 0.697005,
+        "max": 0.697005,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p95_ms": {
+        "n": 1,
+        "min": 2.360325,
+        "median": 2.360325,
+        "mean": 2.360325,
+        "max": 2.360325,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p99_ms": {
+        "n": 1,
+        "min": 325.90631,
+        "median": 325.90631,
+        "mean": 325.90631,
+        "max": 325.90631,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p50_ms": {
+        "n": 1,
+        "min": 0.731856,
+        "median": 0.731856,
+        "mean": 0.731856,
+        "max": 0.731856,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p95_ms": {
+        "n": 1,
+        "min": 501.118375,
+        "median": 501.118375,
+        "mean": 501.118375,
+        "max": 501.118375,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p99_ms": {
+        "n": 1,
+        "min": 501.118375,
+        "median": 501.118375,
+        "mean": 501.118375,
+        "max": 501.118375,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "post_recovery": {
+      "trials_with_phase": 1,
+      "trials_with_attempts": 1,
+      "attempts": 400,
+      "successes": 400,
+      "errors": 0,
+      "error_classes": {},
+      "sum_trial_phase_duration_seconds": 2.000557,
+      "completed_request_success_fraction": 1,
+      "completed_throughput_over_sum_phase_seconds": 199.94431550813098,
+      "successful_throughput_over_sum_phase_seconds": 199.94431550813098,
+      "trial_success_fraction": {
+        "n": 1,
+        "min": 1,
+        "median": 1,
+        "mean": 1,
+        "max": 1,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_completed_throughput_ops_per_second": {
+        "n": 1,
+        "min": 199.94431550813098,
+        "median": 199.94431550813098,
+        "mean": 199.94431550813098,
+        "max": 199.94431550813098,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p50_ms": {
+        "n": 1,
+        "min": 0.697005,
+        "median": 0.697005,
+        "mean": 0.697005,
+        "max": 0.697005,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p95_ms": {
+        "n": 1,
+        "min": 2.038936,
+        "median": 2.038936,
+        "mean": 2.038936,
+        "max": 2.038936,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p99_ms": {
+        "n": 1,
+        "min": 2.478342,
+        "median": 2.478342,
+        "mean": 2.478342,
+        "max": 2.478342,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p50_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p95_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p99_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "reconciliation": {
+      "trials_with_phase": 1,
+      "trials_with_attempts": 1,
+      "attempts": 1202,
+      "successes": 1202,
+      "errors": 0,
+      "error_classes": {},
+      "sum_trial_phase_duration_seconds": 6.011334,
+      "completed_request_success_fraction": 1,
+      "completed_throughput_over_sum_phase_seconds": 199.9556171724945,
+      "successful_throughput_over_sum_phase_seconds": 199.9556171724945,
+      "trial_success_fraction": {
+        "n": 1,
+        "min": 1,
+        "median": 1,
+        "mean": 1,
+        "max": 1,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_completed_throughput_ops_per_second": {
+        "n": 1,
+        "min": 199.9556171724945,
+        "median": 199.9556171724945,
+        "mean": 199.9556171724945,
+        "max": 199.9556171724945,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p50_ms": {
+        "n": 1,
+        "min": 0.632203,
+        "median": 0.632203,
+        "mean": 0.632203,
+        "max": 0.632203,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p95_ms": {
+        "n": 1,
+        "min": 1.19212,
+        "median": 1.19212,
+        "mean": 1.19212,
+        "max": 1.19212,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p99_ms": {
+        "n": 1,
+        "min": 1.677436,
+        "median": 1.677436,
+        "mean": 1.677436,
+        "max": 1.677436,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p50_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p95_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p99_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "repair": {
+      "trials_with_phase": 1,
+      "trials_with_attempts": 1,
+      "attempts": 302,
+      "successes": 302,
+      "errors": 0,
+      "error_classes": {},
+      "sum_trial_phase_duration_seconds": 1.510429834,
+      "completed_request_success_fraction": 1,
+      "completed_throughput_over_sum_phase_seconds": 199.94308454582605,
+      "successful_throughput_over_sum_phase_seconds": 199.94308454582605,
+      "trial_success_fraction": {
+        "n": 1,
+        "min": 1,
+        "median": 1,
+        "mean": 1,
+        "max": 1,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_completed_throughput_ops_per_second": {
+        "n": 1,
+        "min": 199.94308454582605,
+        "median": 199.94308454582605,
+        "mean": 199.94308454582605,
+        "max": 199.94308454582605,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p50_ms": {
+        "n": 1,
+        "min": 0.602098,
+        "median": 0.602098,
+        "mean": 0.602098,
+        "max": 0.602098,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p95_ms": {
+        "n": 1,
+        "min": 1.314313,
+        "median": 1.314313,
+        "mean": 1.314313,
+        "max": 1.314313,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p99_ms": {
+        "n": 1,
+        "min": 2.60226,
+        "median": 2.60226,
+        "mean": 2.60226,
+        "max": 2.60226,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p50_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p95_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p99_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    }
+  },
+  "data": {
+    "validation_attempted_trials": 1,
+    "validation_complete_trials": 1,
+    "acknowledged_writes": 1607,
+    "writes_attempted": 1651,
+    "ambiguous_writes": 44,
+    "checked": 1607,
+    "missing": 0,
+    "corrupt": 0,
+    "unreadable": 0,
+    "unverified": 0,
+    "acknowledged_not_checked": 0,
+    "missing_read_checks": 0,
+    "mismatched_read_checks": 0,
+    "trial_acknowledged_writes": {
+      "n": 1,
+      "min": 1607,
+      "median": 1607,
+      "mean": 1607,
+      "max": 1607,
+      "small_sample": true,
+      "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+    },
+    "trial_ambiguous_writes": {
+      "n": 1,
+      "min": 44,
+      "median": 44,
+      "mean": 44,
+      "max": 44,
+      "small_sample": true,
+      "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+    },
+    "trial_missing_writes": {
+      "n": 1,
+      "min": 0,
+      "median": 0,
+      "mean": 0,
+      "max": 0,
+      "small_sample": true,
+      "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+    },
+    "trial_corrupt_writes": {
+      "n": 1,
+      "min": 0,
+      "median": 0,
+      "mean": 0,
+      "max": 0,
+      "small_sample": true,
+      "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+    },
+    "trial_unreadable_writes": {
+      "n": 1,
+      "min": 0,
+      "median": 0,
+      "mean": 0,
+      "max": 0,
+      "small_sample": true,
+      "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+    }
+  },
+  "load": {
+    "measured_trials": 1,
+    "unmeasured_trials": 0,
+    "offered_requests": 3613,
+    "started_requests": 3251,
+    "completed_requests": 3251,
+    "dropped_requests": 362,
+    "started_fraction_of_offered": 0.8998062551895931,
+    "trial_offered_requests": {
+      "n": 1,
+      "min": 3613,
+      "median": 3613,
+      "mean": 3613,
+      "max": 3613,
+      "small_sample": true,
+      "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+    },
+    "trial_started_requests": {
+      "n": 1,
+      "min": 3251,
+      "median": 3251,
+      "mean": 3251,
+      "max": 3251,
+      "small_sample": true,
+      "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+    },
+    "trial_dropped_requests": {
+      "n": 1,
+      "min": 362,
+      "median": 362,
+      "mean": 362,
+      "max": 362,
+      "small_sample": true,
+      "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+    }
+  },
+  "write_policy": {
+    "measured_trials": 1,
+    "unmeasured_trials": 0,
+    "totals": {
+      "set_acknowledged": 1607,
+      "set_errors": 44,
+      "wait_attempted": 0,
+      "wait_not_attempted": 0,
+      "wait_not_attempted_timeouts": 0,
+      "wait_satisfied": 0,
+      "wait_short": 0,
+      "wait_errors": 0,
+      "wait_client_timeouts": 0,
+      "policy_satisfied": 1607,
+      "handled_redirects": 0,
+      "wait_acknowledgements": {},
+      "waitaof_attempted": 0,
+      "waitaof_not_attempted": 0,
+      "waitaof_not_attempted_timeouts": 0,
+      "waitaof_satisfied": 0,
+      "waitaof_short": 0,
+      "waitaof_errors": 0,
+      "waitaof_client_timeouts": 0,
+      "waitaof_local_satisfied": 0,
+      "waitaof_replica_satisfied": 0,
+      "waitaof_replies": {}
+    },
+    "by_phase": {
+      "baseline": {
+        "set_acknowledged": 417,
+        "set_errors": 0,
+        "wait_attempted": 0,
+        "wait_not_attempted": 0,
+        "wait_not_attempted_timeouts": 0,
+        "wait_satisfied": 0,
+        "wait_short": 0,
+        "wait_errors": 0,
+        "wait_client_timeouts": 0,
+        "policy_satisfied": 417,
+        "handled_redirects": 0,
+        "wait_acknowledgements": {},
+        "waitaof_attempted": 0,
+        "waitaof_not_attempted": 0,
+        "waitaof_not_attempted_timeouts": 0,
+        "waitaof_satisfied": 0,
+        "waitaof_short": 0,
+        "waitaof_errors": 0,
+        "waitaof_client_timeouts": 0,
+        "waitaof_local_satisfied": 0,
+        "waitaof_replica_satisfied": 0,
+        "waitaof_replies": {}
+      },
+      "fault": {
+        "set_acknowledged": 217,
+        "set_errors": 44,
+        "wait_attempted": 0,
+        "wait_not_attempted": 0,
+        "wait_not_attempted_timeouts": 0,
+        "wait_satisfied": 0,
+        "wait_short": 0,
+        "wait_errors": 0,
+        "wait_client_timeouts": 0,
+        "policy_satisfied": 217,
+        "handled_redirects": 0,
+        "wait_acknowledgements": {},
+        "waitaof_attempted": 0,
+        "waitaof_not_attempted": 0,
+        "waitaof_not_attempted_timeouts": 0,
+        "waitaof_satisfied": 0,
+        "waitaof_short": 0,
+        "waitaof_errors": 0,
+        "waitaof_client_timeouts": 0,
+        "waitaof_local_satisfied": 0,
+        "waitaof_replica_satisfied": 0,
+        "waitaof_replies": {}
+      },
+      "post_recovery": {
+        "set_acknowledged": 195,
+        "set_errors": 0,
+        "wait_attempted": 0,
+        "wait_not_attempted": 0,
+        "wait_not_attempted_timeouts": 0,
+        "wait_satisfied": 0,
+        "wait_short": 0,
+        "wait_errors": 0,
+        "wait_client_timeouts": 0,
+        "policy_satisfied": 195,
+        "handled_redirects": 0,
+        "wait_acknowledgements": {},
+        "waitaof_attempted": 0,
+        "waitaof_not_attempted": 0,
+        "waitaof_not_attempted_timeouts": 0,
+        "waitaof_satisfied": 0,
+        "waitaof_short": 0,
+        "waitaof_errors": 0,
+        "waitaof_client_timeouts": 0,
+        "waitaof_local_satisfied": 0,
+        "waitaof_replica_satisfied": 0,
+        "waitaof_replies": {}
+      },
+      "reconciliation": {
+        "set_acknowledged": 634,
+        "set_errors": 0,
+        "wait_attempted": 0,
+        "wait_not_attempted": 0,
+        "wait_not_attempted_timeouts": 0,
+        "wait_satisfied": 0,
+        "wait_short": 0,
+        "wait_errors": 0,
+        "wait_client_timeouts": 0,
+        "policy_satisfied": 634,
+        "handled_redirects": 0,
+        "wait_acknowledgements": {},
+        "waitaof_attempted": 0,
+        "waitaof_not_attempted": 0,
+        "waitaof_not_attempted_timeouts": 0,
+        "waitaof_satisfied": 0,
+        "waitaof_short": 0,
+        "waitaof_errors": 0,
+        "waitaof_client_timeouts": 0,
+        "waitaof_local_satisfied": 0,
+        "waitaof_replica_satisfied": 0,
+        "waitaof_replies": {}
+      },
+      "repair": {
+        "set_acknowledged": 144,
+        "set_errors": 0,
+        "wait_attempted": 0,
+        "wait_not_attempted": 0,
+        "wait_not_attempted_timeouts": 0,
+        "wait_satisfied": 0,
+        "wait_short": 0,
+        "wait_errors": 0,
+        "wait_client_timeouts": 0,
+        "policy_satisfied": 144,
+        "handled_redirects": 0,
+        "wait_acknowledgements": {},
+        "waitaof_attempted": 0,
+        "waitaof_not_attempted": 0,
+        "waitaof_not_attempted_timeouts": 0,
+        "waitaof_satisfied": 0,
+        "waitaof_short": 0,
+        "waitaof_errors": 0,
+        "waitaof_client_timeouts": 0,
+        "waitaof_local_satisfied": 0,
+        "waitaof_replica_satisfied": 0,
+        "waitaof_replies": {}
+      }
+    },
+    "wait_satisfied_subset": {
+      "expected": 0,
+      "checked": 0,
+      "missing": 0,
+      "corrupt": 0,
+      "unreadable": 0,
+      "unverified": 0,
+      "complete": false
+    },
+    "wait_subset_validation_trials": 0,
+    "waitaof_satisfied_subset": {
+      "expected": 0,
+      "checked": 0,
+      "missing": 0,
+      "corrupt": 0,
+      "unreadable": 0,
+      "unverified": 0,
+      "complete": false
+    },
+    "waitaof_subset_validation_trials": 0
+  },
+  "latency_aggregation": "No pooled request latency quantiles are computed: individual report schemas 1, 2 and 3 contain histogram quantile summaries, not mergeable bucket counts. Latency statistics describe distributions of per-trial successful/failed p50/p95/p99 values, conditional on trials with those observations; their means are not pooled request quantiles.",
+  "methodology": [
+    "Trials execute sequentially with a fresh environment per callback; the next callback starts only after the previous callback returns with successful cleanup evidence (or an authoritative report that no environment was provisioned).",
+    "Recovery success fraction uses all requested trials as the denominator. Outcomes, started/unstarted counts and individual reports preserve failed, partial and aborted trials; the started-trial fraction is reported separately.",
+    "Recovery timings are conditional on observed milestones, including observed milestones in partial/failed trials. Unobserved post-fault events are censored at the accepted sampled observation horizon with deadline/abort/error reasons, never zero-duration samples; this does not prove the physical event occurred after that horizon. Trials without a requested fault are separately not at risk. No survival distribution, independence assumption or population reliability guarantee is inferred.",
+    "Event durations use runtime SinceFaultMS and fault_action_duration_ms when present, preserving monotonic elapsed-time measurements. Schema 1 action-completion-relative durations fall back to wall-clock timestamp differences and can be affected by clock adjustments. First sampled observations include polling uncertainty; action duration includes ownership checks and fault command overhead.",
+    "Min, median, mean, N-1 sample standard deviation and maximum describe available trial observations. P90/P95 use nearest rank only when N\u003e=20; smaller samples have an explicit tail-estimation caveat.",
+    "Completed-request success fractions weight actual completed counts; aggregate throughput divides summed completed/successful counts by summed phase wall-clock duration. Offered load and worker saturation are not inferred from completed requests.",
+    "Whole-workload offered, started, completed and dropped schedule-slot counters are aggregated only for reports carrying explicit pacing methodology. Legacy absent counters are unmeasured, not zero. Offered=started+dropped and started=completed after workload quiescence; service probes and validation are excluded.",
+    "Acknowledged SET writes remain distinct from ambiguous SET outcomes and final read-back validation. Skipped/incomplete validation contributes acknowledged-not-checked counts; no observed loss is not a durability guarantee.",
+    "WAIT replica-memory acknowledgements and WAITAOF local/replica AOF acknowledgements are distinct policies. Each successful SET is accounted for by an attempted acknowledgement command or an explicit not-attempted count. Valid WAITAOF replies preserve paired local/replica counts and independently overlapping satisfaction counts; errors provide no acknowledgement observation. Diagnostic command stages do not increase logical request or pacing counts. A recovered policy trial additionally requires sustained policy availability and complete preservation of its acknowledged subset.",
+    "Recovered schema 2 reports require the explicit combined-recovery flag. Legacy schema 1 reports can establish it through healthy topology/client flags and an observed combined-stability milestone, together with complete acknowledged-write validation and verified cleanup.",
+    "Recovered primary-isolate trials additionally require sampled unchanged process survival while disconnected, restored connectivity, observed stable reconciliation and restored replication redundancy. Pre-restoration recovery alone does not establish a recovered network experiment."
+  ]
+}

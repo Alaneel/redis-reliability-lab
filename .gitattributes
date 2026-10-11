@@ -1,0 +1,7 @@
+# Keep source checkouts consistent across platforms.
+* text=auto eol=lf
+
+# Raw experiment evidence and upstream legal texts retain their original bytes.
+# Markdown hard breaks and Redis INFO output include intentional whitespace.
+docs/examples/** -text -whitespace
+licenses/** -text -whitespace

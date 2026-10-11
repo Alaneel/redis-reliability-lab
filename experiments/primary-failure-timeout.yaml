@@ -1,0 +1,10 @@
+# A valid experiment with an intentionally insufficient recovery deadline.
+# Unspecified fields inherit the documented defaults.
+version: 1
+name: primary-failure-timeout
+experiment:
+  baseline: 2s
+  post_recovery: 1s
+timeouts:
+  recovery: 100ms
+  validation: 1s

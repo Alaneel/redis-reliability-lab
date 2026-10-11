@@ -1,0 +1,2613 @@
+{
+  "schema_version": 1,
+  "batch_id": "batch-e4b81963e956ed40e22b4a27",
+  "directory": "/Users/alanwang/Desktop/redis-reliability-lab/reports/phase2/batch-e4b81963e956ed40e22b4a27",
+  "outcome": "recovered",
+  "started_at": "2026-10-11T07:15:35.336483Z",
+  "finished_at": "2026-10-11T07:17:15.963626Z",
+  "config": {
+    "version": 1,
+    "name": "primary-failure-repeat",
+    "environment": {
+      "redis_image": "redis:8.10.2-alpine",
+      "node_timeout": "1s"
+    },
+    "workload": {
+      "workers": 8,
+      "rate_per_second": 200,
+      "max_writes": 20000,
+      "read_percent": 50,
+      "value_bytes": 128,
+      "seed": 42,
+      "operation_timeout": "500ms"
+    },
+    "experiment": {
+      "fault": "primary-kill",
+      "baseline": "2s",
+      "post_recovery": "1s",
+      "sample_interval": "250ms",
+      "stable_for": "1s",
+      "minimum_baseline_success": 0.99
+    },
+    "timeouts": {
+      "provision": "2m0s",
+      "readiness": "1m0s",
+      "recovery": "30s",
+      "validation": "30s",
+      "cleanup": "30s"
+    }
+  },
+  "effective_config_sha256": "8e959199c0f2dff505399e403a8b7f25bfe40c39ec4dbc9ab905198f7d8d36c3",
+  "requested_trials": 5,
+  "started_trials": 5,
+  "completed_trials": 5,
+  "unstarted_trials": 0,
+  "outcomes": {
+    "aborted": 0,
+    "failed": 0,
+    "partial": 0,
+    "recovered": 5,
+    "unstarted": 0
+  },
+  "recovery_success_fraction_all_requested_trials": 1,
+  "recovery_success_fraction_started_trials": 1,
+  "cleanup_failures": 0,
+  "incomplete_evidence_trials": 0,
+  "trials": [
+    {
+      "index": 1,
+      "started": true,
+      "run_id": "c71517bdf2d2fd24649843c9",
+      "outcome": "recovered",
+      "started_at": "2026-10-11T15:15:35.336563+08:00",
+      "finished_at": "2026-10-11T15:15:55.888905+08:00",
+      "effective_config_sha256": "8e959199c0f2dff505399e403a8b7f25bfe40c39ec4dbc9ab905198f7d8d36c3",
+      "report_path": "runs/c71517bdf2d2fd24649843c9/report.json",
+      "evidence_complete": true,
+      "environment_present": true,
+      "cleanup": {
+        "attempted": true,
+        "successful": true
+      },
+      "fault_action_duration_ms": 211.81775,
+      "observations": {
+        "client_first_all_shard_success": {
+          "status": "observed",
+          "since_fault_requested_ms": 3366.93875,
+          "since_fault_completed_ms": 3155.1209999999996,
+          "observation_horizon_at": "2026-10-11T15:15:54.178273+08:00",
+          "horizon_since_fault_requested_ms": 5323.317458,
+          "horizon_since_fault_completed_ms": 5111.499708
+        },
+        "client_stable": {
+          "status": "observed",
+          "since_fault_requested_ms": 4467.861458,
+          "since_fault_completed_ms": 4256.043708,
+          "observation_horizon_at": "2026-10-11T15:15:54.178273+08:00",
+          "horizon_since_fault_requested_ms": 5323.317458,
+          "horizon_since_fault_completed_ms": 5111.499708
+        },
+        "combined_stable": {
+          "status": "observed",
+          "since_fault_requested_ms": 4467.861458,
+          "since_fault_completed_ms": 4256.043708,
+          "observation_horizon_at": "2026-10-11T15:15:54.178273+08:00",
+          "horizon_since_fault_requested_ms": 5323.317458,
+          "horizon_since_fault_completed_ms": 5111.499708
+        },
+        "failure_detected": {
+          "status": "observed",
+          "since_fault_requested_ms": 1777.600791,
+          "since_fault_completed_ms": 1565.7830410000001,
+          "observation_horizon_at": "2026-10-11T15:15:54.178273+08:00",
+          "horizon_since_fault_requested_ms": 5323.317458,
+          "horizon_since_fault_completed_ms": 5111.499708
+        },
+        "full_slot_coverage": {
+          "status": "observed",
+          "since_fault_requested_ms": 2559.737541,
+          "since_fault_completed_ms": 2347.919791,
+          "observation_horizon_at": "2026-10-11T15:15:54.178273+08:00",
+          "horizon_since_fault_requested_ms": 5323.317458,
+          "horizon_since_fault_completed_ms": 5111.499708
+        },
+        "replica_promoted": {
+          "status": "observed",
+          "since_fault_requested_ms": 2559.737541,
+          "since_fault_completed_ms": 2347.919791,
+          "observation_horizon_at": "2026-10-11T15:15:54.178273+08:00",
+          "horizon_since_fault_requested_ms": 5323.317458,
+          "horizon_since_fault_completed_ms": 5111.499708
+        },
+        "topology_converged": {
+          "status": "observed",
+          "since_fault_requested_ms": 2559.737541,
+          "since_fault_completed_ms": 2347.919791,
+          "observation_horizon_at": "2026-10-11T15:15:54.178273+08:00",
+          "horizon_since_fault_requested_ms": 5323.317458,
+          "horizon_since_fault_completed_ms": 5111.499708
+        }
+      },
+      "phases": {
+        "baseline": {
+          "attempts": 404,
+          "successes": 404,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 191,
+              "successes": 191,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 191,
+                "min_ms": 0.340666,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.697005,
+                "p99_ms": 0.768449,
+                "max_ms": 0.807875
+              },
+              "successful_latency": {
+                "count": 191,
+                "min_ms": 0.340666,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.697005,
+                "p99_ms": 0.768449,
+                "max_ms": 0.807875
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 213,
+              "successes": 213,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 213,
+                "min_ms": 0.360375,
+                "p50_ms": 0.54612,
+                "p95_ms": 0.768449,
+                "p99_ms": 1.677436,
+                "max_ms": 8.386
+              },
+              "successful_latency": {
+                "count": 213,
+                "min_ms": 0.360375,
+                "p50_ms": 0.54612,
+                "p95_ms": 0.768449,
+                "p99_ms": 1.677436,
+                "max_ms": 8.386
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 404,
+            "min_ms": 0.340666,
+            "p50_ms": 0.520114,
+            "p95_ms": 0.697005,
+            "p99_ms": 0.847216,
+            "max_ms": 8.386
+          },
+          "successful_latency": {
+            "count": 404,
+            "min_ms": 0.340666,
+            "p50_ms": 0.520114,
+            "p95_ms": 0.697005,
+            "p99_ms": 0.847216,
+            "max_ms": 8.386
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 2.021454542,
+          "throughput_ops_per_second": 199.85608956622286,
+          "success_rate": 1
+        },
+        "fault": {
+          "attempts": 429,
+          "successes": 390,
+          "errors": 39,
+          "error_classes": {
+            "timeout": 39
+          },
+          "by_operation": {
+            "get": {
+              "attempts": 211,
+              "successes": 193,
+              "errors": 18,
+              "error_classes": {
+                "timeout": 18
+              },
+              "latency": {
+                "count": 211,
+                "min_ms": 0.307667,
+                "p50_ms": 0.471758,
+                "p95_ms": 500.556042,
+                "p99_ms": 500.556042,
+                "max_ms": 500.556042
+              },
+              "successful_latency": {
+                "count": 193,
+                "min_ms": 0.307667,
+                "p50_ms": 0.471758,
+                "p95_ms": 0.934056,
+                "p99_ms": 436.745628,
+                "max_ms": 450.760333
+              },
+              "failed_latency": {
+                "count": 18,
+                "min_ms": 500.022917,
+                "p50_ms": 500.556042,
+                "p95_ms": 500.556042,
+                "p99_ms": 500.556042,
+                "max_ms": 500.556042
+              }
+            },
+            "set": {
+              "attempts": 218,
+              "successes": 197,
+              "errors": 21,
+              "error_classes": {
+                "timeout": 21
+              },
+              "latency": {
+                "count": 218,
+                "min_ms": 0.321875,
+                "p50_ms": 0.520114,
+                "p95_ms": 500.565833,
+                "p99_ms": 500.565833,
+                "max_ms": 500.565833
+              },
+              "successful_latency": {
+                "count": 197,
+                "min_ms": 0.321875,
+                "p50_ms": 0.495346,
+                "p95_ms": 1.081287,
+                "p99_ms": 396.141159,
+                "max_ms": 483.372125
+              },
+              "failed_latency": {
+                "count": 21,
+                "min_ms": 500.018041,
+                "p50_ms": 500.565833,
+                "p95_ms": 500.565833,
+                "p99_ms": 500.565833,
+                "max_ms": 500.565833
+              }
+            }
+          },
+          "latency": {
+            "count": 429,
+            "min_ms": 0.307667,
+            "p50_ms": 0.495346,
+            "p95_ms": 500.565833,
+            "p99_ms": 500.565833,
+            "max_ms": 500.565833
+          },
+          "successful_latency": {
+            "count": 390,
+            "min_ms": 0.307667,
+            "p50_ms": 0.471758,
+            "p95_ms": 1.029797,
+            "p99_ms": 396.141159,
+            "max_ms": 483.372125
+          },
+          "failed_latency": {
+            "count": 39,
+            "min_ms": 500.018041,
+            "p50_ms": 500.565833,
+            "p95_ms": 500.565833,
+            "p99_ms": 500.565833,
+            "max_ms": 500.565833
+          },
+          "duration_seconds": 4.467898916,
+          "throughput_ops_per_second": 96.01828690969427,
+          "success_rate": 0.9090909090909091
+        },
+        "post_recovery": {
+          "attempts": 200,
+          "successes": 200,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 104,
+              "successes": 104,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 104,
+                "min_ms": 0.316917,
+                "p50_ms": 0.449293,
+                "p95_ms": 0.663814,
+                "p99_ms": 0.806872,
+                "max_ms": 0.9665
+              },
+              "successful_latency": {
+                "count": 104,
+                "min_ms": 0.316917,
+                "p50_ms": 0.449293,
+                "p95_ms": 0.663814,
+                "p99_ms": 0.806872,
+                "max_ms": 0.9665
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 96,
+              "successes": 96,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 96,
+                "min_ms": 0.342333,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.663814,
+                "p99_ms": 1.817875,
+                "max_ms": 1.817875
+              },
+              "successful_latency": {
+                "count": 96,
+                "min_ms": 0.342333,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.663814,
+                "p99_ms": 1.817875,
+                "max_ms": 1.817875
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 200,
+            "min_ms": 0.316917,
+            "p50_ms": 0.471758,
+            "p95_ms": 0.663814,
+            "p99_ms": 1.081287,
+            "max_ms": 1.817875
+          },
+          "successful_latency": {
+            "count": 200,
+            "min_ms": 0.316917,
+            "p50_ms": 0.471758,
+            "p95_ms": 0.663814,
+            "p99_ms": 1.081287,
+            "max_ms": 1.817875
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 1.000486834,
+          "throughput_ops_per_second": 199.9026805784033,
+          "success_rate": 1
+        }
+      },
+      "workload_stats": {
+        "offered_requests": 1497,
+        "started_requests": 1033,
+        "completed_requests": 1033,
+        "dropped_requests": 464,
+        "pacing_methodology": "Offered requests are ideal period slots from workload Start until the dispatcher observes Stop or parent cancellation; the first slot occurs after one period. The period is one second divided by the configured aggregate rate, truncated to whole nanoseconds. A central dispatcher offers only the latest due slot over an unbuffered channel; missed slots, busy workers, stopped tokens, and tokens with no eligible operation are dropped, without catch-up requests. Started requests count actual workload SET/GET client calls; completed requests count their terminal metrics attempts. After Stop, offered = started + dropped and started = completed. Validation and service probes are excluded. These global counters are not attributed to phases.",
+        "writes_attempted": 527,
+        "acknowledged_writes": 506,
+        "ambiguous_writes": 21,
+        "read_checks": 506,
+        "missing_reads": 0,
+        "mismatched_reads": 0,
+        "write_limit_reached": false,
+        "guarantee": "Only successful client SET acknowledgements are validated. Every write uses a unique immutable key. SET errors are ambiguous outcomes and may have executed; they are excluded from the acknowledged-write guarantee. Redis asynchronous replication can lose acknowledged writes during failover. This check establishes observed post-experiment readability and value equality, not a durability guarantee."
+      },
+      "validation": {
+        "started_at": "2026-10-11T15:15:54.323354+08:00",
+        "completed_at": "2026-10-11T15:15:54.47277+08:00",
+        "complete": true,
+        "expected": 506,
+        "checked": 506,
+        "missing": 0,
+        "corrupt": 0,
+        "unreadable": 0,
+        "unverified": 0,
+        "samples": [],
+        "guarantee": "Only successful client SET acknowledgements are validated. Every write uses a unique immutable key. SET errors are ambiguous outcomes and may have executed; they are excluded from the acknowledged-write guarantee. Redis asynchronous replication can lose acknowledged writes during failover. This check establishes observed post-experiment readability and value equality, not a durability guarantee."
+      }
+    },
+    {
+      "index": 2,
+      "started": true,
+      "run_id": "447f02dcf25ca6d8a1931941",
+      "outcome": "recovered",
+      "started_at": "2026-10-11T15:15:55.932863+08:00",
+      "finished_at": "2026-10-11T15:16:16.121403+08:00",
+      "effective_config_sha256": "8e959199c0f2dff505399e403a8b7f25bfe40c39ec4dbc9ab905198f7d8d36c3",
+      "report_path": "runs/447f02dcf25ca6d8a1931941/report.json",
+      "evidence_complete": true,
+      "environment_present": true,
+      "cleanup": {
+        "attempted": true,
+        "successful": true
+      },
+      "fault_action_duration_ms": 199.701417,
+      "observations": {
+        "client_first_all_shard_success": {
+          "status": "observed",
+          "since_fault_requested_ms": 3058.485667,
+          "since_fault_completed_ms": 2858.7842499999997,
+          "observation_horizon_at": "2026-10-11T15:16:14.434347+08:00",
+          "horizon_since_fault_requested_ms": 5309.565583,
+          "horizon_since_fault_completed_ms": 5109.864166
+        },
+        "client_stable": {
+          "status": "observed",
+          "since_fault_requested_ms": 4174.572667,
+          "since_fault_completed_ms": 3974.87125,
+          "observation_horizon_at": "2026-10-11T15:16:14.434347+08:00",
+          "horizon_since_fault_requested_ms": 5309.565583,
+          "horizon_since_fault_completed_ms": 5109.864166
+        },
+        "combined_stable": {
+          "status": "observed",
+          "since_fault_requested_ms": 4454.120708,
+          "since_fault_completed_ms": 4254.419291,
+          "observation_horizon_at": "2026-10-11T15:16:14.434347+08:00",
+          "horizon_since_fault_requested_ms": 5309.565583,
+          "horizon_since_fault_completed_ms": 5109.864166
+        },
+        "failure_detected": {
+          "status": "observed",
+          "since_fault_requested_ms": 1754.993208,
+          "since_fault_completed_ms": 1555.291791,
+          "observation_horizon_at": "2026-10-11T15:16:14.434347+08:00",
+          "horizon_since_fault_requested_ms": 5309.565583,
+          "horizon_since_fault_completed_ms": 5109.864166
+        },
+        "full_slot_coverage": {
+          "status": "observed",
+          "since_fault_requested_ms": 3312.374583,
+          "since_fault_completed_ms": 3112.6731659999996,
+          "observation_horizon_at": "2026-10-11T15:16:14.434347+08:00",
+          "horizon_since_fault_requested_ms": 5309.565583,
+          "horizon_since_fault_completed_ms": 5109.864166
+        },
+        "replica_promoted": {
+          "status": "observed",
+          "since_fault_requested_ms": 3312.374583,
+          "since_fault_completed_ms": 3112.6731659999996,
+          "observation_horizon_at": "2026-10-11T15:16:14.434347+08:00",
+          "horizon_since_fault_requested_ms": 5309.565583,
+          "horizon_since_fault_completed_ms": 5109.864166
+        },
+        "topology_converged": {
+          "status": "observed",
+          "since_fault_requested_ms": 3312.374583,
+          "since_fault_completed_ms": 3112.6731659999996,
+          "observation_horizon_at": "2026-10-11T15:16:14.434347+08:00",
+          "horizon_since_fault_requested_ms": 5309.565583,
+          "horizon_since_fault_completed_ms": 5109.864166
+        }
+      },
+      "phases": {
+        "baseline": {
+          "attempts": 403,
+          "successes": 403,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 191,
+              "successes": 191,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 191,
+                "min_ms": 0.320291,
+                "p50_ms": 0.471758,
+                "p95_ms": 0.697005,
+                "p99_ms": 2.60226,
+                "max_ms": 2.970084
+              },
+              "successful_latency": {
+                "count": 191,
+                "min_ms": 0.320291,
+                "p50_ms": 0.471758,
+                "p95_ms": 0.697005,
+                "p99_ms": 2.60226,
+                "max_ms": 2.970084
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 212,
+              "successes": 212,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 212,
+                "min_ms": 0.330166,
+                "p50_ms": 0.520114,
+                "p95_ms": 0.697005,
+                "p99_ms": 1.380029,
+                "max_ms": 8.984041
+              },
+              "successful_latency": {
+                "count": 212,
+                "min_ms": 0.330166,
+                "p50_ms": 0.520114,
+                "p95_ms": 0.697005,
+                "p99_ms": 1.380029,
+                "max_ms": 8.984041
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 403,
+            "min_ms": 0.320291,
+            "p50_ms": 0.495346,
+            "p95_ms": 0.697005,
+            "p99_ms": 1.521483,
+            "max_ms": 8.984041
+          },
+          "successful_latency": {
+            "count": 403,
+            "min_ms": 0.320291,
+            "p50_ms": 0.495346,
+            "p95_ms": 0.697005,
+            "p99_ms": 1.521483,
+            "max_ms": 8.984041
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 2.018997375,
+          "throughput_ops_per_second": 199.60402375461234,
+          "success_rate": 1
+        },
+        "fault": {
+          "attempts": 435,
+          "successes": 395,
+          "errors": 40,
+          "error_classes": {
+            "timeout": 40
+          },
+          "by_operation": {
+            "get": {
+              "attempts": 213,
+              "successes": 193,
+              "errors": 20,
+              "error_classes": {
+                "timeout": 20
+              },
+              "latency": {
+                "count": 213,
+                "min_ms": 0.267959,
+                "p50_ms": 0.520114,
+                "p95_ms": 500.61375,
+                "p99_ms": 500.61375,
+                "max_ms": 500.61375
+              },
+              "successful_latency": {
+                "count": 193,
+                "min_ms": 0.267959,
+                "p50_ms": 0.520114,
+                "p95_ms": 0.934056,
+                "p99_ms": 251.087458,
+                "max_ms": 251.087458
+              },
+              "failed_latency": {
+                "count": 20,
+                "min_ms": 500.016458,
+                "p50_ms": 500.61375,
+                "p95_ms": 500.61375,
+                "p99_ms": 500.61375,
+                "max_ms": 500.61375
+              }
+            },
+            "set": {
+              "attempts": 222,
+              "successes": 202,
+              "errors": 20,
+              "error_classes": {
+                "timeout": 20
+              },
+              "latency": {
+                "count": 222,
+                "min_ms": 0.315916,
+                "p50_ms": 0.573426,
+                "p95_ms": 500.472792,
+                "p99_ms": 500.472792,
+                "max_ms": 500.472792
+              },
+              "successful_latency": {
+                "count": 202,
+                "min_ms": 0.315916,
+                "p50_ms": 0.54612,
+                "p95_ms": 2.60226,
+                "p99_ms": 359.311708,
+                "max_ms": 498.397209
+              },
+              "failed_latency": {
+                "count": 20,
+                "min_ms": 500.014958,
+                "p50_ms": 500.472792,
+                "p95_ms": 500.472792,
+                "p99_ms": 500.472792,
+                "max_ms": 500.472792
+              }
+            }
+          },
+          "latency": {
+            "count": 435,
+            "min_ms": 0.267959,
+            "p50_ms": 0.54612,
+            "p95_ms": 500.61375,
+            "p99_ms": 500.61375,
+            "max_ms": 500.61375
+          },
+          "successful_latency": {
+            "count": 395,
+            "min_ms": 0.267959,
+            "p50_ms": 0.520114,
+            "p95_ms": 1.449031,
+            "p99_ms": 255.356119,
+            "max_ms": 498.397209
+          },
+          "failed_latency": {
+            "count": 40,
+            "min_ms": 500.014958,
+            "p50_ms": 500.61375,
+            "p95_ms": 500.61375,
+            "p99_ms": 500.61375,
+            "max_ms": 500.61375
+          },
+          "duration_seconds": 4.45416175,
+          "throughput_ops_per_second": 97.66147356458261,
+          "success_rate": 0.9080459770114943
+        },
+        "post_recovery": {
+          "attempts": 200,
+          "successes": 200,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 111,
+              "successes": 111,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 111,
+                "min_ms": 0.34425,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.663814,
+                "p99_ms": 0.806872,
+                "max_ms": 0.833708
+              },
+              "successful_latency": {
+                "count": 111,
+                "min_ms": 0.34425,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.663814,
+                "p99_ms": 0.806872,
+                "max_ms": 0.833708
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 89,
+              "successes": 89,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 89,
+                "min_ms": 0.34625,
+                "p50_ms": 0.54612,
+                "p95_ms": 0.806872,
+                "p99_ms": 1.8095,
+                "max_ms": 1.8095
+              },
+              "successful_latency": {
+                "count": 89,
+                "min_ms": 0.34625,
+                "p50_ms": 0.54612,
+                "p95_ms": 0.806872,
+                "p99_ms": 1.8095,
+                "max_ms": 1.8095
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 200,
+            "min_ms": 0.34425,
+            "p50_ms": 0.495346,
+            "p95_ms": 0.731856,
+            "p99_ms": 0.934056,
+            "max_ms": 1.8095
+          },
+          "successful_latency": {
+            "count": 200,
+            "min_ms": 0.34425,
+            "p50_ms": 0.495346,
+            "p95_ms": 0.731856,
+            "p99_ms": 0.934056,
+            "max_ms": 1.8095
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 1.000384208,
+          "throughput_ops_per_second": 199.92318791181876,
+          "success_rate": 1
+        }
+      },
+      "workload_stats": {
+        "offered_requests": 1494,
+        "started_requests": 1038,
+        "completed_requests": 1038,
+        "dropped_requests": 456,
+        "pacing_methodology": "Offered requests are ideal period slots from workload Start until the dispatcher observes Stop or parent cancellation; the first slot occurs after one period. The period is one second divided by the configured aggregate rate, truncated to whole nanoseconds. A central dispatcher offers only the latest due slot over an unbuffered channel; missed slots, busy workers, stopped tokens, and tokens with no eligible operation are dropped, without catch-up requests. Started requests count actual workload SET/GET client calls; completed requests count their terminal metrics attempts. After Stop, offered = started + dropped and started = completed. Validation and service probes are excluded. These global counters are not attributed to phases.",
+        "writes_attempted": 523,
+        "acknowledged_writes": 503,
+        "ambiguous_writes": 20,
+        "read_checks": 515,
+        "missing_reads": 0,
+        "mismatched_reads": 0,
+        "write_limit_reached": false,
+        "guarantee": "Only successful client SET acknowledgements are validated. Every write uses a unique immutable key. SET errors are ambiguous outcomes and may have executed; they are excluded from the acknowledged-write guarantee. Redis asynchronous replication can lose acknowledged writes during failover. This check establishes observed post-experiment readability and value equality, not a durability guarantee."
+      },
+      "validation": {
+        "started_at": "2026-10-11T15:16:14.579335+08:00",
+        "completed_at": "2026-10-11T15:16:14.735338+08:00",
+        "complete": true,
+        "expected": 503,
+        "checked": 503,
+        "missing": 0,
+        "corrupt": 0,
+        "unreadable": 0,
+        "unverified": 0,
+        "samples": [],
+        "guarantee": "Only successful client SET acknowledgements are validated. Every write uses a unique immutable key. SET errors are ambiguous outcomes and may have executed; they are excluded from the acknowledged-write guarantee. Redis asynchronous replication can lose acknowledged writes during failover. This check establishes observed post-experiment readability and value equality, not a durability guarantee."
+      }
+    },
+    {
+      "index": 3,
+      "started": true,
+      "run_id": "4052b45ef729eee33f8ba3f8",
+      "outcome": "recovered",
+      "started_at": "2026-10-11T15:16:16.153983+08:00",
+      "finished_at": "2026-10-11T15:16:36.046593+08:00",
+      "effective_config_sha256": "8e959199c0f2dff505399e403a8b7f25bfe40c39ec4dbc9ab905198f7d8d36c3",
+      "report_path": "runs/4052b45ef729eee33f8ba3f8/report.json",
+      "evidence_complete": true,
+      "environment_present": true,
+      "cleanup": {
+        "attempted": true,
+        "successful": true
+      },
+      "fault_action_duration_ms": 217.500125,
+      "observations": {
+        "client_first_all_shard_success": {
+          "status": "observed",
+          "since_fault_requested_ms": 3353.81325,
+          "since_fault_completed_ms": 3136.313125,
+          "observation_horizon_at": "2026-10-11T15:16:34.341033+08:00",
+          "horizon_since_fault_requested_ms": 5283.839166,
+          "horizon_since_fault_completed_ms": 5066.339041
+        },
+        "client_stable": {
+          "status": "observed",
+          "since_fault_requested_ms": 4441.869041,
+          "since_fault_completed_ms": 4224.368916,
+          "observation_horizon_at": "2026-10-11T15:16:34.341033+08:00",
+          "horizon_since_fault_requested_ms": 5283.839166,
+          "horizon_since_fault_completed_ms": 5066.339041
+        },
+        "combined_stable": {
+          "status": "observed",
+          "since_fault_requested_ms": 4441.869041,
+          "since_fault_completed_ms": 4224.368916,
+          "observation_horizon_at": "2026-10-11T15:16:34.341033+08:00",
+          "horizon_since_fault_requested_ms": 5283.839166,
+          "horizon_since_fault_completed_ms": 5066.339041
+        },
+        "failure_detected": {
+          "status": "observed",
+          "since_fault_requested_ms": 1779.71425,
+          "since_fault_completed_ms": 1562.214125,
+          "observation_horizon_at": "2026-10-11T15:16:34.341033+08:00",
+          "horizon_since_fault_requested_ms": 5283.839166,
+          "horizon_since_fault_completed_ms": 5066.339041
+        },
+        "full_slot_coverage": {
+          "status": "observed",
+          "since_fault_requested_ms": 2557.78,
+          "since_fault_completed_ms": 2340.279875,
+          "observation_horizon_at": "2026-10-11T15:16:34.341033+08:00",
+          "horizon_since_fault_requested_ms": 5283.839166,
+          "horizon_since_fault_completed_ms": 5066.339041
+        },
+        "replica_promoted": {
+          "status": "observed",
+          "since_fault_requested_ms": 2557.78,
+          "since_fault_completed_ms": 2340.279875,
+          "observation_horizon_at": "2026-10-11T15:16:34.341033+08:00",
+          "horizon_since_fault_requested_ms": 5283.839166,
+          "horizon_since_fault_completed_ms": 5066.339041
+        },
+        "topology_converged": {
+          "status": "observed",
+          "since_fault_requested_ms": 2557.78,
+          "since_fault_completed_ms": 2340.279875,
+          "observation_horizon_at": "2026-10-11T15:16:34.341033+08:00",
+          "horizon_since_fault_requested_ms": 5283.839166,
+          "horizon_since_fault_completed_ms": 5066.339041
+        }
+      },
+      "phases": {
+        "baseline": {
+          "attempts": 404,
+          "successes": 404,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 190,
+              "successes": 190,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 190,
+                "min_ms": 0.321625,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.697005,
+                "p99_ms": 1.135352,
+                "max_ms": 1.824708
+              },
+              "successful_latency": {
+                "count": 190,
+                "min_ms": 0.321625,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.697005,
+                "p99_ms": 1.135352,
+                "max_ms": 1.824708
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 214,
+              "successes": 214,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 214,
+                "min_ms": 0.3205,
+                "p50_ms": 0.54612,
+                "p95_ms": 0.934056,
+                "p99_ms": 1.849374,
+                "max_ms": 6.853041
+              },
+              "successful_latency": {
+                "count": 214,
+                "min_ms": 0.3205,
+                "p50_ms": 0.54612,
+                "p95_ms": 0.934056,
+                "p99_ms": 1.849374,
+                "max_ms": 6.853041
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 404,
+            "min_ms": 0.3205,
+            "p50_ms": 0.520114,
+            "p95_ms": 0.768449,
+            "p99_ms": 1.761308,
+            "max_ms": 6.853041
+          },
+          "successful_latency": {
+            "count": 404,
+            "min_ms": 0.3205,
+            "p50_ms": 0.520114,
+            "p95_ms": 0.768449,
+            "p99_ms": 1.761308,
+            "max_ms": 6.853041
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 2.020636584,
+          "throughput_ops_per_second": 199.93699173764935,
+          "success_rate": 1
+        },
+        "fault": {
+          "attempts": 424,
+          "successes": 382,
+          "errors": 42,
+          "error_classes": {
+            "timeout": 42
+          },
+          "by_operation": {
+            "get": {
+              "attempts": 210,
+              "successes": 190,
+              "errors": 20,
+              "error_classes": {
+                "timeout": 20
+              },
+              "latency": {
+                "count": 210,
+                "min_ms": 0.263667,
+                "p50_ms": 0.427898,
+                "p95_ms": 500.507416,
+                "p99_ms": 500.507416,
+                "max_ms": 500.507416
+              },
+              "successful_latency": {
+                "count": 190,
+                "min_ms": 0.263667,
+                "p50_ms": 0.407521,
+                "p95_ms": 0.980759,
+                "p99_ms": 415.948217,
+                "max_ms": 459.816333
+              },
+              "failed_latency": {
+                "count": 20,
+                "min_ms": 500.014458,
+                "p50_ms": 500.507416,
+                "p95_ms": 500.507416,
+                "p99_ms": 500.507416,
+                "max_ms": 500.507416
+              }
+            },
+            "set": {
+              "attempts": 214,
+              "successes": 192,
+              "errors": 22,
+              "error_classes": {
+                "timeout": 22
+              },
+              "latency": {
+                "count": 214,
+                "min_ms": 0.310709,
+                "p50_ms": 0.449293,
+                "p95_ms": 500.55975,
+                "p99_ms": 500.55975,
+                "max_ms": 500.55975
+              },
+              "successful_latency": {
+                "count": 192,
+                "min_ms": 0.310709,
+                "p50_ms": 0.449293,
+                "p95_ms": 1.449031,
+                "p99_ms": 231.615526,
+                "max_ms": 388.981875
+              },
+              "failed_latency": {
+                "count": 22,
+                "min_ms": 500.011375,
+                "p50_ms": 500.55975,
+                "p95_ms": 500.55975,
+                "p99_ms": 500.55975,
+                "max_ms": 500.55975
+              }
+            }
+          },
+          "latency": {
+            "count": 424,
+            "min_ms": 0.263667,
+            "p50_ms": 0.427898,
+            "p95_ms": 500.55975,
+            "p99_ms": 500.55975,
+            "max_ms": 500.55975
+          },
+          "successful_latency": {
+            "count": 382,
+            "min_ms": 0.263667,
+            "p50_ms": 0.427898,
+            "p95_ms": 1.314313,
+            "p99_ms": 396.141159,
+            "max_ms": 459.816333
+          },
+          "failed_latency": {
+            "count": 42,
+            "min_ms": 500.011375,
+            "p50_ms": 500.55975,
+            "p95_ms": 500.55975,
+            "p99_ms": 500.55975,
+            "max_ms": 500.55975
+          },
+          "duration_seconds": 4.44189725,
+          "throughput_ops_per_second": 95.45470688228998,
+          "success_rate": 0.9009433962264151
+        },
+        "post_recovery": {
+          "attempts": 200,
+          "successes": 200,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 110,
+              "successes": 110,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 110,
+                "min_ms": 0.337208,
+                "p50_ms": 0.449293,
+                "p95_ms": 0.602098,
+                "p99_ms": 0.632203,
+                "max_ms": 0.721334
+              },
+              "successful_latency": {
+                "count": 110,
+                "min_ms": 0.337208,
+                "p50_ms": 0.449293,
+                "p95_ms": 0.602098,
+                "p99_ms": 0.632203,
+                "max_ms": 0.721334
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 90,
+              "successes": 90,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 90,
+                "min_ms": 0.340875,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.632203,
+                "p99_ms": 0.9225,
+                "max_ms": 0.9225
+              },
+              "successful_latency": {
+                "count": 90,
+                "min_ms": 0.340875,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.632203,
+                "p99_ms": 0.9225,
+                "max_ms": 0.9225
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 200,
+            "min_ms": 0.337208,
+            "p50_ms": 0.471758,
+            "p95_ms": 0.602098,
+            "p99_ms": 0.697005,
+            "max_ms": 0.9225
+          },
+          "successful_latency": {
+            "count": 200,
+            "min_ms": 0.337208,
+            "p50_ms": 0.471758,
+            "p95_ms": 0.602098,
+            "p99_ms": 0.697005,
+            "max_ms": 0.9225
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 1.00013175,
+          "throughput_ops_per_second": 199.9736534711552,
+          "success_rate": 1
+        }
+      },
+      "workload_stats": {
+        "offered_requests": 1492,
+        "started_requests": 1028,
+        "completed_requests": 1028,
+        "dropped_requests": 464,
+        "pacing_methodology": "Offered requests are ideal period slots from workload Start until the dispatcher observes Stop or parent cancellation; the first slot occurs after one period. The period is one second divided by the configured aggregate rate, truncated to whole nanoseconds. A central dispatcher offers only the latest due slot over an unbuffered channel; missed slots, busy workers, stopped tokens, and tokens with no eligible operation are dropped, without catch-up requests. Started requests count actual workload SET/GET client calls; completed requests count their terminal metrics attempts. After Stop, offered = started + dropped and started = completed. Validation and service probes are excluded. These global counters are not attributed to phases.",
+        "writes_attempted": 518,
+        "acknowledged_writes": 496,
+        "ambiguous_writes": 22,
+        "read_checks": 510,
+        "missing_reads": 0,
+        "mismatched_reads": 0,
+        "write_limit_reached": false,
+        "guarantee": "Only successful client SET acknowledgements are validated. Every write uses a unique immutable key. SET errors are ambiguous outcomes and may have executed; they are excluded from the acknowledged-write guarantee. Redis asynchronous replication can lose acknowledged writes during failover. This check establishes observed post-experiment readability and value equality, not a durability guarantee."
+      },
+      "validation": {
+        "started_at": "2026-10-11T15:16:34.499231+08:00",
+        "completed_at": "2026-10-11T15:16:34.640765+08:00",
+        "complete": true,
+        "expected": 496,
+        "checked": 496,
+        "missing": 0,
+        "corrupt": 0,
+        "unreadable": 0,
+        "unverified": 0,
+        "samples": [],
+        "guarantee": "Only successful client SET acknowledgements are validated. Every write uses a unique immutable key. SET errors are ambiguous outcomes and may have executed; they are excluded from the acknowledged-write guarantee. Redis asynchronous replication can lose acknowledged writes during failover. This check establishes observed post-experiment readability and value equality, not a durability guarantee."
+      }
+    },
+    {
+      "index": 4,
+      "started": true,
+      "run_id": "3a9679dd0e8a675a20d49be6",
+      "outcome": "recovered",
+      "started_at": "2026-10-11T15:16:36.087759+08:00",
+      "finished_at": "2026-10-11T15:16:55.669459+08:00",
+      "effective_config_sha256": "8e959199c0f2dff505399e403a8b7f25bfe40c39ec4dbc9ab905198f7d8d36c3",
+      "report_path": "runs/3a9679dd0e8a675a20d49be6/report.json",
+      "evidence_complete": true,
+      "environment_present": true,
+      "cleanup": {
+        "attempted": true,
+        "successful": true
+      },
+      "fault_action_duration_ms": 206.69075,
+      "observations": {
+        "client_first_all_shard_success": {
+          "status": "observed",
+          "since_fault_requested_ms": 3369.663375,
+          "since_fault_completed_ms": 3162.972625,
+          "observation_horizon_at": "2026-10-11T15:16:53.981468+08:00",
+          "horizon_since_fault_requested_ms": 5337.417666,
+          "horizon_since_fault_completed_ms": 5130.726916
+        },
+        "client_stable": {
+          "status": "observed",
+          "since_fault_requested_ms": 4482.43775,
+          "since_fault_completed_ms": 4275.747,
+          "observation_horizon_at": "2026-10-11T15:16:53.981468+08:00",
+          "horizon_since_fault_requested_ms": 5337.417666,
+          "horizon_since_fault_completed_ms": 5130.726916
+        },
+        "combined_stable": {
+          "status": "observed",
+          "since_fault_requested_ms": 4482.43775,
+          "since_fault_completed_ms": 4275.747,
+          "observation_horizon_at": "2026-10-11T15:16:53.981468+08:00",
+          "horizon_since_fault_requested_ms": 5337.417666,
+          "horizon_since_fault_completed_ms": 5130.726916
+        },
+        "failure_detected": {
+          "status": "observed",
+          "since_fault_requested_ms": 1774.004916,
+          "since_fault_completed_ms": 1567.3141660000001,
+          "observation_horizon_at": "2026-10-11T15:16:53.981468+08:00",
+          "horizon_since_fault_requested_ms": 5337.417666,
+          "horizon_since_fault_completed_ms": 5130.726916
+        },
+        "full_slot_coverage": {
+          "status": "observed",
+          "since_fault_requested_ms": 2558.433958,
+          "since_fault_completed_ms": 2351.743208,
+          "observation_horizon_at": "2026-10-11T15:16:53.981468+08:00",
+          "horizon_since_fault_requested_ms": 5337.417666,
+          "horizon_since_fault_completed_ms": 5130.726916
+        },
+        "replica_promoted": {
+          "status": "observed",
+          "since_fault_requested_ms": 2558.433958,
+          "since_fault_completed_ms": 2351.743208,
+          "observation_horizon_at": "2026-10-11T15:16:53.981468+08:00",
+          "horizon_since_fault_requested_ms": 5337.417666,
+          "horizon_since_fault_completed_ms": 5130.726916
+        },
+        "topology_converged": {
+          "status": "observed",
+          "since_fault_requested_ms": 2558.433958,
+          "since_fault_completed_ms": 2351.743208,
+          "observation_horizon_at": "2026-10-11T15:16:53.981468+08:00",
+          "horizon_since_fault_requested_ms": 5337.417666,
+          "horizon_since_fault_completed_ms": 5130.726916
+        }
+      },
+      "phases": {
+        "baseline": {
+          "attempts": 404,
+          "successes": 404,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 189,
+              "successes": 189,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 189,
+                "min_ms": 0.353625,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.663814,
+                "p99_ms": 0.934056,
+                "max_ms": 1.14175
+              },
+              "successful_latency": {
+                "count": 189,
+                "min_ms": 0.353625,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.663814,
+                "p99_ms": 0.934056,
+                "max_ms": 1.14175
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 215,
+              "successes": 215,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 215,
+                "min_ms": 0.369042,
+                "p50_ms": 0.520114,
+                "p95_ms": 0.768449,
+                "p99_ms": 1.521483,
+                "max_ms": 6.065583
+              },
+              "successful_latency": {
+                "count": 215,
+                "min_ms": 0.369042,
+                "p50_ms": 0.520114,
+                "p95_ms": 0.768449,
+                "p99_ms": 1.521483,
+                "max_ms": 6.065583
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 404,
+            "min_ms": 0.353625,
+            "p50_ms": 0.495346,
+            "p95_ms": 0.731856,
+            "p99_ms": 1.251726,
+            "max_ms": 6.065583
+          },
+          "successful_latency": {
+            "count": 404,
+            "min_ms": 0.353625,
+            "p50_ms": 0.495346,
+            "p95_ms": 0.731856,
+            "p99_ms": 1.251726,
+            "max_ms": 6.065583
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 2.020742209,
+          "throughput_ops_per_second": 199.9265409514688,
+          "success_rate": 1
+        },
+        "fault": {
+          "attempts": 414,
+          "successes": 370,
+          "errors": 44,
+          "error_classes": {
+            "timeout": 44
+          },
+          "by_operation": {
+            "get": {
+              "attempts": 203,
+              "successes": 182,
+              "errors": 21,
+              "error_classes": {
+                "timeout": 21
+              },
+              "latency": {
+                "count": 203,
+                "min_ms": 0.285167,
+                "p50_ms": 0.520114,
+                "p95_ms": 500.832166,
+                "p99_ms": 500.832166,
+                "max_ms": 500.832166
+              },
+              "successful_latency": {
+                "count": 182,
+                "min_ms": 0.285167,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.889577,
+                "p99_ms": 325.90631,
+                "max_ms": 369.021292
+              },
+              "failed_latency": {
+                "count": 21,
+                "min_ms": 500.021542,
+                "p50_ms": 500.832166,
+                "p95_ms": 500.832166,
+                "p99_ms": 500.832166,
+                "max_ms": 500.832166
+              }
+            },
+            "set": {
+              "attempts": 211,
+              "successes": 188,
+              "errors": 23,
+              "error_classes": {
+                "timeout": 23
+              },
+              "latency": {
+                "count": 211,
+                "min_ms": 0.326083,
+                "p50_ms": 0.54612,
+                "p95_ms": 500.470417,
+                "p99_ms": 500.470417,
+                "max_ms": 500.470417
+              },
+              "successful_latency": {
+                "count": 188,
+                "min_ms": 0.326083,
+                "p50_ms": 0.54612,
+                "p95_ms": 1.029797,
+                "p99_ms": 396.141159,
+                "max_ms": 460.126416
+              },
+              "failed_latency": {
+                "count": 23,
+                "min_ms": 500.01275,
+                "p50_ms": 500.470417,
+                "p95_ms": 500.470417,
+                "p99_ms": 500.470417,
+                "max_ms": 500.470417
+              }
+            }
+          },
+          "latency": {
+            "count": 414,
+            "min_ms": 0.285167,
+            "p50_ms": 0.54612,
+            "p95_ms": 500.832166,
+            "p99_ms": 500.832166,
+            "max_ms": 500.832166
+          },
+          "successful_latency": {
+            "count": 370,
+            "min_ms": 0.285167,
+            "p50_ms": 0.520114,
+            "p95_ms": 0.980759,
+            "p99_ms": 325.90631,
+            "max_ms": 460.126416
+          },
+          "failed_latency": {
+            "count": 44,
+            "min_ms": 500.01275,
+            "p50_ms": 500.832166,
+            "p95_ms": 500.832166,
+            "p99_ms": 500.832166,
+            "max_ms": 500.832166
+          },
+          "duration_seconds": 4.482481166,
+          "throughput_ops_per_second": 92.35956263246014,
+          "success_rate": 0.893719806763285
+        },
+        "post_recovery": {
+          "attempts": 200,
+          "successes": 200,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 115,
+              "successes": 115,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 115,
+                "min_ms": 0.311792,
+                "p50_ms": 0.471758,
+                "p95_ms": 0.663814,
+                "p99_ms": 0.731856,
+                "max_ms": 0.767375
+              },
+              "successful_latency": {
+                "count": 115,
+                "min_ms": 0.311792,
+                "p50_ms": 0.471758,
+                "p95_ms": 0.663814,
+                "p99_ms": 0.731856,
+                "max_ms": 0.767375
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 85,
+              "successes": 85,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 85,
+                "min_ms": 0.361958,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.632203,
+                "p99_ms": 0.860959,
+                "max_ms": 0.860959
+              },
+              "successful_latency": {
+                "count": 85,
+                "min_ms": 0.361958,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.632203,
+                "p99_ms": 0.860959,
+                "max_ms": 0.860959
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 200,
+            "min_ms": 0.311792,
+            "p50_ms": 0.471758,
+            "p95_ms": 0.632203,
+            "p99_ms": 0.731856,
+            "max_ms": 0.860959
+          },
+          "successful_latency": {
+            "count": 200,
+            "min_ms": 0.311792,
+            "p50_ms": 0.471758,
+            "p95_ms": 0.632203,
+            "p99_ms": 0.731856,
+            "max_ms": 0.860959
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 1.000364125,
+          "throughput_ops_per_second": 199.927201507751,
+          "success_rate": 1
+        }
+      },
+      "workload_stats": {
+        "offered_requests": 1500,
+        "started_requests": 1018,
+        "completed_requests": 1018,
+        "dropped_requests": 482,
+        "pacing_methodology": "Offered requests are ideal period slots from workload Start until the dispatcher observes Stop or parent cancellation; the first slot occurs after one period. The period is one second divided by the configured aggregate rate, truncated to whole nanoseconds. A central dispatcher offers only the latest due slot over an unbuffered channel; missed slots, busy workers, stopped tokens, and tokens with no eligible operation are dropped, without catch-up requests. Started requests count actual workload SET/GET client calls; completed requests count their terminal metrics attempts. After Stop, offered = started + dropped and started = completed. Validation and service probes are excluded. These global counters are not attributed to phases.",
+        "writes_attempted": 511,
+        "acknowledged_writes": 488,
+        "ambiguous_writes": 23,
+        "read_checks": 507,
+        "missing_reads": 0,
+        "mismatched_reads": 0,
+        "write_limit_reached": false,
+        "guarantee": "Only successful client SET acknowledgements are validated. Every write uses a unique immutable key. SET errors are ambiguous outcomes and may have executed; they are excluded from the acknowledged-write guarantee. Redis asynchronous replication can lose acknowledged writes during failover. This check establishes observed post-experiment readability and value equality, not a durability guarantee."
+      },
+      "validation": {
+        "started_at": "2026-10-11T15:16:54.126904+08:00",
+        "completed_at": "2026-10-11T15:16:54.264887+08:00",
+        "complete": true,
+        "expected": 488,
+        "checked": 488,
+        "missing": 0,
+        "corrupt": 0,
+        "unreadable": 0,
+        "unverified": 0,
+        "samples": [],
+        "guarantee": "Only successful client SET acknowledgements are validated. Every write uses a unique immutable key. SET errors are ambiguous outcomes and may have executed; they are excluded from the acknowledged-write guarantee. Redis asynchronous replication can lose acknowledged writes during failover. This check establishes observed post-experiment readability and value equality, not a durability guarantee."
+      }
+    },
+    {
+      "index": 5,
+      "started": true,
+      "run_id": "9c81a869a4e04108f3c73780",
+      "outcome": "recovered",
+      "started_at": "2026-10-11T15:16:55.709772+08:00",
+      "finished_at": "2026-10-11T15:17:15.908872+08:00",
+      "effective_config_sha256": "8e959199c0f2dff505399e403a8b7f25bfe40c39ec4dbc9ab905198f7d8d36c3",
+      "report_path": "runs/9c81a869a4e04108f3c73780/report.json",
+      "evidence_complete": true,
+      "environment_present": true,
+      "cleanup": {
+        "attempted": true,
+        "successful": true
+      },
+      "fault_action_duration_ms": 205.811708,
+      "observations": {
+        "client_first_all_shard_success": {
+          "status": "observed",
+          "since_fault_requested_ms": 3066.242583,
+          "since_fault_completed_ms": 2860.430875,
+          "observation_horizon_at": "2026-10-11T15:17:14.252222+08:00",
+          "horizon_since_fault_requested_ms": 5027.6185,
+          "horizon_since_fault_completed_ms": 4821.806792
+        },
+        "client_stable": {
+          "status": "observed",
+          "since_fault_requested_ms": 4172.747833,
+          "since_fault_completed_ms": 3966.936125,
+          "observation_horizon_at": "2026-10-11T15:17:14.252222+08:00",
+          "horizon_since_fault_requested_ms": 5027.6185,
+          "horizon_since_fault_completed_ms": 4821.806792
+        },
+        "combined_stable": {
+          "status": "observed",
+          "since_fault_requested_ms": 4172.747833,
+          "since_fault_completed_ms": 3966.936125,
+          "observation_horizon_at": "2026-10-11T15:17:14.252222+08:00",
+          "horizon_since_fault_requested_ms": 5027.6185,
+          "horizon_since_fault_completed_ms": 4821.806792
+        },
+        "failure_detected": {
+          "status": "observed",
+          "since_fault_requested_ms": 1755.14925,
+          "since_fault_completed_ms": 1549.337542,
+          "observation_horizon_at": "2026-10-11T15:17:14.252222+08:00",
+          "horizon_since_fault_requested_ms": 5027.6185,
+          "horizon_since_fault_completed_ms": 4821.806792
+        },
+        "full_slot_coverage": {
+          "status": "observed",
+          "since_fault_requested_ms": 2538.939,
+          "since_fault_completed_ms": 2333.1272919999997,
+          "observation_horizon_at": "2026-10-11T15:17:14.252222+08:00",
+          "horizon_since_fault_requested_ms": 5027.6185,
+          "horizon_since_fault_completed_ms": 4821.806792
+        },
+        "replica_promoted": {
+          "status": "observed",
+          "since_fault_requested_ms": 2538.939,
+          "since_fault_completed_ms": 2333.1272919999997,
+          "observation_horizon_at": "2026-10-11T15:17:14.252222+08:00",
+          "horizon_since_fault_requested_ms": 5027.6185,
+          "horizon_since_fault_completed_ms": 4821.806792
+        },
+        "topology_converged": {
+          "status": "observed",
+          "since_fault_requested_ms": 2538.939,
+          "since_fault_completed_ms": 2333.1272919999997,
+          "observation_horizon_at": "2026-10-11T15:17:14.252222+08:00",
+          "horizon_since_fault_requested_ms": 5027.6185,
+          "horizon_since_fault_completed_ms": 4821.806792
+        }
+      },
+      "phases": {
+        "baseline": {
+          "attempts": 404,
+          "successes": 404,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 191,
+              "successes": 191,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 191,
+                "min_ms": 0.313542,
+                "p50_ms": 0.407521,
+                "p95_ms": 0.54612,
+                "p99_ms": 0.697005,
+                "max_ms": 3.385
+              },
+              "successful_latency": {
+                "count": 191,
+                "min_ms": 0.313542,
+                "p50_ms": 0.407521,
+                "p95_ms": 0.54612,
+                "p99_ms": 0.697005,
+                "max_ms": 3.385
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 213,
+              "successes": 213,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 213,
+                "min_ms": 0.315334,
+                "p50_ms": 0.427898,
+                "p95_ms": 0.573426,
+                "p99_ms": 1.521483,
+                "max_ms": 7.112541
+              },
+              "successful_latency": {
+                "count": 213,
+                "min_ms": 0.315334,
+                "p50_ms": 0.427898,
+                "p95_ms": 0.573426,
+                "p99_ms": 1.521483,
+                "max_ms": 7.112541
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 404,
+            "min_ms": 0.313542,
+            "p50_ms": 0.427898,
+            "p95_ms": 0.573426,
+            "p99_ms": 0.731856,
+            "max_ms": 7.112541
+          },
+          "successful_latency": {
+            "count": 404,
+            "min_ms": 0.313542,
+            "p50_ms": 0.427898,
+            "p95_ms": 0.573426,
+            "p99_ms": 0.731856,
+            "max_ms": 7.112541
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 2.021332917,
+          "throughput_ops_per_second": 199.86811504539506,
+          "success_rate": 1
+        },
+        "fault": {
+          "attempts": 350,
+          "successes": 308,
+          "errors": 42,
+          "error_classes": {
+            "timeout": 42
+          },
+          "by_operation": {
+            "get": {
+              "attempts": 175,
+              "successes": 152,
+              "errors": 23,
+              "error_classes": {
+                "timeout": 23
+              },
+              "latency": {
+                "count": 175,
+                "min_ms": 0.301083,
+                "p50_ms": 0.520114,
+                "p95_ms": 500.241042,
+                "p99_ms": 500.241042,
+                "max_ms": 500.241042
+              },
+              "successful_latency": {
+                "count": 152,
+                "min_ms": 0.301083,
+                "p50_ms": 0.495346,
+                "p95_ms": 0.934056,
+                "p99_ms": 342.201626,
+                "max_ms": 478.215
+              },
+              "failed_latency": {
+                "count": 23,
+                "min_ms": 500.009875,
+                "p50_ms": 500.241042,
+                "p95_ms": 500.241042,
+                "p99_ms": 500.241042,
+                "max_ms": 500.241042
+              }
+            },
+            "set": {
+              "attempts": 175,
+              "successes": 156,
+              "errors": 19,
+              "error_classes": {
+                "timeout": 19
+              },
+              "latency": {
+                "count": 175,
+                "min_ms": 0.355667,
+                "p50_ms": 0.573426,
+                "p95_ms": 500.455958,
+                "p99_ms": 500.455958,
+                "max_ms": 500.455958
+              },
+              "successful_latency": {
+                "count": 156,
+                "min_ms": 0.355667,
+                "p50_ms": 0.54612,
+                "p95_ms": 1.251726,
+                "p99_ms": 458.58291,
+                "max_ms": 473.486958
+              },
+              "failed_latency": {
+                "count": 19,
+                "min_ms": 500.015709,
+                "p50_ms": 500.455958,
+                "p95_ms": 500.455958,
+                "p99_ms": 500.455958,
+                "max_ms": 500.455958
+              }
+            }
+          },
+          "latency": {
+            "count": 350,
+            "min_ms": 0.301083,
+            "p50_ms": 0.54612,
+            "p95_ms": 500.455958,
+            "p99_ms": 500.455958,
+            "max_ms": 500.455958
+          },
+          "successful_latency": {
+            "count": 308,
+            "min_ms": 0.301083,
+            "p50_ms": 0.520114,
+            "p95_ms": 0.980759,
+            "p99_ms": 396.141159,
+            "max_ms": 478.215
+          },
+          "failed_latency": {
+            "count": 42,
+            "min_ms": 500.009875,
+            "p50_ms": 500.455958,
+            "p95_ms": 500.455958,
+            "p99_ms": 500.455958,
+            "max_ms": 500.455958
+          },
+          "duration_seconds": 4.172773792,
+          "throughput_ops_per_second": 83.87706054687567,
+          "success_rate": 0.88
+        },
+        "post_recovery": {
+          "attempts": 200,
+          "successes": 200,
+          "errors": 0,
+          "error_classes": {},
+          "by_operation": {
+            "get": {
+              "attempts": 103,
+              "successes": 103,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 103,
+                "min_ms": 0.303708,
+                "p50_ms": 0.449293,
+                "p95_ms": 0.602098,
+                "p99_ms": 0.697005,
+                "max_ms": 0.720167
+              },
+              "successful_latency": {
+                "count": 103,
+                "min_ms": 0.303708,
+                "p50_ms": 0.449293,
+                "p95_ms": 0.602098,
+                "p99_ms": 0.697005,
+                "max_ms": 0.720167
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            },
+            "set": {
+              "attempts": 97,
+              "successes": 97,
+              "errors": 0,
+              "error_classes": {},
+              "latency": {
+                "count": 97,
+                "min_ms": 0.318625,
+                "p50_ms": 0.471758,
+                "p95_ms": 0.602098,
+                "p99_ms": 0.802958,
+                "max_ms": 0.802958
+              },
+              "successful_latency": {
+                "count": 97,
+                "min_ms": 0.318625,
+                "p50_ms": 0.471758,
+                "p95_ms": 0.602098,
+                "p99_ms": 0.802958,
+                "max_ms": 0.802958
+              },
+              "failed_latency": {
+                "count": 0,
+                "min_ms": 0,
+                "p50_ms": 0,
+                "p95_ms": 0,
+                "p99_ms": 0,
+                "max_ms": 0
+              }
+            }
+          },
+          "latency": {
+            "count": 200,
+            "min_ms": 0.303708,
+            "p50_ms": 0.449293,
+            "p95_ms": 0.602098,
+            "p99_ms": 0.731856,
+            "max_ms": 0.802958
+          },
+          "successful_latency": {
+            "count": 200,
+            "min_ms": 0.303708,
+            "p50_ms": 0.449293,
+            "p95_ms": 0.602098,
+            "p99_ms": 0.731856,
+            "max_ms": 0.802958
+          },
+          "failed_latency": {
+            "count": 0,
+            "min_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+            "p99_ms": 0,
+            "max_ms": 0
+          },
+          "duration_seconds": 1.000469708,
+          "throughput_ops_per_second": 199.90610250440486,
+          "success_rate": 1
+        }
+      },
+      "workload_stats": {
+        "offered_requests": 1438,
+        "started_requests": 954,
+        "completed_requests": 954,
+        "dropped_requests": 484,
+        "pacing_methodology": "Offered requests are ideal period slots from workload Start until the dispatcher observes Stop or parent cancellation; the first slot occurs after one period. The period is one second divided by the configured aggregate rate, truncated to whole nanoseconds. A central dispatcher offers only the latest due slot over an unbuffered channel; missed slots, busy workers, stopped tokens, and tokens with no eligible operation are dropped, without catch-up requests. Started requests count actual workload SET/GET client calls; completed requests count their terminal metrics attempts. After Stop, offered = started + dropped and started = completed. Validation and service probes are excluded. These global counters are not attributed to phases.",
+        "writes_attempted": 485,
+        "acknowledged_writes": 466,
+        "ambiguous_writes": 19,
+        "read_checks": 469,
+        "missing_reads": 0,
+        "mismatched_reads": 0,
+        "write_limit_reached": false,
+        "guarantee": "Only successful client SET acknowledgements are validated. Every write uses a unique immutable key. SET errors are ambiguous outcomes and may have executed; they are excluded from the acknowledged-write guarantee. Redis asynchronous replication can lose acknowledged writes during failover. This check establishes observed post-experiment readability and value equality, not a durability guarantee."
+      },
+      "validation": {
+        "started_at": "2026-10-11T15:17:14.397853+08:00",
+        "completed_at": "2026-10-11T15:17:14.52897+08:00",
+        "complete": true,
+        "expected": 466,
+        "checked": 466,
+        "missing": 0,
+        "corrupt": 0,
+        "unreadable": 0,
+        "unverified": 0,
+        "samples": [],
+        "guarantee": "Only successful client SET acknowledgements are validated. Every write uses a unique immutable key. SET errors are ambiguous outcomes and may have executed; they are excluded from the acknowledged-write guarantee. Redis asynchronous replication can lose acknowledged writes during failover. This check establishes observed post-experiment readability and value equality, not a durability guarantee."
+      }
+    }
+  ],
+  "events": {
+    "client_first_all_shard_success": {
+      "observed": 5,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 5,
+        "min": 3058.485667,
+        "median": 3353.81325,
+        "mean": 3243.028725,
+        "sample_stddev": 165.05508180213218,
+        "max": 3369.663375,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 5,
+        "min": 2858.7842499999997,
+        "median": 3136.313125,
+        "mean": 3034.724375,
+        "sample_stddev": 160.15335369051863,
+        "max": 3162.972625,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "client_stable": {
+      "observed": 5,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 5,
+        "min": 4172.747833,
+        "median": 4441.869041,
+        "mean": 4347.8977497999995,
+        "sample_stddev": 159.72005524618672,
+        "max": 4482.43775,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 5,
+        "min": 3966.936125,
+        "median": 4224.368916,
+        "mean": 4139.5933998,
+        "sample_stddev": 155.1042282228061,
+        "max": 4275.747,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "combined_stable": {
+      "observed": 5,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 5,
+        "min": 4172.747833,
+        "median": 4454.120708,
+        "mean": 4403.807358,
+        "sample_stddev": 130.05219650886752,
+        "max": 4482.43775,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 5,
+        "min": 3966.936125,
+        "median": 4254.419291,
+        "mean": 4195.503008,
+        "sample_stddev": 129.08472378647537,
+        "max": 4275.747,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "failure_detected": {
+      "observed": 5,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 5,
+        "min": 1754.993208,
+        "median": 1774.004916,
+        "mean": 1768.292483,
+        "sample_stddev": 12.240797964415542,
+        "max": 1779.71425,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 5,
+        "min": 1549.337542,
+        "median": 1562.214125,
+        "mean": 1559.988133,
+        "sample_stddev": 7.5448239783951925,
+        "max": 1567.3141660000001,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "full_slot_coverage": {
+      "observed": 5,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 5,
+        "min": 2538.939,
+        "median": 2558.433958,
+        "mean": 2705.4530164000003,
+        "sample_stddev": 339.38754718551564,
+        "max": 3312.374583,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 5,
+        "min": 2333.1272919999997,
+        "median": 2347.919791,
+        "mean": 2497.1486664,
+        "sample_stddev": 344.16320371622186,
+        "max": 3112.6731659999996,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "replica_promoted": {
+      "observed": 5,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 5,
+        "min": 2538.939,
+        "median": 2558.433958,
+        "mean": 2705.4530164000003,
+        "sample_stddev": 339.38754718551564,
+        "max": 3312.374583,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 5,
+        "min": 2333.1272919999997,
+        "median": 2347.919791,
+        "mean": 2497.1486664,
+        "sample_stddev": 344.16320371622186,
+        "max": 3112.6731659999996,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "topology_converged": {
+      "observed": 5,
+      "not_at_risk": 0,
+      "censored": 0,
+      "censored_deadline": 0,
+      "censored_aborted": 0,
+      "censored_error": 0,
+      "censored_other": 0,
+      "missing": 0,
+      "unstarted": 0,
+      "missing_reasons": {},
+      "requested_anchor_missing": 0,
+      "completed_anchor_missing": 0,
+      "since_fault_requested_ms": {
+        "n": 5,
+        "min": 2538.939,
+        "median": 2558.433958,
+        "mean": 2705.4530164000003,
+        "sample_stddev": 339.38754718551564,
+        "max": 3312.374583,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "since_fault_completed_ms": {
+        "n": 5,
+        "min": 2333.1272919999997,
+        "median": 2347.919791,
+        "mean": 2497.1486664,
+        "sample_stddev": 344.16320371622186,
+        "max": 3112.6731659999996,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    }
+  },
+  "fault_action_duration_ms": {
+    "n": 5,
+    "min": 199.701417,
+    "median": 206.69075,
+    "mean": 208.30435,
+    "sample_stddev": 6.703239565935228,
+    "max": 217.500125,
+    "small_sample": true,
+    "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+  },
+  "phases": {
+    "baseline": {
+      "trials_with_phase": 5,
+      "trials_with_attempts": 5,
+      "attempts": 2019,
+      "successes": 2019,
+      "errors": 0,
+      "error_classes": {},
+      "sum_trial_phase_duration_seconds": 10.103163627,
+      "completed_request_success_fraction": 1,
+      "completed_throughput_over_sum_phase_seconds": 199.83839463951304,
+      "successful_throughput_over_sum_phase_seconds": 199.83839463951304,
+      "trial_success_fraction": {
+        "n": 5,
+        "min": 1,
+        "median": 1,
+        "mean": 1,
+        "sample_stddev": 0,
+        "max": 1,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_completed_throughput_ops_per_second": {
+        "n": 5,
+        "min": 199.60402375461234,
+        "median": 199.86811504539506,
+        "mean": 199.83835221106966,
+        "sample_stddev": 0.1356625185134454,
+        "max": 199.93699173764935,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p50_ms": {
+        "n": 5,
+        "min": 0.427898,
+        "median": 0.495346,
+        "mean": 0.49176359999999997,
+        "sample_stddev": 0.037788795969175844,
+        "max": 0.520114,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p95_ms": {
+        "n": 5,
+        "min": 0.573426,
+        "median": 0.697005,
+        "mean": 0.6935482,
+        "sample_stddev": 0.07336698720609977,
+        "max": 0.768449,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p99_ms": {
+        "n": 5,
+        "min": 0.731856,
+        "median": 1.251726,
+        "mean": 1.2227177999999999,
+        "sample_stddev": 0.43649983746755283,
+        "max": 1.761308,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p50_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p95_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p99_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "fault": {
+      "trials_with_phase": 5,
+      "trials_with_attempts": 5,
+      "attempts": 2052,
+      "successes": 1845,
+      "errors": 207,
+      "error_classes": {
+        "timeout": 207
+      },
+      "sum_trial_phase_duration_seconds": 22.019212874,
+      "completed_request_success_fraction": 0.8991228070175439,
+      "completed_throughput_over_sum_phase_seconds": 93.19134211300418,
+      "successful_throughput_over_sum_phase_seconds": 83.79046111037657,
+      "trial_success_fraction": {
+        "n": 5,
+        "min": 0.88,
+        "median": 0.9009433962264151,
+        "mean": 0.8983600178184207,
+        "sample_stddev": 0.011981918564233304,
+        "max": 0.9090909090909091,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_completed_throughput_ops_per_second": {
+        "n": 5,
+        "min": 83.87706054687567,
+        "median": 95.45470688228998,
+        "mean": 93.07421810718054,
+        "sample_stddev": 5.488069336990066,
+        "max": 97.66147356458261,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p50_ms": {
+        "n": 5,
+        "min": 0.427898,
+        "median": 0.520114,
+        "mean": 0.4919996,
+        "sample_stddev": 0.04150299975664408,
+        "max": 0.520114,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p95_ms": {
+        "n": 5,
+        "min": 0.980759,
+        "median": 1.029797,
+        "mean": 1.1509318000000002,
+        "sample_stddev": 0.21688000890169654,
+        "max": 1.449031,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p99_ms": {
+        "n": 5,
+        "min": 255.356119,
+        "median": 396.141159,
+        "mean": 353.9371812,
+        "sample_stddev": 62.94339280484479,
+        "max": 396.141159,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p50_ms": {
+        "n": 5,
+        "min": 500.455958,
+        "median": 500.565833,
+        "mean": 500.6054914,
+        "sample_stddev": 0.1391715495702901,
+        "max": 500.832166,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p95_ms": {
+        "n": 5,
+        "min": 500.455958,
+        "median": 500.565833,
+        "mean": 500.6054914,
+        "sample_stddev": 0.1391715495702901,
+        "max": 500.832166,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p99_ms": {
+        "n": 5,
+        "min": 500.455958,
+        "median": 500.565833,
+        "mean": 500.6054914,
+        "sample_stddev": 0.1391715495702901,
+        "max": 500.832166,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    },
+    "post_recovery": {
+      "trials_with_phase": 5,
+      "trials_with_attempts": 5,
+      "attempts": 1000,
+      "successes": 1000,
+      "errors": 0,
+      "error_classes": {},
+      "sum_trial_phase_duration_seconds": 5.001836625,
+      "completed_request_success_fraction": 1,
+      "completed_throughput_over_sum_phase_seconds": 199.9265619756223,
+      "successful_throughput_over_sum_phase_seconds": 199.9265619756223,
+      "trial_success_fraction": {
+        "n": 5,
+        "min": 1,
+        "median": 1,
+        "mean": 1,
+        "sample_stddev": 0,
+        "max": 1,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_completed_throughput_ops_per_second": {
+        "n": 5,
+        "min": 199.9026805784033,
+        "median": 199.92318791181876,
+        "mean": 199.92656519470663,
+        "sample_stddev": 0.028365089913627583,
+        "max": 199.9736534711552,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p50_ms": {
+        "n": 5,
+        "min": 0.449293,
+        "median": 0.471758,
+        "mean": 0.47198260000000003,
+        "sample_stddev": 0.01628509858121834,
+        "max": 0.495346,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p95_ms": {
+        "n": 5,
+        "min": 0.602098,
+        "median": 0.632203,
+        "mean": 0.6464138,
+        "sample_stddev": 0.054159171884363186,
+        "max": 0.731856,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_successful_latency_p99_ms": {
+        "n": 5,
+        "min": 0.697005,
+        "median": 0.731856,
+        "mean": 0.8352120000000001,
+        "sample_stddev": 0.16642501485804354,
+        "max": 1.081287,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p50_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p95_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      },
+      "trial_failed_latency_p99_ms": {
+        "n": 0,
+        "small_sample": true,
+        "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+      }
+    }
+  },
+  "data": {
+    "validation_attempted_trials": 5,
+    "validation_complete_trials": 5,
+    "acknowledged_writes": 2459,
+    "writes_attempted": 2564,
+    "ambiguous_writes": 105,
+    "checked": 2459,
+    "missing": 0,
+    "corrupt": 0,
+    "unreadable": 0,
+    "unverified": 0,
+    "acknowledged_not_checked": 0,
+    "missing_read_checks": 0,
+    "mismatched_read_checks": 0,
+    "trial_acknowledged_writes": {
+      "n": 5,
+      "min": 466,
+      "median": 496,
+      "mean": 491.8,
+      "sample_stddev": 16.006248779773482,
+      "max": 506,
+      "small_sample": true,
+      "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+    },
+    "trial_ambiguous_writes": {
+      "n": 5,
+      "min": 19,
+      "median": 21,
+      "mean": 21,
+      "sample_stddev": 1.5811388300841898,
+      "max": 23,
+      "small_sample": true,
+      "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+    },
+    "trial_missing_writes": {
+      "n": 5,
+      "min": 0,
+      "median": 0,
+      "mean": 0,
+      "sample_stddev": 0,
+      "max": 0,
+      "small_sample": true,
+      "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+    },
+    "trial_corrupt_writes": {
+      "n": 5,
+      "min": 0,
+      "median": 0,
+      "mean": 0,
+      "sample_stddev": 0,
+      "max": 0,
+      "small_sample": true,
+      "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+    },
+    "trial_unreadable_writes": {
+      "n": 5,
+      "min": 0,
+      "median": 0,
+      "mean": 0,
+      "sample_stddev": 0,
+      "max": 0,
+      "small_sample": true,
+      "methodology": "Descriptive statistics over available trial observations. Standard deviation uses N-1. P90/P95 use nearest rank and require at least 20 observations. Small samples do not support reliable tail estimates; these statistics are not confidence intervals or universal reliability guarantees."
+    }
+  },
+  "latency_aggregation": "No pooled request latency quantiles are computed: individual report schemas 1 and 2 contain histogram quantile summaries, not mergeable bucket counts. Latency statistics describe distributions of per-trial successful/failed p50/p95/p99 values, conditional on trials with those observations; their means are not pooled request quantiles.",
+  "methodology": [
+    "Trials execute sequentially with a fresh environment per callback; the next callback starts only after the previous callback returns with successful cleanup evidence (or an authoritative report that no environment was provisioned).",
+    "Recovery success fraction uses all requested trials as the denominator. Outcomes, started/unstarted counts and individual reports preserve failed, partial and aborted trials; the started-trial fraction is reported separately.",
+    "Recovery timings are conditional on observed milestones, including observed milestones in partial/failed trials. Unobserved post-fault events are censored at the accepted sampled observation horizon with deadline/abort/error reasons, never zero-duration samples; this does not prove the physical event occurred after that horizon. Trials without a requested fault are separately not at risk. No survival distribution, independence assumption or population reliability guarantee is inferred.",
+    "Event durations use runtime SinceFaultMS and fault_action_duration_ms when present, preserving monotonic elapsed-time measurements. Schema 1 action-completion-relative durations fall back to wall-clock timestamp differences and can be affected by clock adjustments. First sampled observations include polling uncertainty; action duration includes ownership checks and fault command overhead.",
+    "Min, median, mean, N-1 sample standard deviation and maximum describe available trial observations. P90/P95 use nearest rank only when N\u003e=20; smaller samples have an explicit tail-estimation caveat.",
+    "Completed-request success fractions weight actual completed counts; aggregate throughput divides summed completed/successful counts by summed phase wall-clock duration. Offered load and worker saturation are not inferred from completed requests.",
+    "Acknowledged SET writes remain distinct from ambiguous SET outcomes and final read-back validation. Skipped/incomplete validation contributes acknowledged-not-checked counts; no observed loss is not a durability guarantee."
+  ]
+}

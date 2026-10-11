@@ -1,0 +1,30 @@
+version: 1
+name: policy-set-primary-crash
+# Short, controlled trials for repeated-run observation; not a capacity benchmark.
+environment:
+  redis_image: redis:8.10.2-alpine
+  node_timeout: 1s
+workload:
+  write_policy: set
+  wait_replicas: 1
+  wait_timeout: 100ms
+  workers: 8
+  rate_per_second: 200
+  max_writes: 20000
+  read_percent: 50
+  value_bytes: 128
+  seed: 42
+  operation_timeout: 500ms
+experiment:
+  fault: primary-kill
+  baseline: 8s
+  post_recovery: 3s
+  sample_interval: 250ms
+  stable_for: 1s
+  minimum_baseline_success: 0.99
+timeouts:
+  provision: 2m
+  readiness: 1m
+  recovery: 30s
+  validation: 30s
+  cleanup: 30s

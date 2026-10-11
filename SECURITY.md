@@ -1,0 +1,11 @@
+# Security
+
+Redis Reliability Lab is a local experimental tool that deliberately crashes or disconnects its owned Redis containers. It accepts only local Unix-socket Docker daemons and official version-pinned Redis images, and it checks run labels, full IDs, resource names, network capability and isolation before destructive operations. Restoration reconnects only the original owned endpoints and process; it does not manipulate host firewall rules or grant privileged container access.
+
+The tool requires Docker privileges. Those privileges are powerful; the resource checks are application safeguards, not a sandbox against a compromised daemon or hostile local user. Redis instances contain synthetic data, are unauthenticated inside the dedicated per-run bridge, and configure client ports to bind to `127.0.0.1`. The bridge disables egress IP masquerading, but does not firewall the Docker host or hosts with explicit routes to the container subnet. Do not put sensitive data in the lab or attach other systems to its network.
+
+Use a current Docker Engine, preferably 28.0.0 or newer on native Linux. Docker documents that engines older than 28.0.0 can expose localhost-published ports to other hosts on the same layer-2 network. A configured loopback binding is therefore not an isolation guarantee on those engines. Historical Docker Desktop 24.0.6 results describe the tested VM environment and do not establish whether the native-Linux exposure applies to that host. See [Docker port-publishing limitations](https://docs.docker.com/engine/network/port-publishing/).
+
+The most security-relevant issues are bypasses of target ownership, unsafe address/redirection acceptance, arbitrary command execution, unexpected bind mounts/public ports, and removal of unrelated resources. Describe a reproducible local case and the affected version when reporting a problem. Never include credentials or real production endpoints. Use the repository hosting service's private vulnerability reporting feature when available; otherwise report the issue with a minimal synthetic example.
+
+If a safety validation fails, the tool preserves the affected resource and reports cleanup failure. Recover normal managed resources with `redis-lab cleanup <run-id>`. Do not bypass failed ownership checks with broad Docker prune commands.

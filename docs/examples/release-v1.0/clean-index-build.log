@@ -1,0 +1,63 @@
+$ go version
+go version go1.26.9 darwin/arm64
+Exit status: 0
+$ go mod verify
+all modules verified
+Exit status: 0
+$ /Library/Developer/CommandLineTools/usr/bin/make build VERSION=1.0.0
+go build -trimpath -buildvcs=false -ldflags="-X main.version=$VERSION" -o bin/redis-lab ./cmd/redis-lab
+Exit status: 0
+$ bin/redis-lab version
+redis-lab 1.0.0
+Exit status: 0
+$ bin/redis-lab validate experiments/persistence-aof-always.yaml
+Valid experiment: persistence-aof-always (cluster-restart)
+Exit status: 0
+$ bin/redis-lab validate experiments/persistence-aof-everysec.yaml
+Valid experiment: persistence-aof-everysec (cluster-restart)
+Exit status: 0
+$ bin/redis-lab validate experiments/persistence-memory.yaml
+Valid experiment: persistence-memory (cluster-restart)
+Exit status: 0
+$ bin/redis-lab validate experiments/policy-aof-set.yaml
+Valid experiment: policy-aof-set (primary-kill)
+Exit status: 0
+$ bin/redis-lab validate experiments/policy-aof-wait.yaml
+Valid experiment: policy-aof-wait (primary-kill)
+Exit status: 0
+$ bin/redis-lab validate experiments/policy-aof-waitaof.yaml
+Valid experiment: policy-aof-waitaof (primary-kill)
+Exit status: 0
+$ bin/redis-lab validate experiments/policy-set.yaml
+Valid experiment: policy-set-primary-crash (primary-kill)
+Exit status: 0
+$ bin/redis-lab validate experiments/policy-wait.yaml
+Valid experiment: policy-wait-primary-crash (primary-kill)
+Exit status: 0
+$ bin/redis-lab validate experiments/primary-failure-repeat.yaml
+Valid experiment: primary-failure-repeat (primary-kill)
+Exit status: 0
+$ bin/redis-lab validate experiments/primary-failure-timeout.yaml
+Valid experiment: primary-failure-timeout (primary-kill)
+Exit status: 0
+$ bin/redis-lab validate experiments/primary-failure.yaml
+Valid experiment: primary-failure (primary-kill)
+Exit status: 0
+$ bin/redis-lab validate experiments/primary-isolation.yaml
+Valid experiment: primary-isolation (primary-isolate)
+Exit status: 0
+$ bin/redis-lab validate experiments/primary-repair-wait.yaml
+Valid experiment: primary-repair-wait (primary-kill)
+Exit status: 0
+$ bin/redis-lab validate experiments/primary-repair.yaml
+Valid experiment: primary-repair (primary-kill)
+Exit status: 0
+$ bin/redis-lab validate experiments/replica-crash.yaml
+Valid experiment: replica-crash (replica-kill)
+Exit status: 0
+$ bin/redis-lab validate experiments/replica-isolation.yaml
+Valid experiment: replica-isolation (replica-isolate)
+Exit status: 0
+Clean-index binary SHA256: b54f87e94fe88f306ffad71cefb52b4468ed251a234c00131061bd4b686a1419
+Workspace binary SHA256: b54f87e94fe88f306ffad71cefb52b4468ed251a234c00131061bd4b686a1419
+Bit-identical: True

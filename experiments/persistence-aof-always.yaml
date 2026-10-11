@@ -1,0 +1,30 @@
+version: 1
+name: persistence-aof-always
+# Matched all-process SIGKILL/restart controls; the host and storage stay running.
+environment:
+  redis_image: redis:8.10.2-alpine
+  persistence: aof-always
+  node_timeout: 1s
+workload:
+  workers: 8
+  rate_per_second: 200
+  max_writes: 20000
+  read_percent: 50
+  value_bytes: 128
+  seed: 42
+  operation_timeout: 500ms
+experiment:
+  fault: cluster-restart
+  down_duration: 1s
+  baseline: 4s
+  post_recovery: 2s
+  sample_interval: 250ms
+  stable_for: 1s
+  minimum_baseline_success: 0.99
+timeouts:
+  provision: 2m
+  readiness: 1m
+  recovery: 30s
+  repair: 1m
+  validation: 30s
+  cleanup: 30s

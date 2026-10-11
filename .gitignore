@@ -1,0 +1,21 @@
+/bin/
+/reports/
+/coverage.out
+/redis-lab
+.DS_Store
+/default.profraw
+
+# Local agent metadata and credentials
+/.codex/
+/.agents/
+/.aws/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Transient test and profiling output
+*.test
+*.prof
+/coverage/

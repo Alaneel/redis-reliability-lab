@@ -1,0 +1,10 @@
+=== RUN   TestDockerWAITAOFDisabledRejectsCommandRetainsSET
+    waitaof_integration_test.go:161: run_id=57da802f4d1992742baec29a shard_key=redis-lab-probe-{1} SET acknowledged; WAITAOF error=ERR WAITAOF cannot be used when numlocal is set but appendonly is disabled.; GET retained value
+    waitaof_integration_test.go:161: run_id=57da802f4d1992742baec29a shard_key=redis-lab-probe-{3} SET acknowledged; WAITAOF error=ERR WAITAOF cannot be used when numlocal is set but appendonly is disabled.; GET retained value
+    waitaof_integration_test.go:161: run_id=57da802f4d1992742baec29a shard_key=redis-lab-probe-{0} SET acknowledged; WAITAOF error=ERR WAITAOF cannot be used when numlocal is set but appendonly is disabled.; GET retained value
+    waitaof_integration_test.go:201: run_id=57da802f4d1992742baec29a managed_node=node-4 endpoint=10.238.159.5:6379 observed_role=slave WAITAOF replica rejection without SET: ERR WAITAOF cannot be used with replica instances. Please also note that writes to replicas are just local and are not propagated.
+    waitaof_integration_test.go:201: run_id=57da802f4d1992742baec29a managed_node=node-5 endpoint=10.238.159.6:6379 observed_role=slave WAITAOF replica rejection without SET: ERR WAITAOF cannot be used with replica instances. Please also note that writes to replicas are just local and are not propagated.
+    waitaof_integration_test.go:201: run_id=57da802f4d1992742baec29a managed_node=node-6 endpoint=10.238.159.7:6379 observed_role=slave WAITAOF replica rejection without SET: ERR WAITAOF cannot be used with replica instances. Please also note that writes to replicas are just local and are not propagated.
+--- PASS: TestDockerWAITAOFDisabledRejectsCommandRetainsSET (15.17s)
+PASS
+ok  	github.com/alanwang/redis-reliability-lab/internal/experiment	16.681s

@@ -1,0 +1,1077 @@
+go test -race -tags=integration -count=1 -timeout=20m -v ./internal/experiment
+=== RUN   TestDockerRepeatedRecoveryTimeout
+time=2026-10-11T18:40:11.746+08:00 level=INFO msg="experiment stage" run_id=e4af785cccaa18d486aea09b stage=provisioning
+time=2026-10-11T18:40:17.391+08:00 level=INFO msg="experiment stage" run_id=e4af785cccaa18d486aea09b stage=readiness
+time=2026-10-11T18:40:23.054+08:00 level=INFO msg="experiment stage" run_id=e4af785cccaa18d486aea09b stage=baseline
+time=2026-10-11T18:40:25.157+08:00 level=INFO msg="experiment stage" run_id=e4af785cccaa18d486aea09b stage=injecting
+time=2026-10-11T18:40:25.375+08:00 level=INFO msg="experiment stage" run_id=e4af785cccaa18d486aea09b stage=observing
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+time=2026-10-11T18:40:25.506+08:00 level=INFO msg="experiment stage" run_id=e4af785cccaa18d486aea09b stage=validating
+redis: 2026/10/11 18:40:25 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62044: connect: connection refused
+time=2026-10-11T18:40:28.613+08:00 level=INFO msg="experiment stage" run_id=e4af785cccaa18d486aea09b stage=cleanup
+time=2026-10-11T18:40:30.103+08:00 level=INFO msg="experiment stage" run_id=e4af785cccaa18d486aea09b stage=complete
+time=2026-10-11T18:40:30.154+08:00 level=INFO msg="experiment finished" run_id=e4af785cccaa18d486aea09b outcome=failed reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/batch-3e08987e2fb0cea4022c5698/runs/e4af785cccaa18d486aea09b cleanup_verified=true
+time=2026-10-11T18:40:30.235+08:00 level=INFO msg="experiment stage" run_id=3e8f8b417234d385fa379d7d stage=provisioning
+time=2026-10-11T18:40:35.905+08:00 level=INFO msg="experiment stage" run_id=3e8f8b417234d385fa379d7d stage=readiness
+time=2026-10-11T18:40:41.111+08:00 level=INFO msg="experiment stage" run_id=3e8f8b417234d385fa379d7d stage=baseline
+time=2026-10-11T18:40:43.218+08:00 level=INFO msg="experiment stage" run_id=3e8f8b417234d385fa379d7d stage=injecting
+time=2026-10-11T18:40:43.434+08:00 level=INFO msg="experiment stage" run_id=3e8f8b417234d385fa379d7d stage=observing
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+time=2026-10-11T18:40:43.566+08:00 level=INFO msg="experiment stage" run_id=3e8f8b417234d385fa379d7d stage=validating
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+redis: 2026/10/11 18:40:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62124: connect: connection refused
+time=2026-10-11T18:40:46.465+08:00 level=INFO msg="experiment stage" run_id=3e8f8b417234d385fa379d7d stage=cleanup
+time=2026-10-11T18:40:47.929+08:00 level=INFO msg="experiment stage" run_id=3e8f8b417234d385fa379d7d stage=complete
+time=2026-10-11T18:40:47.976+08:00 level=INFO msg="experiment finished" run_id=3e8f8b417234d385fa379d7d outcome=failed reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/batch-3e08987e2fb0cea4022c5698/runs/3e8f8b417234d385fa379d7d cleanup_verified=true
+    batch_integration_test.go:68: batch_id=batch-3e08987e2fb0cea4022c5698 failed_trials=2 cleanup_verified=true
+--- PASS: TestDockerRepeatedRecoveryTimeout (36.66s)
+=== RUN   TestDockerPrimaryFailure
+time=2026-10-11T18:40:48.404+08:00 level=INFO msg="experiment stage" run_id=1485ab7480f2b6415fbec67c stage=provisioning
+time=2026-10-11T18:40:53.871+08:00 level=INFO msg="experiment stage" run_id=1485ab7480f2b6415fbec67c stage=readiness
+time=2026-10-11T18:40:59.024+08:00 level=INFO msg="experiment stage" run_id=1485ab7480f2b6415fbec67c stage=baseline
+time=2026-10-11T18:41:01.121+08:00 level=INFO msg="experiment stage" run_id=1485ab7480f2b6415fbec67c stage=injecting
+time=2026-10-11T18:41:01.348+08:00 level=INFO msg="experiment stage" run_id=1485ab7480f2b6415fbec67c stage=observing
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:01 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:02 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:02 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:02 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:02 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:02 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:02 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:03 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:04 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+time=2026-10-11T18:41:05.514+08:00 level=INFO msg="experiment stage" run_id=1485ab7480f2b6415fbec67c stage=post_recovery
+redis: 2026/10/11 18:41:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:05 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+redis: 2026/10/11 18:41:07 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62195: connect: connection refused
+time=2026-10-11T18:41:07.515+08:00 level=INFO msg="experiment stage" run_id=1485ab7480f2b6415fbec67c stage=validating
+time=2026-10-11T18:41:07.735+08:00 level=INFO msg="experiment stage" run_id=1485ab7480f2b6415fbec67c stage=cleanup
+time=2026-10-11T18:41:09.203+08:00 level=INFO msg="experiment stage" run_id=1485ab7480f2b6415fbec67c stage=complete
+time=2026-10-11T18:41:09.345+08:00 level=INFO msg="experiment finished" run_id=1485ab7480f2b6415fbec67c outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/1485ab7480f2b6415fbec67c cleanup_verified=true
+    integration_test.go:76: run_id=1485ab7480f2b6415fbec67c outcome=recovered report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/1485ab7480f2b6415fbec67c/report.json
+    integration_test.go:95: promoted_ms=2729.49 stable_ms=4392.74 acknowledged=649
+--- PASS: TestDockerPrimaryFailure (21.60s)
+=== RUN   TestDockerRecoveryTimeout
+time=2026-10-11T18:41:10.003+08:00 level=INFO msg="experiment stage" run_id=85a141ed117be1a07be48bd3 stage=provisioning
+time=2026-10-11T18:41:15.698+08:00 level=INFO msg="experiment stage" run_id=85a141ed117be1a07be48bd3 stage=readiness
+time=2026-10-11T18:41:20.813+08:00 level=INFO msg="experiment stage" run_id=85a141ed117be1a07be48bd3 stage=baseline
+time=2026-10-11T18:41:22.910+08:00 level=INFO msg="experiment stage" run_id=85a141ed117be1a07be48bd3 stage=injecting
+time=2026-10-11T18:41:23.144+08:00 level=INFO msg="experiment stage" run_id=85a141ed117be1a07be48bd3 stage=observing
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+time=2026-10-11T18:41:23.276+08:00 level=INFO msg="experiment stage" run_id=85a141ed117be1a07be48bd3 stage=validating
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+redis: 2026/10/11 18:41:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62330: connect: connection refused
+time=2026-10-11T18:41:26.103+08:00 level=INFO msg="experiment stage" run_id=85a141ed117be1a07be48bd3 stage=cleanup
+time=2026-10-11T18:41:27.604+08:00 level=INFO msg="experiment stage" run_id=85a141ed117be1a07be48bd3 stage=complete
+time=2026-10-11T18:41:27.645+08:00 level=INFO msg="experiment finished" run_id=85a141ed117be1a07be48bd3 outcome=failed reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/85a141ed117be1a07be48bd3 cleanup_verified=true
+    integration_test.go:100: run_id=85a141ed117be1a07be48bd3 outcome=failed report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/85a141ed117be1a07be48bd3/report.json
+--- PASS: TestDockerRecoveryTimeout (18.18s)
+=== RUN   TestDockerCancellationCleanup
+time=2026-10-11T18:41:28.183+08:00 level=INFO msg="experiment stage" run_id=abaa1ca91ed9bde99f8293c5 stage=provisioning
+time=2026-10-11T18:41:33.828+08:00 level=INFO msg="experiment stage" run_id=abaa1ca91ed9bde99f8293c5 stage=readiness
+time=2026-10-11T18:41:38.997+08:00 level=INFO msg="experiment stage" run_id=abaa1ca91ed9bde99f8293c5 stage=baseline
+time=2026-10-11T18:41:41.104+08:00 level=INFO msg="experiment stage" run_id=abaa1ca91ed9bde99f8293c5 stage=injecting
+time=2026-10-11T18:41:41.316+08:00 level=INFO msg="experiment stage" run_id=abaa1ca91ed9bde99f8293c5 stage=observing
+time=2026-10-11T18:41:41.317+08:00 level=INFO msg="experiment stage" run_id=abaa1ca91ed9bde99f8293c5 stage=cleanup
+time=2026-10-11T18:41:42.782+08:00 level=INFO msg="experiment stage" run_id=abaa1ca91ed9bde99f8293c5 stage=complete
+time=2026-10-11T18:41:42.815+08:00 level=INFO msg="experiment finished" run_id=abaa1ca91ed9bde99f8293c5 outcome=aborted reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/abaa1ca91ed9bde99f8293c5 cleanup_verified=true
+--- PASS: TestDockerCancellationCleanup (14.80s)
+=== RUN   TestDockerReplicaCrashRestart
+time=2026-10-11T18:41:42.980+08:00 level=INFO msg="experiment stage" run_id=541d9b1cc315caad0495c22f stage=provisioning
+time=2026-10-11T18:41:49.779+08:00 level=INFO msg="experiment stage" run_id=541d9b1cc315caad0495c22f stage=readiness
+time=2026-10-11T18:41:55.092+08:00 level=INFO msg="experiment stage" run_id=541d9b1cc315caad0495c22f stage=baseline
+time=2026-10-11T18:41:57.193+08:00 level=INFO msg="experiment stage" run_id=541d9b1cc315caad0495c22f stage=injecting
+time=2026-10-11T18:41:57.434+08:00 level=INFO msg="experiment stage" run_id=541d9b1cc315caad0495c22f stage=observing
+redis: 2026/10/11 18:41:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62485: connect: connection refused
+redis: 2026/10/11 18:41:57 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62485: connect: connection refused
+redis: 2026/10/11 18:41:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62485: connect: connection refused
+redis: 2026/10/11 18:41:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62485: connect: connection refused
+redis: 2026/10/11 18:41:58 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62485: connect: connection refused
+redis: 2026/10/11 18:41:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62485: connect: connection refused
+redis: 2026/10/11 18:41:59 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62485: connect: connection refused
+redis: 2026/10/11 18:42:00 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62485: connect: connection refused
+redis: 2026/10/11 18:42:00 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62485: connect: connection refused
+redis: 2026/10/11 18:42:00 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62485: connect: connection refused
+time=2026-10-11T18:42:00.588+08:00 level=INFO msg="experiment stage" run_id=541d9b1cc315caad0495c22f stage=repairing
+time=2026-10-11T18:42:02.267+08:00 level=INFO msg="experiment stage" run_id=541d9b1cc315caad0495c22f stage=reconciling
+time=2026-10-11T18:42:06.954+08:00 level=INFO msg="experiment stage" run_id=541d9b1cc315caad0495c22f stage=post_recovery
+time=2026-10-11T18:42:07.954+08:00 level=INFO msg="experiment stage" run_id=541d9b1cc315caad0495c22f stage=validating
+time=2026-10-11T18:42:08.399+08:00 level=INFO msg="experiment stage" run_id=541d9b1cc315caad0495c22f stage=cleanup
+time=2026-10-11T18:42:10.979+08:00 level=INFO msg="experiment stage" run_id=541d9b1cc315caad0495c22f stage=complete
+time=2026-10-11T18:42:11.188+08:00 level=INFO msg="experiment finished" run_id=541d9b1cc315caad0495c22f outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/541d9b1cc315caad0495c22f cleanup_verified=true
+    lifecycle_integration_test.go:67: run_id=541d9b1cc315caad0495c22f outcome=recovered report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/541d9b1cc315caad0495c22f/report.json
+    lifecycle_integration_test.go:68: repair_action_ms=1679.699 stable_redundancy_since_repair_ms=4488.091 sync_evidence=full_sync_counter_increased acknowledged=1310 missing=0
+--- PASS: TestDockerReplicaCrashRestart (29.31s)
+=== RUN   TestDockerReplicaNetworkIsolation
+time=2026-10-11T18:42:12.292+08:00 level=INFO msg="experiment stage" run_id=88c7ca8300da8bc116f98470 stage=provisioning
+time=2026-10-11T18:42:17.998+08:00 level=INFO msg="experiment stage" run_id=88c7ca8300da8bc116f98470 stage=readiness
+time=2026-10-11T18:42:23.247+08:00 level=INFO msg="experiment stage" run_id=88c7ca8300da8bc116f98470 stage=baseline
+time=2026-10-11T18:42:25.346+08:00 level=INFO msg="experiment stage" run_id=88c7ca8300da8bc116f98470 stage=injecting
+time=2026-10-11T18:42:26.813+08:00 level=INFO msg="experiment stage" run_id=88c7ca8300da8bc116f98470 stage=observing
+time=2026-10-11T18:42:30.588+08:00 level=INFO msg="experiment stage" run_id=88c7ca8300da8bc116f98470 stage=repairing
+time=2026-10-11T18:42:31.939+08:00 level=INFO msg="experiment stage" run_id=88c7ca8300da8bc116f98470 stage=reconciling
+time=2026-10-11T18:42:33.378+08:00 level=INFO msg="experiment stage" run_id=88c7ca8300da8bc116f98470 stage=post_recovery
+time=2026-10-11T18:42:34.378+08:00 level=INFO msg="experiment stage" run_id=88c7ca8300da8bc116f98470 stage=validating
+time=2026-10-11T18:42:34.810+08:00 level=INFO msg="experiment stage" run_id=88c7ca8300da8bc116f98470 stage=cleanup
+time=2026-10-11T18:42:36.378+08:00 level=INFO msg="experiment stage" run_id=88c7ca8300da8bc116f98470 stage=complete
+time=2026-10-11T18:42:36.527+08:00 level=INFO msg="experiment finished" run_id=88c7ca8300da8bc116f98470 outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/88c7ca8300da8bc116f98470 cleanup_verified=true
+    lifecycle_integration_test.go:76: run_id=88c7ca8300da8bc116f98470 outcome=recovered report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/88c7ca8300da8bc116f98470/report.json
+    lifecycle_integration_test.go:77: repair_action_ms=1351.025 stable_redundancy_since_repair_ms=1242.332 sync_evidence=no_counter_increase_observed acknowledged=1128 missing=0
+    lifecycle_integration_test.go:86: owned interface was detached while Redis survived; INFO-level replication interruption was unobserved
+--- PASS: TestDockerReplicaNetworkIsolation (25.18s)
+=== RUN   TestDockerPrimaryRepairRestoresRedundancy
+time=2026-10-11T18:42:37.472+08:00 level=INFO msg="experiment stage" run_id=7366bab971f960637400cd03 stage=provisioning
+time=2026-10-11T18:42:44.158+08:00 level=INFO msg="experiment stage" run_id=7366bab971f960637400cd03 stage=readiness
+time=2026-10-11T18:42:48.943+08:00 level=INFO msg="experiment stage" run_id=7366bab971f960637400cd03 stage=baseline
+time=2026-10-11T18:42:51.045+08:00 level=INFO msg="experiment stage" run_id=7366bab971f960637400cd03 stage=injecting
+time=2026-10-11T18:42:51.306+08:00 level=INFO msg="experiment stage" run_id=7366bab971f960637400cd03 stage=observing
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:51 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:52 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:53 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:54 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+redis: 2026/10/11 18:42:55 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62629: connect: connection refused
+time=2026-10-11T18:42:55.580+08:00 level=INFO msg="experiment stage" run_id=7366bab971f960637400cd03 stage=repairing
+time=2026-10-11T18:42:57.274+08:00 level=INFO msg="experiment stage" run_id=7366bab971f960637400cd03 stage=reconciling
+time=2026-10-11T18:43:01.974+08:00 level=INFO msg="experiment stage" run_id=7366bab971f960637400cd03 stage=post_recovery
+time=2026-10-11T18:43:02.974+08:00 level=INFO msg="experiment stage" run_id=7366bab971f960637400cd03 stage=validating
+time=2026-10-11T18:43:03.402+08:00 level=INFO msg="experiment stage" run_id=7366bab971f960637400cd03 stage=cleanup
+time=2026-10-11T18:43:05.992+08:00 level=INFO msg="experiment stage" run_id=7366bab971f960637400cd03 stage=complete
+time=2026-10-11T18:43:06.196+08:00 level=INFO msg="experiment finished" run_id=7366bab971f960637400cd03 outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/7366bab971f960637400cd03 cleanup_verified=true
+    lifecycle_integration_test.go:93: run_id=7366bab971f960637400cd03 outcome=recovered report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/7366bab971f960637400cd03/report.json
+    lifecycle_integration_test.go:94: repair_action_ms=1694.223 stable_redundancy_since_repair_ms=4495.192 sync_evidence=full_sync_counter_increased acknowledged=1230 missing=0
+--- PASS: TestDockerPrimaryRepairRestoresRedundancy (29.82s)
+=== RUN   TestDockerReplicaRepairTimeout
+time=2026-10-11T18:43:07.289+08:00 level=INFO msg="experiment stage" run_id=831e490bfe2f887190311b8f stage=provisioning
+time=2026-10-11T18:43:13.907+08:00 level=INFO msg="experiment stage" run_id=831e490bfe2f887190311b8f stage=readiness
+time=2026-10-11T18:43:18.957+08:00 level=INFO msg="experiment stage" run_id=831e490bfe2f887190311b8f stage=baseline
+time=2026-10-11T18:43:21.065+08:00 level=INFO msg="experiment stage" run_id=831e490bfe2f887190311b8f stage=injecting
+time=2026-10-11T18:43:21.317+08:00 level=INFO msg="experiment stage" run_id=831e490bfe2f887190311b8f stage=observing
+redis: 2026/10/11 18:43:21 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62776: connect: connection refused
+redis: 2026/10/11 18:43:21 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62776: connect: connection refused
+redis: 2026/10/11 18:43:21 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62776: connect: connection refused
+redis: 2026/10/11 18:43:22 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62776: connect: connection refused
+redis: 2026/10/11 18:43:22 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62776: connect: connection refused
+redis: 2026/10/11 18:43:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62776: connect: connection refused
+redis: 2026/10/11 18:43:23 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62776: connect: connection refused
+redis: 2026/10/11 18:43:24 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62776: connect: connection refused
+redis: 2026/10/11 18:43:24 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62776: connect: connection refused
+redis: 2026/10/11 18:43:24 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62776: connect: connection refused
+redis: 2026/10/11 18:43:24 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62776: connect: connection refused
+time=2026-10-11T18:43:25.399+08:00 level=INFO msg="experiment stage" run_id=831e490bfe2f887190311b8f stage=repairing
+time=2026-10-11T18:43:25.501+08:00 level=INFO msg="experiment stage" run_id=831e490bfe2f887190311b8f stage=cleanup
+time=2026-10-11T18:43:28.017+08:00 level=INFO msg="experiment stage" run_id=831e490bfe2f887190311b8f stage=complete
+time=2026-10-11T18:43:28.132+08:00 level=INFO msg="experiment finished" run_id=831e490bfe2f887190311b8f outcome=failed reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/831e490bfe2f887190311b8f cleanup_verified=true
+    lifecycle_integration_test.go:117: run_id=831e490bfe2f887190311b8f outcome=failed report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/831e490bfe2f887190311b8f/report.json
+--- PASS: TestDockerReplicaRepairTimeout (21.71s)
+=== RUN   TestDockerReplicaRepairAmbiguousFailureCleansVolumes
+time=2026-10-11T18:43:29.003+08:00 level=INFO msg="experiment stage" run_id=762a8508b73185b4b5eadffb stage=provisioning
+time=2026-10-11T18:43:35.664+08:00 level=INFO msg="experiment stage" run_id=762a8508b73185b4b5eadffb stage=readiness
+time=2026-10-11T18:43:41.117+08:00 level=INFO msg="experiment stage" run_id=762a8508b73185b4b5eadffb stage=baseline
+time=2026-10-11T18:43:43.227+08:00 level=INFO msg="experiment stage" run_id=762a8508b73185b4b5eadffb stage=injecting
+time=2026-10-11T18:43:43.498+08:00 level=INFO msg="experiment stage" run_id=762a8508b73185b4b5eadffb stage=observing
+redis: 2026/10/11 18:43:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62845: connect: connection refused
+redis: 2026/10/11 18:43:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62845: connect: connection refused
+redis: 2026/10/11 18:43:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62845: connect: connection refused
+redis: 2026/10/11 18:43:44 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62845: connect: connection refused
+redis: 2026/10/11 18:43:44 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62845: connect: connection refused
+redis: 2026/10/11 18:43:44 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62845: connect: connection refused
+redis: 2026/10/11 18:43:45 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62845: connect: connection refused
+redis: 2026/10/11 18:43:45 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62845: connect: connection refused
+redis: 2026/10/11 18:43:46 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62845: connect: connection refused
+time=2026-10-11T18:43:46.665+08:00 level=INFO msg="experiment stage" run_id=762a8508b73185b4b5eadffb stage=repairing
+time=2026-10-11T18:43:48.347+08:00 level=INFO msg="experiment stage" run_id=762a8508b73185b4b5eadffb stage=cleanup
+time=2026-10-11T18:43:50.918+08:00 level=INFO msg="experiment stage" run_id=762a8508b73185b4b5eadffb stage=complete
+time=2026-10-11T18:43:51.018+08:00 level=INFO msg="experiment finished" run_id=762a8508b73185b4b5eadffb outcome=failed reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/762a8508b73185b4b5eadffb cleanup_verified=true
+    lifecycle_integration_test.go:157: run_id=762a8508b73185b4b5eadffb outcome=failed report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/762a8508b73185b4b5eadffb/report.json
+--- PASS: TestDockerReplicaRepairAmbiguousFailureCleansVolumes (22.91s)
+=== RUN   TestDockerCancellationDuringReplicaSynchronization
+time=2026-10-11T18:43:51.912+08:00 level=INFO msg="experiment stage" run_id=afafb5148cbcffd3c52b72ed stage=provisioning
+time=2026-10-11T18:43:58.740+08:00 level=INFO msg="experiment stage" run_id=afafb5148cbcffd3c52b72ed stage=readiness
+time=2026-10-11T18:44:04.104+08:00 level=INFO msg="experiment stage" run_id=afafb5148cbcffd3c52b72ed stage=baseline
+time=2026-10-11T18:44:06.207+08:00 level=INFO msg="experiment stage" run_id=afafb5148cbcffd3c52b72ed stage=injecting
+time=2026-10-11T18:44:06.470+08:00 level=INFO msg="experiment stage" run_id=afafb5148cbcffd3c52b72ed stage=observing
+redis: 2026/10/11 18:44:06 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62891: connect: connection refused
+redis: 2026/10/11 18:44:06 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62891: connect: connection refused
+redis: 2026/10/11 18:44:06 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62891: connect: connection refused
+redis: 2026/10/11 18:44:07 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62891: connect: connection refused
+redis: 2026/10/11 18:44:07 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62891: connect: connection refused
+redis: 2026/10/11 18:44:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62891: connect: connection refused
+redis: 2026/10/11 18:44:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62891: connect: connection refused
+redis: 2026/10/11 18:44:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62891: connect: connection refused
+redis: 2026/10/11 18:44:09 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62891: connect: connection refused
+redis: 2026/10/11 18:44:09 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:62891: connect: connection refused
+time=2026-10-11T18:44:09.655+08:00 level=INFO msg="experiment stage" run_id=afafb5148cbcffd3c52b72ed stage=repairing
+time=2026-10-11T18:44:11.328+08:00 level=INFO msg="experiment stage" run_id=afafb5148cbcffd3c52b72ed stage=reconciling
+time=2026-10-11T18:44:11.329+08:00 level=INFO msg="experiment stage" run_id=afafb5148cbcffd3c52b72ed stage=cleanup
+time=2026-10-11T18:44:13.929+08:00 level=INFO msg="experiment stage" run_id=afafb5148cbcffd3c52b72ed stage=complete
+time=2026-10-11T18:44:14.030+08:00 level=INFO msg="experiment finished" run_id=afafb5148cbcffd3c52b72ed outcome=aborted reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/afafb5148cbcffd3c52b72ed cleanup_verified=true
+    lifecycle_integration_test.go:192: run_id=afafb5148cbcffd3c52b72ed outcome=aborted restart_applied=true cleanup_verified=true
+--- PASS: TestDockerCancellationDuringReplicaSynchronization (22.96s)
+=== RUN   TestLifecycleRepairRetainsActionEvidenceAndFailure
+=== RUN   TestLifecycleRepairRetainsActionEvidenceAndFailure/success
+=== RUN   TestLifecycleRepairRetainsActionEvidenceAndFailure/ambiguous_failure
+=== RUN   TestLifecycleRepairRetainsActionEvidenceAndFailure/wrong_identity
+=== RUN   TestLifecycleRepairRetainsActionEvidenceAndFailure/deadline
+--- PASS: TestLifecycleRepairRetainsActionEvidenceAndFailure (0.44s)
+    --- PASS: TestLifecycleRepairRetainsActionEvidenceAndFailure/success (0.11s)
+    --- PASS: TestLifecycleRepairRetainsActionEvidenceAndFailure/ambiguous_failure (0.11s)
+    --- PASS: TestLifecycleRepairRetainsActionEvidenceAndFailure/wrong_identity (0.11s)
+    --- PASS: TestLifecycleRepairRetainsActionEvidenceAndFailure/deadline (0.11s)
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/missing_completion
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/changed_endpoint
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/after_start_missing
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/network_detached
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/multiple_networks
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/after_Redis_process_absent
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/before_observation_absent
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/wrong_run
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/process_unchanged
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/observation_reversed
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/completion_before_request
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/observation_absent
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/wrong_container
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/wrong_node
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/before_still_running
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/before_start_missing
+=== RUN   TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/after_start_unchanged
+--- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts (1.86s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/missing_completion (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/changed_endpoint (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/after_start_missing (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/network_detached (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/multiple_networks (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/after_Redis_process_absent (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/before_observation_absent (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/wrong_run (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/process_unchanged (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/observation_reversed (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/completion_before_request (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/observation_absent (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/wrong_container (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/wrong_node (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/before_still_running (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/before_start_missing (0.11s)
+    --- PASS: TestLifecycleRepairRejectsIncompleteOrContradictoryRestartReceipts/after_start_unchanged (0.11s)
+=== RUN   TestLifecycleSynchronizationRequiresFreshStableInterval
+--- PASS: TestLifecycleSynchronizationRequiresFreshStableInterval (1.42s)
+=== RUN   TestLifecycleSynchronizationDeadlineAndCancellationExcludeLateSample
+=== RUN   TestLifecycleSynchronizationDeadlineAndCancellationExcludeLateSample/canceled=false
+=== RUN   TestLifecycleSynchronizationDeadlineAndCancellationExcludeLateSample/canceled=true
+--- PASS: TestLifecycleSynchronizationDeadlineAndCancellationExcludeLateSample (0.59s)
+    --- PASS: TestLifecycleSynchronizationDeadlineAndCancellationExcludeLateSample/canceled=false (0.30s)
+    --- PASS: TestLifecycleSynchronizationDeadlineAndCancellationExcludeLateSample/canceled=true (0.28s)
+=== RUN   TestLifecycleSynchronizationRejectsUnsynchronizedReplica
+--- PASS: TestLifecycleSynchronizationRejectsUnsynchronizedReplica (1.19s)
+=== RUN   TestReplicaMilestonesDoNotRequireOrInventPromotion
+--- PASS: TestReplicaMilestonesDoNotRequireOrInventPromotion (0.22s)
+=== RUN   TestLifecycleResyncCountersAndUnknownFailedReads
+--- PASS: TestLifecycleResyncCountersAndUnknownFailedReads (0.26s)
+=== RUN   TestRunLifecycleRequiresRestartBeforeProvisioning
+--- PASS: TestRunLifecycleRequiresRestartBeforeProvisioning (0.00s)
+=== RUN   TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners
+=== RUN   TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners/unknown_member
+=== RUN   TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners/duplicate_member
+=== RUN   TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners/changed_endpoint
+=== RUN   TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners/unreachable_owner
+=== RUN   TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners/owner_actually_replica
+=== RUN   TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners/wrong_sync_primary
+--- PASS: TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners (1.28s)
+    --- PASS: TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners/unknown_member (0.21s)
+    --- PASS: TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners/duplicate_member (0.21s)
+    --- PASS: TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners/changed_endpoint (0.21s)
+    --- PASS: TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners/unreachable_owner (0.21s)
+    --- PASS: TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners/owner_actually_replica (0.21s)
+    --- PASS: TestLifecycleDimensionsRejectUnknownMembersAndUnreachableOwners/wrong_sync_primary (0.21s)
+=== RUN   TestLifecycleRepairDoesNotHideUnavailableWAITPolicy
+--- PASS: TestLifecycleRepairDoesNotHideUnavailableWAITPolicy (0.63s)
+=== RUN   TestDockerPrimaryNetworkIsolation
+time=2026-10-11T18:44:22.751+08:00 level=INFO msg="experiment stage" run_id=14cbc121b6e05f2d1905ae9a stage=provisioning
+time=2026-10-11T18:44:28.889+08:00 level=INFO msg="experiment stage" run_id=14cbc121b6e05f2d1905ae9a stage=readiness
+time=2026-10-11T18:44:33.975+08:00 level=INFO msg="experiment stage" run_id=14cbc121b6e05f2d1905ae9a stage=baseline
+time=2026-10-11T18:44:36.086+08:00 level=INFO msg="experiment stage" run_id=14cbc121b6e05f2d1905ae9a stage=injecting
+time=2026-10-11T18:44:37.580+08:00 level=INFO msg="experiment stage" run_id=14cbc121b6e05f2d1905ae9a stage=observing
+time=2026-10-11T18:44:46.336+08:00 level=INFO msg="experiment stage" run_id=14cbc121b6e05f2d1905ae9a stage=restoring
+time=2026-10-11T18:44:47.666+08:00 level=INFO msg="experiment stage" run_id=14cbc121b6e05f2d1905ae9a stage=reconciling
+time=2026-10-11T18:44:54.698+08:00 level=INFO msg="experiment stage" run_id=14cbc121b6e05f2d1905ae9a stage=post_recovery
+time=2026-10-11T18:44:56.698+08:00 level=INFO msg="experiment stage" run_id=14cbc121b6e05f2d1905ae9a stage=validating
+time=2026-10-11T18:44:57.400+08:00 level=INFO msg="experiment stage" run_id=14cbc121b6e05f2d1905ae9a stage=cleanup
+time=2026-10-11T18:44:59.033+08:00 level=INFO msg="experiment stage" run_id=14cbc121b6e05f2d1905ae9a stage=complete
+time=2026-10-11T18:44:59.361+08:00 level=INFO msg="experiment finished" run_id=14cbc121b6e05f2d1905ae9a outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/14cbc121b6e05f2d1905ae9a cleanup_verified=true
+    network_integration_test.go:90: run_id=14cbc121b6e05f2d1905ae9a outcome=recovered report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/14cbc121b6e05f2d1905ae9a/report.json
+    network_integration_test.go:127: promoted_ms=2877.28 majority_stable_ms=4900.82 stable_reconciliation_ms=6345.32 acknowledged=2135 missing=0
+--- PASS: TestDockerPrimaryNetworkIsolation (39.94s)
+=== RUN   TestDockerNetworkReconciliationTimeout
+time=2026-10-11T18:45:02.696+08:00 level=INFO msg="experiment stage" run_id=b57cad49038bc3830f24cd4c stage=provisioning
+time=2026-10-11T18:45:08.619+08:00 level=INFO msg="experiment stage" run_id=b57cad49038bc3830f24cd4c stage=readiness
+time=2026-10-11T18:45:13.673+08:00 level=INFO msg="experiment stage" run_id=b57cad49038bc3830f24cd4c stage=baseline
+time=2026-10-11T18:45:15.770+08:00 level=INFO msg="experiment stage" run_id=b57cad49038bc3830f24cd4c stage=injecting
+time=2026-10-11T18:45:17.240+08:00 level=INFO msg="experiment stage" run_id=b57cad49038bc3830f24cd4c stage=observing
+time=2026-10-11T18:45:26.049+08:00 level=INFO msg="experiment stage" run_id=b57cad49038bc3830f24cd4c stage=restoring
+time=2026-10-11T18:45:27.399+08:00 level=INFO msg="experiment stage" run_id=b57cad49038bc3830f24cd4c stage=reconciling
+time=2026-10-11T18:45:28.207+08:00 level=INFO msg="experiment stage" run_id=b57cad49038bc3830f24cd4c stage=validating
+time=2026-10-11T18:45:28.645+08:00 level=INFO msg="experiment stage" run_id=b57cad49038bc3830f24cd4c stage=cleanup
+time=2026-10-11T18:45:30.215+08:00 level=INFO msg="experiment stage" run_id=b57cad49038bc3830f24cd4c stage=complete
+time=2026-10-11T18:45:30.386+08:00 level=INFO msg="experiment finished" run_id=b57cad49038bc3830f24cd4c outcome=partial reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/b57cad49038bc3830f24cd4c cleanup_verified=true
+    network_integration_test.go:133: run_id=b57cad49038bc3830f24cd4c outcome=partial report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/b57cad49038bc3830f24cd4c/report.json
+--- PASS: TestDockerNetworkReconciliationTimeout (30.31s)
+=== RUN   TestDockerAmbiguousNetworkIsolationRestoresAndCleans
+time=2026-10-11T18:45:33.006+08:00 level=INFO msg="experiment stage" run_id=1ab9adb988a609c6f906a83e stage=provisioning
+time=2026-10-11T18:45:38.826+08:00 level=INFO msg="experiment stage" run_id=1ab9adb988a609c6f906a83e stage=readiness
+time=2026-10-11T18:45:43.918+08:00 level=INFO msg="experiment stage" run_id=1ab9adb988a609c6f906a83e stage=baseline
+time=2026-10-11T18:45:46.023+08:00 level=INFO msg="experiment stage" run_id=1ab9adb988a609c6f906a83e stage=injecting
+time=2026-10-11T18:45:49.279+08:00 level=INFO msg="experiment stage" run_id=1ab9adb988a609c6f906a83e stage=cleanup
+time=2026-10-11T18:45:50.867+08:00 level=INFO msg="experiment stage" run_id=1ab9adb988a609c6f906a83e stage=complete
+time=2026-10-11T18:45:50.914+08:00 level=INFO msg="experiment finished" run_id=1ab9adb988a609c6f906a83e outcome=failed reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/1ab9adb988a609c6f906a83e cleanup_verified=true
+    network_integration_test.go:201: run_id=1ab9adb988a609c6f906a83e outcome=failed report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/1ab9adb988a609c6f906a83e/report.json
+--- PASS: TestDockerAmbiguousNetworkIsolationRestoresAndCleans (18.46s)
+=== RUN   TestDockerNetworkCancellationRestoresAndCleans
+time=2026-10-11T18:45:51.462+08:00 level=INFO msg="experiment stage" run_id=6bf26d3e13a5b5da45d2d796 stage=provisioning
+time=2026-10-11T18:45:57.259+08:00 level=INFO msg="experiment stage" run_id=6bf26d3e13a5b5da45d2d796 stage=readiness
+time=2026-10-11T18:46:03.300+08:00 level=INFO msg="experiment stage" run_id=6bf26d3e13a5b5da45d2d796 stage=baseline
+time=2026-10-11T18:46:05.401+08:00 level=INFO msg="experiment stage" run_id=6bf26d3e13a5b5da45d2d796 stage=injecting
+time=2026-10-11T18:46:06.867+08:00 level=INFO msg="experiment stage" run_id=6bf26d3e13a5b5da45d2d796 stage=observing
+time=2026-10-11T18:46:08.233+08:00 level=INFO msg="experiment stage" run_id=6bf26d3e13a5b5da45d2d796 stage=cleanup
+time=2026-10-11T18:46:09.825+08:00 level=INFO msg="experiment stage" run_id=6bf26d3e13a5b5da45d2d796 stage=complete
+time=2026-10-11T18:46:09.862+08:00 level=INFO msg="experiment finished" run_id=6bf26d3e13a5b5da45d2d796 outcome=aborted reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/6bf26d3e13a5b5da45d2d796 cleanup_verified=true
+    network_integration_test.go:237: run_id=6bf26d3e13a5b5da45d2d796 outcome=aborted connectivity_restored=true cleanup_verified=true
+--- PASS: TestDockerNetworkCancellationRestoresAndCleans (18.94s)
+=== RUN   TestRestoreNetworkRecordsCompletedActionSeparatelyFromErrors
+=== RUN   TestRestoreNetworkRecordsCompletedActionSeparatelyFromErrors/restored
+=== RUN   TestRestoreNetworkRecordsCompletedActionSeparatelyFromErrors/restore_error
+--- PASS: TestRestoreNetworkRecordsCompletedActionSeparatelyFromErrors (0.00s)
+    --- PASS: TestRestoreNetworkRecordsCompletedActionSeparatelyFromErrors/restored (0.00s)
+    --- PASS: TestRestoreNetworkRecordsCompletedActionSeparatelyFromErrors/restore_error (0.00s)
+=== RUN   TestRunIsolationRejectsNoncapableManagerBeforeProvision
+--- PASS: TestRunIsolationRejectsNoncapableManagerBeforeProvision (0.00s)
+=== RUN   TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity
+=== RUN   TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/no_observations
+=== RUN   TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/probe_failed
+=== RUN   TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/process_stopped
+=== RUN   TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/network_connected
+=== RUN   TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/unexpected_other_network
+=== RUN   TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/different_container_start
+=== RUN   TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/different_Redis_run_ID
+=== RUN   TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/no_Redis_PONG
+=== RUN   TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/different_container_PID
+=== RUN   TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/different_Redis_PID
+=== RUN   TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/missing_Redis_identity
+--- PASS: TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity (0.00s)
+    --- PASS: TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/no_observations (0.00s)
+    --- PASS: TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/probe_failed (0.00s)
+    --- PASS: TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/process_stopped (0.00s)
+    --- PASS: TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/network_connected (0.00s)
+    --- PASS: TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/unexpected_other_network (0.00s)
+    --- PASS: TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/different_container_start (0.00s)
+    --- PASS: TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/different_Redis_run_ID (0.00s)
+    --- PASS: TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/no_Redis_PONG (0.00s)
+    --- PASS: TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/different_container_PID (0.00s)
+    --- PASS: TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/different_Redis_PID (0.00s)
+    --- PASS: TestProcessSurvivalRequiresDisconnectedRedisAndStableIdentity/missing_Redis_identity (0.00s)
+=== RUN   TestCaptureProcessPreservesErrorsAndBoundedLatestEvidence
+--- PASS: TestCaptureProcessPreservesErrorsAndBoundedLatestEvidence (0.00s)
+=== RUN   TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints
+=== RUN   TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints/another_run
+=== RUN   TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints/another_network
+=== RUN   TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints/another_private_endpoint
+=== RUN   TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints/another_published_endpoint
+=== RUN   TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints/another_owned_node
+=== RUN   TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints/another_container
+--- PASS: TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints (0.00s)
+    --- PASS: TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints/another_run (0.00s)
+    --- PASS: TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints/another_network (0.00s)
+    --- PASS: TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints/another_private_endpoint (0.00s)
+    --- PASS: TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints/another_published_endpoint (0.00s)
+    --- PASS: TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints/another_owned_node (0.00s)
+    --- PASS: TestIsolationReceiptBindsSelectedNodeAndOriginalEndpoints/another_container (0.00s)
+=== RUN   TestDockerPersistenceModes
+=== RUN   TestDockerPersistenceModes/memory
+time=2026-10-11T18:46:10.409+08:00 level=INFO msg="experiment stage" run_id=c58be88a7f165f0805e97461 stage=provisioning
+time=2026-10-11T18:46:17.399+08:00 level=INFO msg="experiment stage" run_id=c58be88a7f165f0805e97461 stage=readiness
+time=2026-10-11T18:46:28.429+08:00 level=INFO msg="experiment stage" run_id=c58be88a7f165f0805e97461 stage=baseline
+time=2026-10-11T18:46:32.568+08:00 level=INFO msg="experiment stage" run_id=c58be88a7f165f0805e97461 stage=quiescing
+time=2026-10-11T18:46:32.569+08:00 level=INFO msg="experiment stage" run_id=c58be88a7f165f0805e97461 stage=injecting
+time=2026-10-11T18:46:34.923+08:00 level=INFO msg="experiment stage" run_id=c58be88a7f165f0805e97461 stage=observing
+time=2026-10-11T18:46:35.925+08:00 level=INFO msg="experiment stage" run_id=c58be88a7f165f0805e97461 stage=repairing
+time=2026-10-11T18:46:46.025+08:00 level=INFO msg="experiment stage" run_id=c58be88a7f165f0805e97461 stage=reconciling
+time=2026-10-11T18:46:58.034+08:00 level=INFO msg="experiment stage" run_id=c58be88a7f165f0805e97461 stage=validating
+time=2026-10-11T18:46:58.255+08:00 level=INFO msg="experiment stage" run_id=c58be88a7f165f0805e97461 stage=diagnosing
+time=2026-10-11T18:47:02.086+08:00 level=INFO msg="experiment stage" run_id=c58be88a7f165f0805e97461 stage=cleanup
+time=2026-10-11T18:47:05.387+08:00 level=INFO msg="experiment stage" run_id=c58be88a7f165f0805e97461 stage=complete
+time=2026-10-11T18:47:05.638+08:00 level=INFO msg="experiment finished" run_id=c58be88a7f165f0805e97461 outcome=partial reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/c58be88a7f165f0805e97461 cleanup_verified=true
+    persistence_integration_test.go:102: run_id=c58be88a7f165f0805e97461 outcome=partial report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/c58be88a7f165f0805e97461/report.json
+    persistence_integration_test.go:103: mode=memory frozen_ack=431 ambiguous=0 missing=431 drain_first_kill_ms=0.209 drain_last_kill_ms=1576.085 all_stopped_first_restart_ms=1002.387
+=== RUN   TestDockerPersistenceModes/aof-everysec
+time=2026-10-11T18:47:07.073+08:00 level=INFO msg="experiment stage" run_id=1d5be3b0553405258d0ef864 stage=provisioning
+time=2026-10-11T18:47:13.883+08:00 level=INFO msg="experiment stage" run_id=1d5be3b0553405258d0ef864 stage=readiness
+time=2026-10-11T18:47:25.512+08:00 level=INFO msg="experiment stage" run_id=1d5be3b0553405258d0ef864 stage=baseline
+time=2026-10-11T18:47:29.653+08:00 level=INFO msg="experiment stage" run_id=1d5be3b0553405258d0ef864 stage=quiescing
+time=2026-10-11T18:47:29.653+08:00 level=INFO msg="experiment stage" run_id=1d5be3b0553405258d0ef864 stage=injecting
+time=2026-10-11T18:47:32.007+08:00 level=INFO msg="experiment stage" run_id=1d5be3b0553405258d0ef864 stage=observing
+time=2026-10-11T18:47:33.008+08:00 level=INFO msg="experiment stage" run_id=1d5be3b0553405258d0ef864 stage=repairing
+time=2026-10-11T18:47:43.212+08:00 level=INFO msg="experiment stage" run_id=1d5be3b0553405258d0ef864 stage=reconciling
+time=2026-10-11T18:47:54.852+08:00 level=INFO msg="experiment stage" run_id=1d5be3b0553405258d0ef864 stage=validating
+time=2026-10-11T18:47:55.005+08:00 level=INFO msg="experiment stage" run_id=1d5be3b0553405258d0ef864 stage=diagnosing
+time=2026-10-11T18:47:58.751+08:00 level=INFO msg="experiment stage" run_id=1d5be3b0553405258d0ef864 stage=cleanup
+time=2026-10-11T18:48:01.376+08:00 level=INFO msg="experiment stage" run_id=1d5be3b0553405258d0ef864 stage=complete
+time=2026-10-11T18:48:01.606+08:00 level=INFO msg="experiment finished" run_id=1d5be3b0553405258d0ef864 outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/1d5be3b0553405258d0ef864 cleanup_verified=true
+    persistence_integration_test.go:102: run_id=1d5be3b0553405258d0ef864 outcome=recovered report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/1d5be3b0553405258d0ef864/report.json
+    persistence_integration_test.go:103: mode=aof-everysec frozen_ack=431 ambiguous=0 missing=0 drain_first_kill_ms=0.227 drain_last_kill_ms=1583.434 all_stopped_first_restart_ms=1001.664
+=== RUN   TestDockerPersistenceModes/aof-always
+time=2026-10-11T18:48:02.800+08:00 level=INFO msg="experiment stage" run_id=49fa9354192a2d2b95e07b91 stage=provisioning
+time=2026-10-11T18:48:09.762+08:00 level=INFO msg="experiment stage" run_id=49fa9354192a2d2b95e07b91 stage=readiness
+time=2026-10-11T18:48:21.412+08:00 level=INFO msg="experiment stage" run_id=49fa9354192a2d2b95e07b91 stage=baseline
+time=2026-10-11T18:48:25.551+08:00 level=INFO msg="experiment stage" run_id=49fa9354192a2d2b95e07b91 stage=quiescing
+time=2026-10-11T18:48:25.551+08:00 level=INFO msg="experiment stage" run_id=49fa9354192a2d2b95e07b91 stage=injecting
+time=2026-10-11T18:48:27.872+08:00 level=INFO msg="experiment stage" run_id=49fa9354192a2d2b95e07b91 stage=observing
+time=2026-10-11T18:48:28.874+08:00 level=INFO msg="experiment stage" run_id=49fa9354192a2d2b95e07b91 stage=repairing
+time=2026-10-11T18:48:39.079+08:00 level=INFO msg="experiment stage" run_id=49fa9354192a2d2b95e07b91 stage=reconciling
+time=2026-10-11T18:48:50.568+08:00 level=INFO msg="experiment stage" run_id=49fa9354192a2d2b95e07b91 stage=validating
+time=2026-10-11T18:48:50.716+08:00 level=INFO msg="experiment stage" run_id=49fa9354192a2d2b95e07b91 stage=diagnosing
+time=2026-10-11T18:48:54.896+08:00 level=INFO msg="experiment stage" run_id=49fa9354192a2d2b95e07b91 stage=cleanup
+time=2026-10-11T18:48:57.468+08:00 level=INFO msg="experiment stage" run_id=49fa9354192a2d2b95e07b91 stage=complete
+time=2026-10-11T18:48:57.711+08:00 level=INFO msg="experiment finished" run_id=49fa9354192a2d2b95e07b91 outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/49fa9354192a2d2b95e07b91 cleanup_verified=true
+    persistence_integration_test.go:102: run_id=49fa9354192a2d2b95e07b91 outcome=recovered report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/49fa9354192a2d2b95e07b91/report.json
+    persistence_integration_test.go:103: mode=aof-always frozen_ack=431 ambiguous=0 missing=0 drain_first_kill_ms=0.193 drain_last_kill_ms=1556.748 all_stopped_first_restart_ms=1002.336
+--- PASS: TestDockerPersistenceModes (168.48s)
+    --- PASS: TestDockerPersistenceModes/memory (56.66s)
+    --- PASS: TestDockerPersistenceModes/aof-everysec (55.73s)
+    --- PASS: TestDockerPersistenceModes/aof-always (56.09s)
+=== RUN   TestDockerPersistenceRestartFailureCleansVolumes
+time=2026-10-11T18:48:58.889+08:00 level=INFO msg="experiment stage" run_id=dbcfcb3d41b9bff756e6fc78 stage=provisioning
+time=2026-10-11T18:49:05.757+08:00 level=INFO msg="experiment stage" run_id=dbcfcb3d41b9bff756e6fc78 stage=readiness
+time=2026-10-11T18:49:17.654+08:00 level=INFO msg="experiment stage" run_id=dbcfcb3d41b9bff756e6fc78 stage=baseline
+time=2026-10-11T18:49:21.795+08:00 level=INFO msg="experiment stage" run_id=dbcfcb3d41b9bff756e6fc78 stage=quiescing
+time=2026-10-11T18:49:21.796+08:00 level=INFO msg="experiment stage" run_id=dbcfcb3d41b9bff756e6fc78 stage=injecting
+time=2026-10-11T18:49:24.151+08:00 level=INFO msg="experiment stage" run_id=dbcfcb3d41b9bff756e6fc78 stage=observing
+time=2026-10-11T18:49:25.153+08:00 level=INFO msg="experiment stage" run_id=dbcfcb3d41b9bff756e6fc78 stage=repairing
+time=2026-10-11T18:49:26.857+08:00 level=INFO msg="experiment stage" run_id=dbcfcb3d41b9bff756e6fc78 stage=cleanup
+time=2026-10-11T18:49:28.997+08:00 level=INFO msg="experiment stage" run_id=dbcfcb3d41b9bff756e6fc78 stage=complete
+time=2026-10-11T18:49:29.038+08:00 level=INFO msg="experiment finished" run_id=dbcfcb3d41b9bff756e6fc78 outcome=failed reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/dbcfcb3d41b9bff756e6fc78 cleanup_verified=true
+    persistence_integration_test.go:125: run_id=dbcfcb3d41b9bff756e6fc78 outcome=failed report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/dbcfcb3d41b9bff756e6fc78/report.json
+--- PASS: TestDockerPersistenceRestartFailureCleansVolumes (30.97s)
+=== RUN   TestDockerPersistenceRestartTimeout
+time=2026-10-11T18:49:29.858+08:00 level=INFO msg="experiment stage" run_id=6a49635a64fc8fbfa454e1f6 stage=provisioning
+time=2026-10-11T18:49:36.522+08:00 level=INFO msg="experiment stage" run_id=6a49635a64fc8fbfa454e1f6 stage=readiness
+time=2026-10-11T18:49:48.394+08:00 level=INFO msg="experiment stage" run_id=6a49635a64fc8fbfa454e1f6 stage=baseline
+time=2026-10-11T18:49:52.545+08:00 level=INFO msg="experiment stage" run_id=6a49635a64fc8fbfa454e1f6 stage=quiescing
+time=2026-10-11T18:49:52.545+08:00 level=INFO msg="experiment stage" run_id=6a49635a64fc8fbfa454e1f6 stage=injecting
+time=2026-10-11T18:49:54.907+08:00 level=INFO msg="experiment stage" run_id=6a49635a64fc8fbfa454e1f6 stage=observing
+time=2026-10-11T18:49:55.908+08:00 level=INFO msg="experiment stage" run_id=6a49635a64fc8fbfa454e1f6 stage=repairing
+time=2026-10-11T18:49:56.023+08:00 level=INFO msg="experiment stage" run_id=6a49635a64fc8fbfa454e1f6 stage=cleanup
+time=2026-10-11T18:49:58.113+08:00 level=INFO msg="experiment stage" run_id=6a49635a64fc8fbfa454e1f6 stage=complete
+time=2026-10-11T18:49:58.161+08:00 level=INFO msg="experiment finished" run_id=6a49635a64fc8fbfa454e1f6 outcome=failed reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/6a49635a64fc8fbfa454e1f6 cleanup_verified=true
+    persistence_integration_test.go:135: run_id=6a49635a64fc8fbfa454e1f6 outcome=failed report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/6a49635a64fc8fbfa454e1f6/report.json
+--- PASS: TestDockerPersistenceRestartTimeout (29.10s)
+=== RUN   TestDockerPersistenceCancellationAfterRestart
+time=2026-10-11T18:49:58.963+08:00 level=INFO msg="experiment stage" run_id=c96de38a9d0bb2df4a2bf009 stage=provisioning
+time=2026-10-11T18:50:05.637+08:00 level=INFO msg="experiment stage" run_id=c96de38a9d0bb2df4a2bf009 stage=readiness
+time=2026-10-11T18:50:17.735+08:00 level=INFO msg="experiment stage" run_id=c96de38a9d0bb2df4a2bf009 stage=baseline
+time=2026-10-11T18:50:21.879+08:00 level=INFO msg="experiment stage" run_id=c96de38a9d0bb2df4a2bf009 stage=quiescing
+time=2026-10-11T18:50:21.879+08:00 level=INFO msg="experiment stage" run_id=c96de38a9d0bb2df4a2bf009 stage=injecting
+time=2026-10-11T18:50:24.225+08:00 level=INFO msg="experiment stage" run_id=c96de38a9d0bb2df4a2bf009 stage=observing
+time=2026-10-11T18:50:25.227+08:00 level=INFO msg="experiment stage" run_id=c96de38a9d0bb2df4a2bf009 stage=repairing
+time=2026-10-11T18:50:26.918+08:00 level=INFO msg="experiment stage" run_id=c96de38a9d0bb2df4a2bf009 stage=cleanup
+time=2026-10-11T18:50:29.072+08:00 level=INFO msg="experiment stage" run_id=c96de38a9d0bb2df4a2bf009 stage=complete
+time=2026-10-11T18:50:29.121+08:00 level=INFO msg="experiment finished" run_id=c96de38a9d0bb2df4a2bf009 outcome=aborted reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/c96de38a9d0bb2df4a2bf009 cleanup_verified=true
+    persistence_integration_test.go:171: run_id=c96de38a9d0bb2df4a2bf009 outcome=aborted stopped_barrier=true first_restart_applied=true cleanup_verified=true
+--- PASS: TestDockerPersistenceCancellationAfterRestart (30.93s)
+=== RUN   TestPersistenceFreezeBarrierAndValidationOrder
+=== RUN   TestPersistenceFreezeBarrierAndValidationOrder/memory
+=== RUN   TestPersistenceFreezeBarrierAndValidationOrder/aof-everysec
+=== RUN   TestPersistenceFreezeBarrierAndValidationOrder/aof-always
+--- PASS: TestPersistenceFreezeBarrierAndValidationOrder (4.81s)
+    --- PASS: TestPersistenceFreezeBarrierAndValidationOrder/memory (1.60s)
+    --- PASS: TestPersistenceFreezeBarrierAndValidationOrder/aof-everysec (1.64s)
+    --- PASS: TestPersistenceFreezeBarrierAndValidationOrder/aof-always (1.57s)
+=== RUN   TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe
+=== RUN   TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/partial_kill
+=== RUN   TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/ownership_probe
+=== RUN   TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/joined_ownership_error
+=== RUN   TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/restart_policy
+=== RUN   TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/same_process
+=== RUN   TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/old_action_receipt
+=== RUN   TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/applied_restart_failure
+=== RUN   TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/cancel_restart
+--- PASS: TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe (1.55s)
+    --- PASS: TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/partial_kill (0.19s)
+    --- PASS: TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/ownership_probe (0.19s)
+    --- PASS: TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/joined_ownership_error (0.19s)
+    --- PASS: TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/restart_policy (0.19s)
+    --- PASS: TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/same_process (0.20s)
+    --- PASS: TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/old_action_receipt (0.20s)
+    --- PASS: TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/applied_restart_failure (0.20s)
+    --- PASS: TestPersistenceFaultBarrierRefusesPartialKillOrUnownedProbe/cancel_restart (0.19s)
+=== RUN   TestPersistenceReadOnlyRestorationRejectsChangedOwnershipAndLateSamples
+=== RUN   TestPersistenceReadOnlyRestorationRejectsChangedOwnershipAndLateSamples/changed_ownership
+=== RUN   TestPersistenceReadOnlyRestorationRejectsChangedOwnershipAndLateSamples/crossed_deadline
+=== RUN   TestPersistenceReadOnlyRestorationRejectsChangedOwnershipAndLateSamples/cancellation
+--- PASS: TestPersistenceReadOnlyRestorationRejectsChangedOwnershipAndLateSamples (1.17s)
+    --- PASS: TestPersistenceReadOnlyRestorationRejectsChangedOwnershipAndLateSamples/changed_ownership (0.43s)
+    --- PASS: TestPersistenceReadOnlyRestorationRejectsChangedOwnershipAndLateSamples/crossed_deadline (0.47s)
+    --- PASS: TestPersistenceReadOnlyRestorationRejectsChangedOwnershipAndLateSamples/cancellation (0.26s)
+=== RUN   TestPersistencePreparationRetriesOnlyObservedTransientBeforeBaseline
+--- PASS: TestPersistencePreparationRetriesOnlyObservedTransientBeforeBaseline (0.26s)
+=== RUN   TestPersistenceRuntimeEvidenceRefusesInventedDurability
+=== RUN   TestPersistenceRuntimeEvidenceRefusesInventedDurability/missing_configuration
+=== RUN   TestPersistenceRuntimeEvidenceRefusesInventedDurability/wrong_fsync
+=== RUN   TestPersistenceRuntimeEvidenceRefusesInventedDurability/loading
+=== RUN   TestPersistenceRuntimeEvidenceRefusesInventedDurability/AOF_error
+=== RUN   TestPersistenceRuntimeEvidenceRefusesInventedDurability/missing_files
+=== RUN   TestPersistenceRuntimeEvidenceRefusesInventedDurability/memory_RDB
+=== RUN   TestPersistenceRuntimeEvidenceRefusesInventedDurability/unknown_restart_policy
+--- PASS: TestPersistenceRuntimeEvidenceRefusesInventedDurability (0.00s)
+    --- PASS: TestPersistenceRuntimeEvidenceRefusesInventedDurability/missing_configuration (0.00s)
+    --- PASS: TestPersistenceRuntimeEvidenceRefusesInventedDurability/wrong_fsync (0.00s)
+    --- PASS: TestPersistenceRuntimeEvidenceRefusesInventedDurability/loading (0.00s)
+    --- PASS: TestPersistenceRuntimeEvidenceRefusesInventedDurability/AOF_error (0.00s)
+    --- PASS: TestPersistenceRuntimeEvidenceRefusesInventedDurability/missing_files (0.00s)
+    --- PASS: TestPersistenceRuntimeEvidenceRefusesInventedDurability/memory_RDB (0.00s)
+    --- PASS: TestPersistenceRuntimeEvidenceRefusesInventedDurability/unknown_restart_policy (0.00s)
+=== RUN   TestPersistenceAOFVerdictKeepsValidationUncertaintyAndObservedLoss
+=== RUN   TestPersistenceAOFVerdictKeepsValidationUncertaintyAndObservedLoss/missing
+=== RUN   TestPersistenceAOFVerdictKeepsValidationUncertaintyAndObservedLoss/unreadable
+=== RUN   TestPersistenceAOFVerdictKeepsValidationUncertaintyAndObservedLoss/unverified
+=== RUN   TestPersistenceAOFVerdictKeepsValidationUncertaintyAndObservedLoss/memory_preserved
+--- PASS: TestPersistenceAOFVerdictKeepsValidationUncertaintyAndObservedLoss (6.14s)
+    --- PASS: TestPersistenceAOFVerdictKeepsValidationUncertaintyAndObservedLoss/missing (1.54s)
+    --- PASS: TestPersistenceAOFVerdictKeepsValidationUncertaintyAndObservedLoss/unreadable (1.53s)
+    --- PASS: TestPersistenceAOFVerdictKeepsValidationUncertaintyAndObservedLoss/unverified (1.56s)
+    --- PASS: TestPersistenceAOFVerdictKeepsValidationUncertaintyAndObservedLoss/memory_preserved (1.51s)
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression
+=== RUN   TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/deadline_sample
+--- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent (3.11s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/ordinary_service_regression (0.93s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAIT_regression (0.95s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/WAITAOF_regression (0.94s)
+    --- PASS: TestPersistenceDiagnosticsKeepPostStabilityRegressionAndPolicyIndependent/deadline_sample (0.28s)
+=== RUN   TestPersistenceMissingValidationWithholdsDiagnosticWrites
+--- PASS: TestPersistenceMissingValidationWithholdsDiagnosticWrites (0.72s)
+=== RUN   TestPersistenceQuietPreparationUnknownsAndAfterRestartRewrite
+--- PASS: TestPersistenceQuietPreparationUnknownsAndAfterRestartRewrite (0.00s)
+=== RUN   TestNonRestartAOFPoliciesShareQuietPreparationEvidence
+=== RUN   TestNonRestartAOFPoliciesShareQuietPreparationEvidence/set
+=== RUN   TestNonRestartAOFPoliciesShareQuietPreparationEvidence/wait
+=== RUN   TestNonRestartAOFPoliciesShareQuietPreparationEvidence/waitaof
+--- PASS: TestNonRestartAOFPoliciesShareQuietPreparationEvidence (0.57s)
+    --- PASS: TestNonRestartAOFPoliciesShareQuietPreparationEvidence/set (0.19s)
+    --- PASS: TestNonRestartAOFPoliciesShareQuietPreparationEvidence/wait (0.19s)
+    --- PASS: TestNonRestartAOFPoliciesShareQuietPreparationEvidence/waitaof (0.19s)
+=== RUN   TestPersistenceFinalRuntimeIsFreshWithoutRewritingEarlyReceipts
+=== RUN   TestPersistenceFinalRuntimeIsFreshWithoutRewritingEarlyReceipts/memory
+=== RUN   TestPersistenceFinalRuntimeIsFreshWithoutRewritingEarlyReceipts/aof-everysec
+--- PASS: TestPersistenceFinalRuntimeIsFreshWithoutRewritingEarlyReceipts (3.00s)
+    --- PASS: TestPersistenceFinalRuntimeIsFreshWithoutRewritingEarlyReceipts/memory (1.51s)
+    --- PASS: TestPersistenceFinalRuntimeIsFreshWithoutRewritingEarlyReceipts/aof-everysec (1.50s)
+=== RUN   TestDockerWaitPolicyPreservesSETLedgerAndReportsDegradedAcknowledgements
+time=2026-10-11T18:50:51.229+08:00 level=INFO msg="experiment stage" run_id=ded5720f13cbdd97729710b3 stage=provisioning
+time=2026-10-11T18:50:58.489+08:00 level=INFO msg="experiment stage" run_id=ded5720f13cbdd97729710b3 stage=readiness
+time=2026-10-11T18:51:04.162+08:00 level=INFO msg="experiment stage" run_id=ded5720f13cbdd97729710b3 stage=baseline
+time=2026-10-11T18:51:08.263+08:00 level=INFO msg="experiment stage" run_id=ded5720f13cbdd97729710b3 stage=injecting
+time=2026-10-11T18:51:08.500+08:00 level=INFO msg="experiment stage" run_id=ded5720f13cbdd97729710b3 stage=observing
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:08 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:09 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:09 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:09 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:09 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:09 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:09 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:09 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:10 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:11 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:11 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:12 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:12 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+time=2026-10-11T18:51:12.704+08:00 level=INFO msg="experiment stage" run_id=ded5720f13cbdd97729710b3 stage=post_recovery
+redis: 2026/10/11 18:51:12 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:13 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:13 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+redis: 2026/10/11 18:51:13 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64550: connect: connection refused
+time=2026-10-11T18:51:15.704+08:00 level=INFO msg="experiment stage" run_id=ded5720f13cbdd97729710b3 stage=validating
+time=2026-10-11T18:51:16.133+08:00 level=INFO msg="experiment stage" run_id=ded5720f13cbdd97729710b3 stage=cleanup
+time=2026-10-11T18:51:17.703+08:00 level=INFO msg="experiment stage" run_id=ded5720f13cbdd97729710b3 stage=complete
+time=2026-10-11T18:51:17.850+08:00 level=INFO msg="experiment finished" run_id=ded5720f13cbdd97729710b3 outcome=partial reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/ded5720f13cbdd97729710b3 cleanup_verified=true
+    policy_integration_test.go:19: run_id=ded5720f13cbdd97729710b3 outcome=partial report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/ded5720f13cbdd97729710b3/report.json
+    policy_integration_test.go:42: set_acknowledged=957 wait_satisfied=806 wait_short=151 wait_errors=0 set_ledger_checked=957 wait_subset_checked=806 missing=0
+--- PASS: TestDockerWaitPolicyPreservesSETLedgerAndReportsDegradedAcknowledgements (27.32s)
+=== RUN   TestPolicyProbeDistinguishesShortReplyFromUnknownAcknowledgement
+=== RUN   TestPolicyProbeDistinguishesShortReplyFromUnknownAcknowledgement/full
+=== RUN   TestPolicyProbeDistinguishesShortReplyFromUnknownAcknowledgement/short_integer_zero
+=== RUN   TestPolicyProbeDistinguishesShortReplyFromUnknownAcknowledgement/WAIT_error_unknown
+=== RUN   TestPolicyProbeDistinguishesShortReplyFromUnknownAcknowledgement/WAIT_not_issued
+=== RUN   TestPolicyProbeDistinguishesShortReplyFromUnknownAcknowledgement/malformed_success_with_zero_acknowledgement
+--- PASS: TestPolicyProbeDistinguishesShortReplyFromUnknownAcknowledgement (0.00s)
+    --- PASS: TestPolicyProbeDistinguishesShortReplyFromUnknownAcknowledgement/full (0.00s)
+    --- PASS: TestPolicyProbeDistinguishesShortReplyFromUnknownAcknowledgement/short_integer_zero (0.00s)
+    --- PASS: TestPolicyProbeDistinguishesShortReplyFromUnknownAcknowledgement/WAIT_error_unknown (0.00s)
+    --- PASS: TestPolicyProbeDistinguishesShortReplyFromUnknownAcknowledgement/WAIT_not_issued (0.00s)
+    --- PASS: TestPolicyProbeDistinguishesShortReplyFromUnknownAcknowledgement/malformed_success_with_zero_acknowledgement (0.00s)
+=== RUN   TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts
+=== RUN   TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/both
+=== RUN   TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/local_only
+=== RUN   TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/replica_only
+=== RUN   TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/observed_zero_pair
+=== RUN   TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/command_error_unknown_pair
+=== RUN   TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/not_attempted
+=== RUN   TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/invalid_local
+=== RUN   TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/negative_replica
+=== RUN   TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/different_requested_replicas
+=== RUN   TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/SET_error_contradicts_full_pair
+=== RUN   TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/writer_policy_false
+--- PASS: TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts (0.00s)
+    --- PASS: TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/both (0.00s)
+    --- PASS: TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/local_only (0.00s)
+    --- PASS: TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/replica_only (0.00s)
+    --- PASS: TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/observed_zero_pair (0.00s)
+    --- PASS: TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/command_error_unknown_pair (0.00s)
+    --- PASS: TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/not_attempted (0.00s)
+    --- PASS: TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/invalid_local (0.00s)
+    --- PASS: TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/negative_replica (0.00s)
+    --- PASS: TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/different_requested_replicas (0.00s)
+    --- PASS: TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/SET_error_contradicts_full_pair (0.00s)
+    --- PASS: TestWAITAOFPolicyProbeRequiresIndependentLocalAndReplicaCounts/writer_policy_false (0.00s)
+=== RUN   TestUnsupportedAcknowledgementProbeDoesNotCallWriter
+--- PASS: TestUnsupportedAcknowledgementProbeDoesNotCallWriter (0.00s)
+=== RUN   TestSETPreparationProbeHasNoReplicationAcknowledgementPopulation
+--- PASS: TestSETPreparationProbeHasNoReplicationAcknowledgementPopulation (0.00s)
+=== RUN   TestAOFExperimentRequiresProcessProofBeforeProvisioning
+--- PASS: TestAOFExperimentRequiresProcessProofBeforeProvisioning (0.00s)
+=== RUN   TestWAITAOFCompletionAtDeadlineCannotRaiseRecovery
+--- PASS: TestWAITAOFCompletionAtDeadlineCannotRaiseRecovery (0.27s)
+=== RUN   TestOutcomeDistinguishesFullPartialAndFailedRecovery
+=== RUN   TestOutcomeDistinguishesFullPartialAndFailedRecovery/full_observable_recovery
+=== RUN   TestOutcomeDistinguishesFullPartialAndFailedRecovery/basic_service_recovered_but_WAIT_policy_unavailable
+=== RUN   TestOutcomeDistinguishesFullPartialAndFailedRecovery/regression_before_stable_interval_reestablished
+=== RUN   TestOutcomeDistinguishesFullPartialAndFailedRecovery/asynchronous_loss_despite_service_recovery
+=== RUN   TestOutcomeDistinguishesFullPartialAndFailedRecovery/topology_without_clients
+=== RUN   TestOutcomeDistinguishesFullPartialAndFailedRecovery/clients_without_converged_topology
+=== RUN   TestOutcomeDistinguishesFullPartialAndFailedRecovery/healthy_sample_without_stable_interval
+=== RUN   TestOutcomeDistinguishesFullPartialAndFailedRecovery/deadline_with_partial_observations
+=== RUN   TestOutcomeDistinguishesFullPartialAndFailedRecovery/regression_after_stable_interval
+=== RUN   TestOutcomeDistinguishesFullPartialAndFailedRecovery/unrecovered_deadline
+=== RUN   TestOutcomeDistinguishesFullPartialAndFailedRecovery/unobserved_recovery
+--- PASS: TestOutcomeDistinguishesFullPartialAndFailedRecovery (0.00s)
+    --- PASS: TestOutcomeDistinguishesFullPartialAndFailedRecovery/full_observable_recovery (0.00s)
+    --- PASS: TestOutcomeDistinguishesFullPartialAndFailedRecovery/basic_service_recovered_but_WAIT_policy_unavailable (0.00s)
+    --- PASS: TestOutcomeDistinguishesFullPartialAndFailedRecovery/regression_before_stable_interval_reestablished (0.00s)
+    --- PASS: TestOutcomeDistinguishesFullPartialAndFailedRecovery/asynchronous_loss_despite_service_recovery (0.00s)
+    --- PASS: TestOutcomeDistinguishesFullPartialAndFailedRecovery/topology_without_clients (0.00s)
+    --- PASS: TestOutcomeDistinguishesFullPartialAndFailedRecovery/clients_without_converged_topology (0.00s)
+    --- PASS: TestOutcomeDistinguishesFullPartialAndFailedRecovery/healthy_sample_without_stable_interval (0.00s)
+    --- PASS: TestOutcomeDistinguishesFullPartialAndFailedRecovery/deadline_with_partial_observations (0.00s)
+    --- PASS: TestOutcomeDistinguishesFullPartialAndFailedRecovery/regression_after_stable_interval (0.00s)
+    --- PASS: TestOutcomeDistinguishesFullPartialAndFailedRecovery/unrecovered_deadline (0.00s)
+    --- PASS: TestOutcomeDistinguishesFullPartialAndFailedRecovery/unobserved_recovery (0.00s)
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/malformed_internal_endpoint
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/duplicate_internal_endpoint
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/incomplete_inventory
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/out_of_range_host_port
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/duplicate_host_endpoint
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/empty_managed_identity
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/remote_published_endpoint
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/hostname_published_endpoint
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/empty_port
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/nonnumeric_host_port
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/zero_host_port
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/duplicate_managed_identity
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/private_published_endpoint
+=== RUN   TestNewClientRejectsUnmanagedAndNonLoopbackTargets/malformed_host_endpoint
+--- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/malformed_internal_endpoint (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/duplicate_internal_endpoint (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/incomplete_inventory (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/out_of_range_host_port (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/duplicate_host_endpoint (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/empty_managed_identity (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/remote_published_endpoint (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/hostname_published_endpoint (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/empty_port (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/nonnumeric_host_port (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/zero_host_port (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/duplicate_managed_identity (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/private_published_endpoint (0.00s)
+    --- PASS: TestNewClientRejectsUnmanagedAndNonLoopbackTargets/malformed_host_endpoint (0.00s)
+=== RUN   TestProbeKeysCoversEveryInitialShard
+--- PASS: TestProbeKeysCoversEveryInitialShard (0.00s)
+=== RUN   TestProbeAllRequiresSuccessfulReadWriteOnEveryShard
+=== RUN   TestProbeAllRequiresSuccessfulReadWriteOnEveryShard/all_shards_read_and_write
+=== RUN   TestProbeAllRequiresSuccessfulReadWriteOnEveryShard/write_unavailable
+=== RUN   TestProbeAllRequiresSuccessfulReadWriteOnEveryShard/read_unavailable
+=== RUN   TestProbeAllRequiresSuccessfulReadWriteOnEveryShard/missing_acknowledged_probe
+=== RUN   TestProbeAllRequiresSuccessfulReadWriteOnEveryShard/corrupt_probe_value
+=== RUN   TestProbeAllRequiresSuccessfulReadWriteOnEveryShard/multiple_failed_shards
+--- PASS: TestProbeAllRequiresSuccessfulReadWriteOnEveryShard (0.00s)
+    --- PASS: TestProbeAllRequiresSuccessfulReadWriteOnEveryShard/all_shards_read_and_write (0.00s)
+    --- PASS: TestProbeAllRequiresSuccessfulReadWriteOnEveryShard/write_unavailable (0.00s)
+    --- PASS: TestProbeAllRequiresSuccessfulReadWriteOnEveryShard/read_unavailable (0.00s)
+    --- PASS: TestProbeAllRequiresSuccessfulReadWriteOnEveryShard/missing_acknowledged_probe (0.00s)
+    --- PASS: TestProbeAllRequiresSuccessfulReadWriteOnEveryShard/corrupt_probe_value (0.00s)
+    --- PASS: TestProbeAllRequiresSuccessfulReadWriteOnEveryShard/multiple_failed_shards (0.00s)
+=== RUN   TestProbeAllPropagatesBoundedOperationContexts
+--- PASS: TestProbeAllPropagatesBoundedOperationContexts (0.01s)
+=== RUN   TestProbeAllSeparatesWriteFailureFromUnattemptedRead
+=== RUN   TestProbeAllSeparatesWriteFailureFromUnattemptedRead/all_writes_acknowledged_but_one_read_fails
+=== RUN   TestProbeAllSeparatesWriteFailureFromUnattemptedRead/failed_SET_means_not_all_reads_attempted
+=== RUN   TestProbeAllSeparatesWriteFailureFromUnattemptedRead/incomplete_shard_population_remains_unobserved
+--- PASS: TestProbeAllSeparatesWriteFailureFromUnattemptedRead (0.00s)
+    --- PASS: TestProbeAllSeparatesWriteFailureFromUnattemptedRead/all_writes_acknowledged_but_one_read_fails (0.00s)
+    --- PASS: TestProbeAllSeparatesWriteFailureFromUnattemptedRead/failed_SET_means_not_all_reads_attempted (0.00s)
+    --- PASS: TestProbeAllSeparatesWriteFailureFromUnattemptedRead/incomplete_shard_population_remains_unobserved (0.00s)
+=== RUN   TestRunProvisionFailureCleansPartialInventoryAndWritesEvidence
+--- PASS: TestRunProvisionFailureCleansPartialInventoryAndWritesEvidence (0.02s)
+=== RUN   TestRunCleanupFailureIsVisibleInReportAndReturnedError
+--- PASS: TestRunCleanupFailureIsVisibleInReportAndReturnedError (0.01s)
+=== RUN   TestRunCanceledReadinessStillCleansAndWritesAbortedReport
+--- PASS: TestRunCanceledReadinessStillCleansAndWritesAbortedReport (0.01s)
+=== RUN   TestRunCancellationDuringCleanupPreservesCauseAndFreshDeadline
+--- PASS: TestRunCancellationDuringCleanupPreservesCauseAndFreshDeadline (0.01s)
+=== RUN   TestRunRejectsNilSuccessfulProvisionerInventory
+--- PASS: TestRunRejectsNilSuccessfulProvisionerInventory (0.01s)
+=== RUN   TestMilestonesDistinguishPromotionFromTopologyConvergence
+--- PASS: TestMilestonesDistinguishPromotionFromTopologyConvergence (0.00s)
+=== RUN   TestFullCoverageMilestoneRejectsStaleOwnershipOfKilledPrimary
+--- PASS: TestFullCoverageMilestoneRejectsStaleOwnershipOfKilledPrimary (0.03s)
+=== RUN   TestLifecycle
+--- PASS: TestLifecycle (0.00s)
+=== RUN   TestFailureCleanupAndClock
+--- PASS: TestFailureCleanupAndClock (0.00s)
+=== RUN   TestSustainedRecovery
+--- PASS: TestSustainedRecovery (0.00s)
+=== RUN   TestNetworkRestorationLifecycleBranches
+=== RUN   TestNetworkRestorationLifecycleBranches/post_recovery
+=== RUN   TestNetworkRestorationLifecycleBranches/validating
+=== RUN   TestNetworkRestorationLifecycleBranches/cleanup_from_restoring
+=== RUN   TestNetworkRestorationLifecycleBranches/cleanup_from_reconciling
+--- PASS: TestNetworkRestorationLifecycleBranches (0.00s)
+    --- PASS: TestNetworkRestorationLifecycleBranches/post_recovery (0.00s)
+    --- PASS: TestNetworkRestorationLifecycleBranches/validating (0.00s)
+    --- PASS: TestNetworkRestorationLifecycleBranches/cleanup_from_restoring (0.00s)
+    --- PASS: TestNetworkRestorationLifecycleBranches/cleanup_from_reconciling (0.00s)
+=== RUN   TestReplicaRepairLifecycleBranchesAndFailureCleanup
+--- PASS: TestReplicaRepairLifecycleBranchesAndFailureCleanup (0.00s)
+=== RUN   TestDockerWAITAOFPrimaryRepairRestoresPolicy
+time=2026-10-11T18:51:18.932+08:00 level=INFO msg="experiment stage" run_id=4f15a0dd04718aa5a03e2c81 stage=provisioning
+time=2026-10-11T18:51:26.572+08:00 level=INFO msg="experiment stage" run_id=4f15a0dd04718aa5a03e2c81 stage=readiness
+time=2026-10-11T18:51:38.464+08:00 level=INFO msg="experiment stage" run_id=4f15a0dd04718aa5a03e2c81 stage=baseline
+time=2026-10-11T18:51:42.567+08:00 level=INFO msg="experiment stage" run_id=4f15a0dd04718aa5a03e2c81 stage=injecting
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+time=2026-10-11T18:51:42.831+08:00 level=INFO msg="experiment stage" run_id=4f15a0dd04718aa5a03e2c81 stage=observing
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:42 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:43 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:44 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:45 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:45 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:46 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+redis: 2026/10/11 18:51:46 pool.go:770: redis: connection pool: failed to dial after 1 attempts: dial tcp 127.0.0.1:64679: connect: connection refused
+time=2026-10-11T18:51:47.171+08:00 level=INFO msg="experiment stage" run_id=4f15a0dd04718aa5a03e2c81 stage=repairing
+time=2026-10-11T18:51:48.790+08:00 level=INFO msg="experiment stage" run_id=4f15a0dd04718aa5a03e2c81 stage=reconciling
+time=2026-10-11T18:51:54.551+08:00 level=INFO msg="experiment stage" run_id=4f15a0dd04718aa5a03e2c81 stage=post_recovery
+time=2026-10-11T18:51:56.579+08:00 level=INFO msg="experiment stage" run_id=4f15a0dd04718aa5a03e2c81 stage=validating
+time=2026-10-11T18:51:57.079+08:00 level=INFO msg="experiment stage" run_id=4f15a0dd04718aa5a03e2c81 stage=cleanup
+time=2026-10-11T18:51:59.929+08:00 level=INFO msg="experiment stage" run_id=4f15a0dd04718aa5a03e2c81 stage=complete
+time=2026-10-11T18:52:00.170+08:00 level=INFO msg="experiment finished" run_id=4f15a0dd04718aa5a03e2c81 outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/4f15a0dd04718aa5a03e2c81 cleanup_verified=true
+    waitaof_integration_test.go:62: run_id=4f15a0dd04718aa5a03e2c81 outcome=recovered report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/4f15a0dd04718aa5a03e2c81/report.json
+    waitaof_integration_test.go:63: repair_action_ms=1618.539 stable_redundancy_since_repair_ms=5533.934 sync_evidence=full_sync_counter_increased acknowledged=1605 missing=0
+    waitaof_integration_test.go:65: set_ack=1605 both_aof=1366 short=239 errors=0 ambiguous=41 all_checked=1605 subset_checked=1366 subset_missing=0
+--- PASS: TestDockerWAITAOFPrimaryRepairRestoresPolicy (42.38s)
+=== RUN   TestDockerWAITAOFFrozenPersistenceValidation
+time=2026-10-11T18:52:01.309+08:00 level=INFO msg="experiment stage" run_id=4edc6bd9e00111611f849e16 stage=provisioning
+time=2026-10-11T18:52:08.007+08:00 level=INFO msg="experiment stage" run_id=4edc6bd9e00111611f849e16 stage=readiness
+time=2026-10-11T18:52:19.565+08:00 level=INFO msg="experiment stage" run_id=4edc6bd9e00111611f849e16 stage=baseline
+time=2026-10-11T18:52:23.718+08:00 level=INFO msg="experiment stage" run_id=4edc6bd9e00111611f849e16 stage=quiescing
+time=2026-10-11T18:52:23.718+08:00 level=INFO msg="experiment stage" run_id=4edc6bd9e00111611f849e16 stage=injecting
+time=2026-10-11T18:52:25.938+08:00 level=INFO msg="experiment stage" run_id=4edc6bd9e00111611f849e16 stage=observing
+time=2026-10-11T18:52:26.939+08:00 level=INFO msg="experiment stage" run_id=4edc6bd9e00111611f849e16 stage=repairing
+time=2026-10-11T18:52:36.988+08:00 level=INFO msg="experiment stage" run_id=4edc6bd9e00111611f849e16 stage=reconciling
+time=2026-10-11T18:52:50.303+08:00 level=INFO msg="experiment stage" run_id=4edc6bd9e00111611f849e16 stage=validating
+time=2026-10-11T18:52:50.467+08:00 level=INFO msg="experiment stage" run_id=4edc6bd9e00111611f849e16 stage=diagnosing
+time=2026-10-11T18:52:54.673+08:00 level=INFO msg="experiment stage" run_id=4edc6bd9e00111611f849e16 stage=cleanup
+time=2026-10-11T18:52:57.351+08:00 level=INFO msg="experiment stage" run_id=4edc6bd9e00111611f849e16 stage=complete
+time=2026-10-11T18:52:57.606+08:00 level=INFO msg="experiment finished" run_id=4edc6bd9e00111611f849e16 outcome=recovered reports=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/4edc6bd9e00111611f849e16 cleanup_verified=true
+    waitaof_integration_test.go:81: run_id=4edc6bd9e00111611f849e16 outcome=recovered report=/Users/alanwang/Desktop/redis-reliability-lab/reports/ci/4edc6bd9e00111611f849e16/report.json
+    waitaof_integration_test.go:82: mode=aof-always frozen_ack=433 ambiguous=0 missing=0 drain_first_kill_ms=0.236 drain_last_kill_ms=1505.907 all_stopped_first_restart_ms=1001.484
+    waitaof_integration_test.go:83: set_ack=433 both_aof=433 short=0 errors=0 ambiguous=0 all_checked=433 subset_checked=433 subset_missing=0
+--- PASS: TestDockerWAITAOFFrozenPersistenceValidation (57.57s)
+=== RUN   TestDockerWAITAOFDisabledRejectsCommandRetainsSET
+    waitaof_integration_test.go:161: run_id=f98749a5656e0d2dbd1b8e55 shard_key=redis-lab-probe-{0} SET acknowledged; WAITAOF error=ERR WAITAOF cannot be used when numlocal is set but appendonly is disabled.; GET retained value
+    waitaof_integration_test.go:161: run_id=f98749a5656e0d2dbd1b8e55 shard_key=redis-lab-probe-{3} SET acknowledged; WAITAOF error=ERR WAITAOF cannot be used when numlocal is set but appendonly is disabled.; GET retained value
+    waitaof_integration_test.go:161: run_id=f98749a5656e0d2dbd1b8e55 shard_key=redis-lab-probe-{1} SET acknowledged; WAITAOF error=ERR WAITAOF cannot be used when numlocal is set but appendonly is disabled.; GET retained value
+    waitaof_integration_test.go:201: run_id=f98749a5656e0d2dbd1b8e55 managed_node=node-4 endpoint=10.237.108.5:6379 observed_role=slave WAITAOF replica rejection without SET: ERR WAITAOF cannot be used with replica instances. Please also note that writes to replicas are just local and are not propagated.
+    waitaof_integration_test.go:201: run_id=f98749a5656e0d2dbd1b8e55 managed_node=node-5 endpoint=10.237.108.6:6379 observed_role=slave WAITAOF replica rejection without SET: ERR WAITAOF cannot be used with replica instances. Please also note that writes to replicas are just local and are not propagated.
+    waitaof_integration_test.go:201: run_id=f98749a5656e0d2dbd1b8e55 managed_node=node-6 endpoint=10.237.108.7:6379 observed_role=slave WAITAOF replica rejection without SET: ERR WAITAOF cannot be used with replica instances. Please also note that writes to replicas are just local and are not propagated.
+--- PASS: TestDockerWAITAOFDisabledRejectsCommandRetainsSET (15.98s)
+=== RUN   TestManagedWriterSamePhysicalConnectionAndComparableSETPath
+=== RUN   TestManagedWriterSamePhysicalConnectionAndComparableSETPath/set
+=== RUN   TestManagedWriterSamePhysicalConnectionAndComparableSETPath/wait
+--- PASS: TestManagedWriterSamePhysicalConnectionAndComparableSETPath (0.00s)
+    --- PASS: TestManagedWriterSamePhysicalConnectionAndComparableSETPath/set (0.00s)
+    --- PASS: TestManagedWriterSamePhysicalConnectionAndComparableSETPath/wait (0.00s)
+=== RUN   TestManagedWriterRetainsSETAcknowledgementAfterShortOrUnknownWAIT
+=== RUN   TestManagedWriterRetainsSETAcknowledgementAfterShortOrUnknownWAIT/reply-":0\r\n"
+=== RUN   TestManagedWriterRetainsSETAcknowledgementAfterShortOrUnknownWAIT/reply-"-ERR_WAIT_unavailable\r\n"
+=== RUN   TestManagedWriterRetainsSETAcknowledgementAfterShortOrUnknownWAIT/reply-""
+--- PASS: TestManagedWriterRetainsSETAcknowledgementAfterShortOrUnknownWAIT (0.00s)
+    --- PASS: TestManagedWriterRetainsSETAcknowledgementAfterShortOrUnknownWAIT/reply-":0\r\n" (0.00s)
+    --- PASS: TestManagedWriterRetainsSETAcknowledgementAfterShortOrUnknownWAIT/reply-"-ERR_WAIT_unavailable\r\n" (0.00s)
+    --- PASS: TestManagedWriterRetainsSETAcknowledgementAfterShortOrUnknownWAIT/reply-"" (0.00s)
+=== RUN   TestManagedWriterDeadlineDuringWAITRetainsEarlierSETAckTimestamp
+--- PASS: TestManagedWriterDeadlineDuringWAITRetainsEarlierSETAckTimestamp (0.10s)
+=== RUN   TestManagedWriterDeadlineDuringSETNeverIssuesWAIT
+--- PASS: TestManagedWriterDeadlineDuringSETNeverIssuesWAIT (0.10s)
+=== RUN   TestManagedWriterConcurrentOperationsKeepEachWAITAfterItsOwnSET
+--- PASS: TestManagedWriterConcurrentOperationsKeepEachWAITAfterItsOwnSET (0.00s)
+=== RUN   TestManagedWriterNeverReplaysInterruptedSETOrIssuesWAIT
+--- PASS: TestManagedWriterNeverReplaysInterruptedSETOrIssuesWAIT (0.00s)
+=== RUN   TestManagedWriterUnexpectedSETStatusIsNotAcknowledged
+--- PASS: TestManagedWriterUnexpectedSETStatusIsNotAcknowledged (0.00s)
+=== RUN   TestManagedWriterMOVEDAndASKOnlyUseAllowlistedTargets
+=== RUN   TestManagedWriterMOVEDAndASKOnlyUseAllowlistedTargets/MOVED
+=== RUN   TestManagedWriterMOVEDAndASKOnlyUseAllowlistedTargets/ASK
+--- PASS: TestManagedWriterMOVEDAndASKOnlyUseAllowlistedTargets (0.00s)
+    --- PASS: TestManagedWriterMOVEDAndASKOnlyUseAllowlistedTargets/MOVED (0.00s)
+    --- PASS: TestManagedWriterMOVEDAndASKOnlyUseAllowlistedTargets/ASK (0.00s)
+=== RUN   TestManagedWriterBoundsRedirectLoopsAndRejectsWrongSlot
+--- PASS: TestManagedWriterBoundsRedirectLoopsAndRejectsWrongSlot (0.00s)
+=== RUN   TestManagedWriterASKINGFailureCannotIssueSETOrWAITAtTarget
+--- PASS: TestManagedWriterASKINGFailureCannotIssueSETOrWAITAtTarget (0.00s)
+=== RUN   TestManagedWriterRefusesUnmanagedDiscoveredOwnerBeforeDial
+--- PASS: TestManagedWriterRefusesUnmanagedDiscoveredOwnerBeforeDial (0.00s)
+=== RUN   TestManagedRedirectCannotMistakeTransportTextForServerRejection
+--- PASS: TestManagedRedirectCannotMistakeTransportTextForServerRejection (0.00s)
+=== RUN   TestManagedWriterCloseDoesNotCloseClusterAndRejectsLaterWrites
+--- PASS: TestManagedWriterCloseDoesNotCloseClusterAndRejectsLaterWrites (0.00s)
+=== RUN   TestManagedWriterValidatesWAITMillisecondsAndOwnedInventory
+--- PASS: TestManagedWriterValidatesWAITMillisecondsAndOwnedInventory (0.00s)
+=== RUN   TestManagedWriterWAITAOFUsesSuccessfulSETPhysicalConnection
+=== RUN   TestManagedWriterWAITAOFUsesSuccessfulSETPhysicalConnection/#00
+=== RUN   TestManagedWriterWAITAOFUsesSuccessfulSETPhysicalConnection/MOVED
+=== RUN   TestManagedWriterWAITAOFUsesSuccessfulSETPhysicalConnection/ASK
+--- PASS: TestManagedWriterWAITAOFUsesSuccessfulSETPhysicalConnection (0.00s)
+    --- PASS: TestManagedWriterWAITAOFUsesSuccessfulSETPhysicalConnection/#00 (0.00s)
+    --- PASS: TestManagedWriterWAITAOFUsesSuccessfulSETPhysicalConnection/MOVED (0.00s)
+    --- PASS: TestManagedWriterWAITAOFUsesSuccessfulSETPhysicalConnection/ASK (0.00s)
+=== RUN   TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck
+=== RUN   TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/local_short
+=== RUN   TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/replica_short
+=== RUN   TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/both_short
+=== RUN   TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/unknown_command
+=== RUN   TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/aof_disabled
+=== RUN   TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/disconnect
+=== RUN   TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/wrong_length
+=== RUN   TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/negative_local
+=== RUN   TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/invalid_local
+=== RUN   TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/negative_replica
+--- PASS: TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck (0.01s)
+    --- PASS: TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/local_short (0.00s)
+    --- PASS: TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/replica_short (0.00s)
+    --- PASS: TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/both_short (0.00s)
+    --- PASS: TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/unknown_command (0.00s)
+    --- PASS: TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/aof_disabled (0.00s)
+    --- PASS: TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/disconnect (0.00s)
+    --- PASS: TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/wrong_length (0.00s)
+    --- PASS: TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/negative_local (0.00s)
+    --- PASS: TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/invalid_local (0.00s)
+    --- PASS: TestManagedWriterWAITAOFShortErrorsAndMalformedReplyKeepSETAck/negative_replica (0.00s)
+=== RUN   TestManagedWriterWAITAOFDeadlineAndUnacknowledgedSET
+=== RUN   TestManagedWriterWAITAOFDeadlineAndUnacknowledgedSET/set
+=== RUN   TestManagedWriterWAITAOFDeadlineAndUnacknowledgedSET/waitaof
+--- PASS: TestManagedWriterWAITAOFDeadlineAndUnacknowledgedSET (0.20s)
+    --- PASS: TestManagedWriterWAITAOFDeadlineAndUnacknowledgedSET/set (0.10s)
+    --- PASS: TestManagedWriterWAITAOFDeadlineAndUnacknowledgedSET/waitaof (0.10s)
+=== RUN   TestManagedWriterConcurrentWAITAOFDoesNotInterleaveWrites
+--- PASS: TestManagedWriterConcurrentWAITAOFDoesNotInterleaveWrites (0.01s)
+=== RUN   TestManagedWriterWAITAOFRequiresManagedPersistence
+--- PASS: TestManagedWriterWAITAOFRequiresManagedPersistence (0.00s)
+PASS
+ok  	github.com/alanwang/redis-reliability-lab/internal/experiment	785.061s

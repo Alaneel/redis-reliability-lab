@@ -1,0 +1,50 @@
+go version go1.26.9 linux/arm64
+Linux 6.4.16-linuxkit aarch64 GNU/Linux
+client=24.0.6 server=24.0.6
+all modules verified
+test -z "$(gofmt -l cmd internal)"
+go vet ./...
+go test -race -count=1 ./...
+ok  	github.com/alanwang/redis-reliability-lab/cmd/redis-lab	1.015s
+ok  	github.com/alanwang/redis-reliability-lab/internal/batch	10.533s
+ok  	github.com/alanwang/redis-reliability-lab/internal/cluster	22.212s
+ok  	github.com/alanwang/redis-reliability-lab/internal/comparison	5.297s
+ok  	github.com/alanwang/redis-reliability-lab/internal/config	1.318s
+ok  	github.com/alanwang/redis-reliability-lab/internal/environment	1.811s
+ok  	github.com/alanwang/redis-reliability-lab/internal/experiment	36.030s
+ok  	github.com/alanwang/redis-reliability-lab/internal/metrics	1.100s
+ok  	github.com/alanwang/redis-reliability-lab/internal/report	1.123s
+ok  	github.com/alanwang/redis-reliability-lab/internal/workload	1.523s
+go build -trimpath -buildvcs=false -ldflags="-X main.version=$VERSION" -o bin/redis-lab ./cmd/redis-lab
+redis-lab 1.0.0
+bin/redis-lab-linux-amd64: go1.26.9
+	path	github.com/alanwang/redis-reliability-lab/cmd/redis-lab
+	mod	github.com/alanwang/redis-reliability-lab	(devel)	
+	dep	github.com/cespare/xxhash/v2	v2.3.0	h1:UL815xU9SqsFlibzuggzjXhog7bL6oX9BbNZnL2UFvs=
+	dep	github.com/redis/go-redis/v9	v9.23.0	h1:/TTVdJa8BRNsybwwGGnmiYktHNlUXtbOQxlWpHBPL3s=
+	dep	go.uber.org/atomic	v1.12.0	h1:BvcXdFKuviU4fTL/f+SxdQ5qJX/Jix8pAkgdUcb3XOE=
+	dep	go.yaml.in/yaml/v3	v3.0.5	h1:N6y/pJk8buWs9NY5ERU2HSMfm+IuD/OtfdAnq6kESPw=
+	dep	golang.org/x/sys	v0.48.0	h1:bbX/i/6MgT9BVLM9RT1thmxL04yeTAhbEz4SyadbXoo=
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	-trimpath=true
+	build	CGO_ENABLED=0
+	build	GOARCH=amd64
+	build	GOOS=linux
+	build	GOAMD64=v1
+Valid experiment: persistence-aof-always (cluster-restart)
+Valid experiment: persistence-aof-everysec (cluster-restart)
+Valid experiment: persistence-memory (cluster-restart)
+Valid experiment: policy-aof-set (primary-kill)
+Valid experiment: policy-aof-wait (primary-kill)
+Valid experiment: policy-aof-waitaof (primary-kill)
+Valid experiment: policy-set-primary-crash (primary-kill)
+Valid experiment: policy-wait-primary-crash (primary-kill)
+Valid experiment: primary-failure-repeat (primary-kill)
+Valid experiment: primary-failure-timeout (primary-kill)
+Valid experiment: primary-failure (primary-kill)
+Valid experiment: primary-isolation (primary-isolate)
+Valid experiment: primary-repair-wait (primary-kill)
+Valid experiment: primary-repair (primary-kill)
+Valid experiment: replica-crash (replica-kill)
+Valid experiment: replica-isolation (replica-isolate)
