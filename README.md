@@ -2,7 +2,11 @@
 
 A Redis cluster can serve requests again after a primary crash while still having reduced redundancy or missing acknowledged data. This Go CLI measures those conditions separately in reproducible local fault experiments.
 
+[Run an experiment](#quick-start) · [Inspect recorded evidence](#what-the-experiments-expose) · [Diagnose a saved report](#offline-incident-diagnosis) · [Documentation](docs/README.md)
+
 It provisions **three primaries and three replicas**, drives bounded synthetic traffic, injects a managed fault, verifies every successful SET acknowledgement, and saves JSON and Markdown reports after checking cleanup. It supports primary and replica crashes, whole-node network isolation, optional former-primary repair, all-process restart, SET/WAIT/WAITAOF policies, sequential trials, and counterbalanced comparisons. The experiments expose asynchronous replication, failure detection and elections, cached routing, replication repair, and acknowledgement-versus-persistence trade-offs.
+
+The offline diagnosis extension works from recorded evidence: it cites observations, preserves ambiguous causes, and proposes read-only plans. It is a deterministic diagnostic engine, not an LLM agent. [Case studies](docs/aiops-case-studies.md) · [Evaluation and limits](docs/aiops-evaluation.md).
 
 ## Quick start
 
@@ -20,6 +24,20 @@ Read `reports/<run-id>/report.md` first, then its JSON for configuration, raw ob
 
 **Real evidence:** the [Phase 3 original CLI regression](docs/examples/phase3/primary-failure-regression/report.md) recovered and checked **2,030 acknowledged values** with zero missing, corrupt, unreadable, or unverified records; **87 ambiguous SET outcomes** remained separate. Promotion was first sampled at **5.370 s** and joint topology/client stability at **8.567 s** after fault orchestration began. Cleanup succeeded. These are observations from one local run, not recovery or durability guarantees. [Raw JSON](docs/examples/phase3/primary-failure-regression/report.json) · [Validation record](docs/phase3-validation.md#final-original-cli-regression).
 
+## Offline incident diagnosis
+
+The evidence-based extension analyzes saved Redis observations without Docker, an API key or an external AI service. It separates observed symptoms from possible causes, cites original evidence, reconstructs sampled recovery transitions and produces read-only remediation plans. Process failure and network isolation can remain indistinguishable; the engine abstains from selecting an unsupported unique root cause.
+
+```sh
+make build
+bin/redis-lab diagnose docs/examples/phase3/primary-repair-wait/report.json --output reports/diagnoses
+# Collect fresh development/heldout trials using managed local Docker:
+REDIS_LAB_DATASET=reports/aiops-dataset make aiops-integration
+bin/redis-lab evaluate --dataset reports/aiops-dataset/manifest.json --partition heldout --output reports/aiops-evaluation
+```
+
+See [architecture and safety](docs/aiops-architecture.md), [actual evaluation results](docs/aiops-evaluation.md), [three real case studies](docs/aiops-case-studies.md) and [validation evidence](docs/phase4-validation.md). Diagnostic outputs contain JSON and Markdown; existing diagnosis output is protected against overwrite. Evaluation keeps ambiguous cases, false positives, missed categories and malformed inputs visible. These single-host laboratory observations do not establish production diagnostic accuracy.
+
 ## What the experiments expose
 
 | Distributed-systems concept | How the lab makes it observable |
@@ -35,20 +53,20 @@ The [Phase 3 evidence](docs/phase3-validation.md) includes replica lifecycle and
 ## Architecture
 
 ```mermaid
-flowchart LR
-    CLI[CLI + strict YAML] --> Runner[Experiment lifecycle]
-    CLI --> Trials[Sequential trials / seeded comparisons]
+flowchart TD
+    CLI["CLI + strict YAML"] --> Runner["Experiment lifecycle"]
+    CLI --> Trials["Sequential trials / seeded comparisons"]
     Trials --> Runner
-    Runner --> Docker[Owned local Docker resources]
-    Docker --> Redis[3 primaries + 3 replicas]
-    Runner --> Observe[Direct topology + recovery probes]
+    Runner --> Docker["Owned local Docker resources"]
+    Docker --> Redis["3 primaries + 3 replicas"]
+    Runner --> Observe["Direct topology + recovery probes"]
     Observe --> Redis
-    Runner --> Workload[Bounded traffic + immutable ledger]
+    Runner --> Workload["Bounded traffic + immutable ledger"]
     Workload --> Redis
-    Observe --> Report[JSON + Markdown evidence]
-    Workload --> Metrics[Phase metrics + data validation]
+    Observe --> Report["JSON + Markdown evidence"]
+    Workload --> Metrics["Phase metrics + data validation"]
     Metrics --> Report
-    Docker --> Cleanup[Verify resource cleanup]
+    Docker --> Cleanup["Verify resource cleanup"]
     Cleanup --> Report
 ```
 
@@ -103,18 +121,5 @@ Ownership, names, endpoints, and isolation settings are checked before managed a
 - [Run and configure experiments](docs/running-experiments.md): all CLI commands, defaults, report interpretation, and expected partial outcomes.
 - [Contributing](CONTRIBUTING.md): local development and checks.
 
-This independent project uses synthetic data and contains no employer infrastructure, credentials, or production configuration. Project source is [MIT licensed](LICENSE); Redis, Docker, Go, and dependencies retain their respective licenses. See [third-party notices](THIRD_PARTY_NOTICES.md).
+The experiments use synthetic data. Project source is [MIT licensed](LICENSE); Redis, Docker, Go, and dependencies retain their respective licenses. See [third-party notices](THIRD_PARTY_NOTICES.md).
 
-## Offline incident diagnosis (Phase 4)
-
-The evidence-based extension analyzes saved Redis observations without Docker, an API key or an external AI service. It separates observed symptoms from possible causes, cites original evidence, reconstructs sampled recovery transitions and produces read-only remediation plans. Process failure and network isolation can remain indistinguishable; the engine abstains from selecting an unsupported unique root cause.
-
-```sh
-make build
-bin/redis-lab diagnose docs/examples/phase3/primary-repair-wait/report.json --output reports/diagnoses
-# Collect fresh development/heldout trials using managed local Docker:
-REDIS_LAB_DATASET=reports/aiops-dataset make aiops-integration
-bin/redis-lab evaluate --dataset reports/aiops-dataset/manifest.json --partition heldout --output reports/aiops-evaluation
-```
-
-See [architecture and safety](docs/aiops-architecture.md), [actual evaluation results](docs/aiops-evaluation.md), [three real case studies](docs/aiops-case-studies.md) and [validation evidence](docs/phase4-validation.md). Diagnostic outputs contain JSON and Markdown; existing diagnosis output is protected against overwrite. Evaluation keeps ambiguous cases, false positives, missed categories and malformed inputs visible. These single-host laboratory observations do not establish production diagnostic accuracy.
